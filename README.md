@@ -22,10 +22,10 @@ The dataset comprises the following sections:
 
 If you use this data, please cite the following: \
 \
-**Paper:** Laurila O.; Zakary, O.; Lantto P. Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics. *In preparation* **2025**. [DOI: TBA]
+**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics. *In preparation* **2025**. [DOI: TBA]
 
 \
-**Dataset:** Laurila O.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. *figshare. Dataset.* [DOI: TBA]
+**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. *figshare. Dataset.* [DOI: TBA]
 
 ---
 
