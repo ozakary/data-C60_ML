@@ -1,4 +1,4 @@
-# Prediction of NMR Isotropic Magnetic Shielding from the Trained NMR-ML SchNet Model  
+# Prediction of NMR Isotropic Magnetic Shielding from the Pre-Trained NMR-ML SchNet Model  
 **Author:** Ouail Zakary  
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
