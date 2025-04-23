@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#BATCH --job-name=MLAMD
+#SBATCH --partition=gpu
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=4
+#SBATCH --time=3-00:00:00
+#SBATCH --gres=gpu:v100:4
+#SBATCH --output=ml_nmr-output_%j.txt
+#SBATCH --error=ml_nmr-errors_%j.txt
+
+#--------------------------------------------------------------------------------------------------------------------------------
+
+# Record start time
+start_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Job started at $start_time"
+
+#================================< Instructions-Section for Training Full Magnetic Shielding Tensor using SchNet Model >============================================
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Activate virtual environment
+source /home/ozakary24/packages/SchNet/schnet-venv/bin/activate
+
+# Set unlimited stack size
+ulimit -s unlimited
+
+# Loop over i and j directories
+for i in $(seq 0 1 31); do
+    for j in $(seq 1 1 5); do
+        python ml-predict.py \
+        --input_path ./${i}/${j}/converted_split_beads_dump_${i}_${j}.csv \
+        --output_path ./${i}/${j}/CHAMPS_new_test.db \
+        --property sigma_iso
+    done
+done
+
+# Record end time
+end_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Job finished at $end_time"
+
+# Calculate and print execution time
+start_seconds=$(date -d "$start_time" +"%s")
+end_seconds=$(date -d "$end_time" +"%s")
+execution_time=$((end_seconds - start_seconds))
+echo "Job took $execution_time seconds to complete."
+
+exit 0
