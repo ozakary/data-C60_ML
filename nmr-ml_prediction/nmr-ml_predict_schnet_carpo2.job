@@ -27,7 +27,7 @@ ulimit -s unlimited
 # Loop over i and j directories
 for i in $(seq 0 1 31); do
     for j in $(seq 1 1 5); do
-        python ml-predict.py \
+        python nmr-ml_predict_script.py \
         --input_path ./${i}/${j}/converted_split_beads_dump_${i}_${j}.csv \
         --output_path ./${i}/${j}/CHAMPS_new_test.db \
         --property sigma_iso
