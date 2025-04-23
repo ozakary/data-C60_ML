@@ -198,3 +198,7 @@ After running the complete workflow, you will have the following output files:
    - `./0/1/sigma_iso_new_predictions_with_structures.csv` (Prediction results)
    - ...
    - `./31/5/sigma_iso_new_predictions_with_structures.csv`
+
+---
+
+For further details, please refer to the respective folders or contact the author via the provided email.
