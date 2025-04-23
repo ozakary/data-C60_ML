@@ -1,4 +1,4 @@
-# Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C60-Fullerene”
+# Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”
 
 ## Graphical Abstract
 
