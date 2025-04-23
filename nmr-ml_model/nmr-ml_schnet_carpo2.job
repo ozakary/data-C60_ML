@@ -27,7 +27,7 @@ source /home/ozakary24/packages/SchNet/schnet-venv/bin/activate
 # allocated for the call stack of a program.
 ulimit -s unlimited
 
-python ml-script.py
+python nmr-ml_train-valid-test_script.py
 
 
 # Record end time
