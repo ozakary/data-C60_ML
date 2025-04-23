@@ -1,9 +1,4 @@
-# Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”
-
-## Graphical Abstract
-
-![Graphical Abstract](./blank.png)
-
+# C<sub>60</sub> Fullerene DFT and NMR magnetic Shielding Tensor Calculations
 **Author:** Ouail Zakary  
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
@@ -11,6 +6,32 @@
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
 This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. [DOI: TBA]
+
+## Overview of the Data
+
+This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. The complete input and output files are available in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
+
+In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `1000`.
+
+Directory structure example:
+```
+./cluster_0/basis
+...
+./cluster_0/auxbasis
+./cluster_0/mpshift.out
+./cluster_0/rdgrad.out
+./cluster_0/ridft.out
+./cluster_1/basis
+...
+./cluster_1/auxbasis
+./cluster_1/mpshift.out
+./cluster_1/rdgrad.out
+./cluster_1/ridft.out
+```
+
+Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the log files from the computation jobs:
+- Output log: `jobfile.out<JOB_ID>`
+- Error log: `jobfile.err<JOB_ID>`
 
 ## Computational Details
 
