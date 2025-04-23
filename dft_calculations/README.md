@@ -16,17 +16,28 @@ In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Tu
 Directory structure example:
 ```
 ./cluster_0/basis
-...
+./cluster_0/control
+./cluster_0/coord
 ./cluster_0/auxbasis
 ./cluster_0/mpshift.out
 ./cluster_0/rdgrad.out
 ./cluster_0/ridft.out
 ./cluster_1/basis
-...
+./cluster_1/control
+./cluster_1/coord
 ./cluster_1/auxbasis
 ./cluster_1/mpshift.out
 ./cluster_1/rdgrad.out
 ./cluster_1/ridft.out
+...
+...
+./cluster_1000/basis
+./cluster_1000/control
+./cluster_1000/coord
+./cluster_1000/auxbasis
+./cluster_1000/mpshift.out
+./cluster_1000/rdgrad.out
+./cluster_1000/ridft.out
 ```
 
 Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the log files from the computation jobs:
