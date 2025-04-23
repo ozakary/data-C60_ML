@@ -1,4 +1,4 @@
-# Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”
+# Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C60-Fullerene”
 
 ## Graphical Abstract
 
@@ -10,7 +10,7 @@
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
-This is the Supporting Dataset for the manuscript “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. [DOI: TBA]
+This is the Supporting Dataset for the manuscript “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C60-Fullerene”. [DOI: TBA]
 
 The dataset comprises the following sections:
 
@@ -24,10 +24,10 @@ The dataset comprises the following sections:
 
 If you use this data, please cite the following: \
 \
-**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics. *In preparation* **2025**. [DOI: TBA]
+**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C60-Fullerene. *In preparation* **2025**. [DOI: TBA]
 
 \
-**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. *figshare. Dataset.* [DOI: TBA]
+**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C60-Fullerene”. *figshare. Dataset.* [DOI: TBA]
 
 ---
 
