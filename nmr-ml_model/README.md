@@ -35,7 +35,7 @@ pip install ase==3.17.0 pandas==1.1.5 numpy==1.19.5 schnetpack==0.2.1
 
 ## Directory Structure
 
-### Input Files (the *.csv input files are to be found in the [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60))
+### Input Files (the *.csv input files are to be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60))
 ```
 ./input/
     structures.csv             # Atomic coordinates (cartesian) for all structures
