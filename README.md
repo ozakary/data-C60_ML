@@ -14,8 +14,8 @@ This is the Supporting Dataset for the manuscript “Thermal Expansion and Isoto
 
 The dataset comprises the following sections:
 
-1. Dataset used to train the NMR-ML model using SchNet architecture. ([directory](./dataset/))
-2. NMR-ML model training and testing code. ([directory](./NMR-ML_model/))
+1. Dataset preparation for the NMR-ML model. ([directory](./dataset/))
+2. Training and validation processes for the NMR-ML model using SchNet architecture. ([directory](./NMR-ML_model/))
 5. Python scripts and raw numerical data for all figures related to the NMR-ML model included in the main manuscript and the Supporting Information. ([directory](./figures/))
 
 ## Citations
