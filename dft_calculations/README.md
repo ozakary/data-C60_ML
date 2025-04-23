@@ -5,7 +5,7 @@
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
-This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. [DOI: TBA]
+This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. [DOI: TBA]
 
 ## Overview of the Data
 
@@ -89,15 +89,6 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
   - [auxbasis](./input_files/auxbasis): Auxiliary basis set for RI approximation
   - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
 
-
-## Citations
-
-If you use this data, please cite the following: \
-\
-**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics. *In preparation* **2025**. [DOI: TBA]
-
-\
-**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Thermal Expansion and Isotope Effects of Chemical Shift of C60-Fullerene Using Machine Learning-Assisted Path Integral Molecular Dynamics”. *figshare. Dataset.* [DOI: TBA]
 
 ---
 
