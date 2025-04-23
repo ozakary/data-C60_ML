@@ -16,8 +16,8 @@ The dataset comprises the following sections:
 
 1. DFT calculations. ([directory](./dft_calculations/))
 2. Dataset preparation for the NMR-ML model. ([directory](./nmr-ml_dataset/))
-3. Training, validation, and testing processes for the NMR-ML model using SchNet architecture. ([directory](./nmr-ml_model/))
-4. Prediction of NMR magnetic shielding parameters, including the skew, span, and σ<sub>iso</sub> from the trained NMR-ML model. ([directory](./nmr-ml_prediction/))
+3. Training, validation, and testing processes for the NMR-ML model using SchNet architecture on NMR magnetic shielding parameters, including the skew, span, and σ<sub>iso</sub>. ([directory](./nmr-ml_model/))
+4. Prediction of NMR isotropic magnetic shielding values, σ<sub>iso</sub>, from the pre-trained NMR-ML model. ([directory](./nmr-ml_prediction/))
 5. Python scripts and raw numerical data for all figures related to the NMR-ML model included in the main manuscript and the Supporting Information. ([directory](./figures/))
 
 ## Citations
