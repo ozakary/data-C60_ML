@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#SBATCH --job-name=MLAMD
+#SBATCH --partition=gpu
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=4
+#SBATCH --time=3-00:00:00
+#SBATCH --gres=gpu:v100:4
+#SBATCH --output=ml_nmr-output_%j.txt
+#SBATCH --error=ml_nmr-errors_%j.txt
+
+#--------------------------------------------------------------------------------------------------------------------------------
+
+# Record start time
+start_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Job started at $start_time"
+
+#================================< Instructions-Section for Training Full Magnetic Shielding Tensor using SchNet Model >============================================
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# using a virtual environment (!!when using v-env all the packages and dependencies should be installed in that v-env!!) 
+# python3 -m venv --system-site-packages schnet-venv # should be used if there is no existent schnet-env
+source /home/ozakary24/packages/SchNet/schnet-venv/bin/activate
+
+# Using the 'ulimit' command to control the user-level resource limits for processes. the option '-s unlimited' specifies that 
+# there should be no limit on the stack size for the processes launched by the job. The stack size is the amount of memory 
+# allocated for the call stack of a program.
+ulimit -s unlimited
+
+python ml-script.py
+
+
+# Record end time
+end_time=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Job finished at $end_time"
+
+# Calculate and print execution time
+start_seconds=$(date -d "$start_time" +"%s")
+end_seconds=$(date -d "$end_time" +"%s")
+execution_time=$((end_seconds - start_seconds))
+echo "Job took $execution_time seconds to complete."
+
+exit 0
