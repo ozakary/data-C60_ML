@@ -22,14 +22,13 @@ To reproduce the figures and analyze the data, you will need the following softw
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|-------------|-------------|------------|-----------------|
-| [Figure X1](./manuscript/figure_X1.png) | [Script](./manuscript/figure_X1_script.py) | [Data X-1](./manuscript/figure_X1-a_data.csv), [Data X-2](./manuscript/figure_X1-b_data.csv), [Data X-3](./manuscript/figure_X1-b_data.csv) | [Readme](./manuscript/figure_X1_readme.txt) | [Description](./manuscript/figure_X1_description.txt) |
-| [Figure X1](./manuscript/figure_X2.png) | [Script](./manuscript/figure_X2_script.py) | [Data X-1](./manuscript/figure_X1-a_data.csv), [Data X-2](./manuscript/figure_X1-b_data.csv) | [Readme](./manuscript/figure_X2_readme.txt) | [Description](./manuscript/figure_X2_description.txt) |
+| [Figure X-a](./manuscript/figure_X-a.png), [Figure X-b](./manuscript/figure_X-b.png), [Figure X-c](./manuscript/figure_X-c.png) | [Script](./manuscript/figure_X_script.py) | [Data X-a](./manuscript/figure_X-a_data.csv), [Data X-b](./manuscript/figure_X-b_data.csv), [Data X-c](./manuscript/figure_X-c_data.csv) | [Readme](./manuscript/figure_X_readme.txt) | [Description](./manuscript/figure_X_description.txt) |
 
 ## Table 2: Figures from the Supporting Information
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|------------|-------------|------------|-----------------|
-| [Figure SX1](./supporting_information/figure_SX1.png) | [Script](./supporting_information/figure_SX1_script.py) | [Data](./supporting_information/figure_SX1_data.txt) | [Readme](./supporting_information/figure_SX1_readme.txt) | [Description](./supporting_information/figure_SX1_description.txt) |
+| [Figure SX](./supporting_information/figure_SX.png) | [Script](./supporting_information/figure_SX_script.py) | [Data](./supporting_information/figure_SX_data.txt) | [Readme](./supporting_information/figure_SX_readme.txt) | [Description](./supporting_information/figure_SX_description.txt) |
 
 ---
 
