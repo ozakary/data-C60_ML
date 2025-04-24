@@ -59,7 +59,7 @@ for i in $(seq 0 1 31); do
 done
 ```
 
-### 2. Copy XYZ Files to Bead Directories
+### 2. Copy XYZ Files to Bead Directories (XYZ files to be found in [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60))
 
 Copy the corresponding trajectory files to each bead directory:
 
