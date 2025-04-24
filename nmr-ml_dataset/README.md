@@ -3,7 +3,7 @@
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-**Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
+**Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
 
 This document describes the preparation of datasets for training the NMR-ML SchNet architecture.
 
