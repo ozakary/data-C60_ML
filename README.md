@@ -1,4 +1,4 @@
-# Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”
+# Supporting Data for “Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”
 
 ## Graphical Abstract
 
@@ -10,7 +10,7 @@
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
-This is the Supporting Dataset for the manuscript “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. [DOI: TBA]
+This is the Supporting Dataset for the manuscript “Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. [DOI: TBA]
 
 The dataset comprises the following sections:
 
@@ -24,10 +24,10 @@ The dataset comprises the following sections:
 
 If you use this data, please cite the following: \
 \
-**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene. *In preparation* **2025**. [DOI: TBA]
+**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene. *In preparation* **2025**. [DOI: TBA]
 
 \
-**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. *Zenodo. Dataset.* [DOI: TBA]
+**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. *Zenodo. Dataset.* [DOI: TBA]
 
 ---
 
