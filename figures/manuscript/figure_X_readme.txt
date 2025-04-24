@@ -1,0 +1,1 @@
+# Each of the three NMR correlation plots between the DFT computed and NMR-ML predicted sigma_iso values of the C60 fullerene were first plotted by running the Python scripts, and saved in the format ".png".
