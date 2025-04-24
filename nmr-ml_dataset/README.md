@@ -9,7 +9,7 @@ This document describes the preparation of datasets for training the NMR-ML SchN
 
 ## Directory Contents
 
-The `nmr-ml_dataset` directory contains the processed data files necessary for training machine learning models to predict NMR shielding parameters from molecular structures. The dataset is focused on C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using `TURBOMOLE`.
+The `nmr-ml_dataset` directory contains the processed data files necessary for training machine learning models to predict NMR shielding parameters from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using `TURBOMOLE`.
 
 ## Dataset Files
 
