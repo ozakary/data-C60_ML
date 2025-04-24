@@ -1,0 +1,1 @@
+# Logarithmic scaled plots of MAE (blue dots) and RMSE (green squares) illustrating the training process of the NMR-ML SchNet model from C60 fullerene.
