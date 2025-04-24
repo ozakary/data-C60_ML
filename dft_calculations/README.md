@@ -40,7 +40,7 @@ Directory structure example:
 ./cluster_1000/ridft.out
 ```
 
-Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the log files from the computation jobs:
+Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
 
