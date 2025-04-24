@@ -27,7 +27,7 @@ If you use this data, please cite the following: \
 **Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene. *In preparation* **2025**. [DOI: TBA]
 
 \
-**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. *figshare. Dataset.* [DOI: TBA]
+**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”. *Zenodo. Dataset.* [DOI: TBA]
 
 ---
 
