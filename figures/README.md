@@ -28,7 +28,7 @@ To reproduce the figures and analyze the data, you will need the following softw
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|------------|-------------|------------|-----------------|
-| [Figure SX](./supporting_information/figure_SX.png) | [Script](./supporting_information/figure_SX_script.py) | [Data](./supporting_information/figure_SX_data.txt) | [Readme](./supporting_information/figure_SX_readme.txt) | [Description](./supporting_information/figure_SX_description.txt) |
+| [Figure SX](./supporting_information/figure_SX.png) | [Script](./supporting_information/figure_SX_script.py) | [Data](./supporting_information/sigma_iso/log/log.csv) | [Readme](./supporting_information/figure_SX_readme.txt) | [Description](./supporting_information/figure_SX_description.txt) |
 
 ---
 
