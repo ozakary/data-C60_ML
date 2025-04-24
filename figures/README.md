@@ -1,11 +1,11 @@
-# Figures, Scripts, and Datasets for Manuscript and Supporting Information “Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene”
+# Figures, Scripts, and Datasets for Manuscript and Supporting Information “*Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
 **Author:** Ouail Zakary  
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
-This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the manuscript and supporting information documents of “***Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub>-Fullerene***”.
+This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the manuscript and supporting information documents of “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”.
 
 ## Requirements
 
