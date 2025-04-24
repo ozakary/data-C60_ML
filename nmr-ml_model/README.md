@@ -5,7 +5,7 @@
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
 
-This repository contains the code and workflows for training a machine learning model to predict NMR magnetic shielding tensors using the SchNet neural network architecture. The model is trained on a dataset of 1001 C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using TURBOMOLE.
+This sub-repository contains the code and workflows for training a machine learning model to predict NMR magnetic shielding tensors using the SchNet neural network architecture. The model is trained on a dataset of 1001 C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using TURBOMOLE.
 
 ## Installation
 
