@@ -3,7 +3,7 @@
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-**Personal Website:** [Ouail Zakary - personal webpage](https://ozakary.github.io/)
+**Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
 
 This sub-repository contains code and workflows for predicting NMR isotropic magnetic shielding for carbon atoms using the pre-trained SchNet model. The workflow is specifically designed to handle Path Integral Molecular Dynamics (PIMD) simulation data with 32 beads (the corresponding data can be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60)).
 
