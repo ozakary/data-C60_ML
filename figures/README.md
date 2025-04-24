@@ -9,7 +9,7 @@ This folder contains the figures, Python scripts, datasets, and additional metad
 
 ## Requirements
 
-To reproduce the figures and analyze the data, you will need the following libraries:
+To reproduce the figures and analyze the data, you will need the following:
 - **Python 3.x**
 - **Matplotlib**
 - **NumPy**
