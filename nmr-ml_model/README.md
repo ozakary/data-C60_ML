@@ -9,7 +9,7 @@ This sub-repository contains the code and workflows for training a machine learn
 
 ## Installation
 
-The model training uses SchNetPack 0.2.1 with specific version requirements for dependencies. The installation was performed on [CSC](https://csc.fi/) supercomputers ([PUHTI](https://www.puhti.csc.fi/public/), [MAHTI](https://www.mahti.csc.fi/public/)) and the University of Oulu supercomputer [CARPO2](https://ict.oulu.fi/17120/?lang=en), using the following procedure:
+The model training uses `SchNetPack 0.2.1` with specific version requirements for dependencies. The installation was performed on [CSC](https://csc.fi/) supercomputers ([PUHTI](https://www.puhti.csc.fi/public/), [MAHTI](https://www.mahti.csc.fi/public/)) and the University of Oulu supercomputer [CARPO2](https://ict.oulu.fi/17120/?lang=en), using the following procedure:
 
 ```bash
 # Load PyTorch version 1.11
