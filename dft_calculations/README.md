@@ -56,7 +56,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
 - **Basis Set**: `x2c-TZVPall-s` (relativistically recontracted triple-zeta valence basis set with polarization functions)
   - (`11s7p2d1f`) primitive Gaussian functions contracted to `[5s4p2d1f]`
 - **Auxiliary Basis Set**: `x2c-TZVPall-s` (`12s5p4d2f1g`)
-- **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact two-component (`X2C`) Hamiltonian
+- **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact Two-Component (`X2C`) Hamiltonian
 - **Dispersion Correction**: `DFT-D4` dispersion model
 
 ### SCF Parameters
