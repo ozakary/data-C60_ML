@@ -1,0 +1,30 @@
+
+  ========================================================================
+                license information 
+ Customer : 200000000037812
+ ID       : LKO3413519
+
+ License file is VALID, continuing with full version
+  ========================================================================
+
+   OpenMP run-time library returned nthreads = 20
+
+ data group $actual step is not empty 
+ due to the abend of mpshift
+
+
+ this is only a subsequent error message
+ check reason for abend in the other output files ...
+
+ use the command  'actual -r'  to get rid of that 
+
+
+========================
+ internal module stack: 
+------------------------
+    ridft
+    turbo_setup
+========================
+
+  CONTRL dead = actual step 
+ ridft ended abnormally

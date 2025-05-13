@@ -1,0 +1,368 @@
+
+   OpenMP run-time library returned nthreads = 20
+
+ data group $actual step is not empty 
+ due to the abend of mpshift
+
+
+ mpshift (r02c35.bullx) : TURBOMOLE rev. V7-7 compiled 26 Oct 2022 at 08:57:28
+ Copyright (C) 2022 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-02-21 13:52:14.713 
+
+
+
+
+                                mpshift
+
+                             TURBOMOLE GmbH
+
+
+          integral direct evaluation of NMR shielding tensors
+
+
+
+          OpenMP Shared-Memory Parallelization: 20 CPUs.
+
+            By: K. Reiter, F. Mack, Y. J. Franzke, and F. Weigend
+
+
+                                                          
+                                 References:                     
+                                                                 
+          DIRECT RHF NMR CHEMICAL SHIFTS                         
+              M.Haser, R.Ahlrichs, H.P.Baron, P.Weis, H.Horn     
+              Direct computation of second-order SCF properties  
+              of large molecules on workstation computers with an
+              application to large carbon clusters               
+              Theor. Chim. Acta 83, 455 (1992).                  
+          DIRECT MP2 NMR CHEMICAL SHIFTS                         
+              M.Kollwitz, J.Gauss                                
+              A direct implementation of the GIAO-MBPT(2) method 
+              for calculating NMR chemical shifts. Application to
+              the naphthalenium and anthracenium ions            
+              Chem. Phys. Lett. 260, 639 (1996).                 
+          SYMMETRY FOR DIRECT MP2 NMR CHEMICAL SHIFTS            
+              M.Kollwitz, M.Haser, J.Gauss                       
+              Non-Abelian point group symmetry in direct second- 
+              order many-body perturbation theory calculations of
+              NMR chemical shifts                                
+              J. Chem. Phys. 108, 8295 (1998).                   
+          DIRECT DFT NMR CHEMICAL SHIFTS                         
+              U. Huniar                                          
+              Berechnung der chemischen Verschiebung der NMR mit 
+              Methoden der Dichtefunktionaltheorie (DFT)         
+              Diploma Thesis, University of Karlsruhe (1999).    
+          VIBRATIONAL CIRCULAR DICHROISM AND EXTENSION TO ECPS   
+              K. Reiter, M. Kuehn, F. Weigend                    
+              Vibrational circular dichroism spectra for large   
+              molecules and molecules with heavy elements        
+              J. Chem. Phys. 146, 054102 (2017).                 
+          (MA)RI-J APPROXIMATION, META-GGAS AND OPENMP VERSION   
+              K. Reiter, F. Mack, F. Weigend                     
+              Calculation of magnetic shielding constants with   
+              meta-GGA functionals employing the multipole-      
+              accelerated resolution of the identity:            
+              Implementation and assessment of accuracy and      
+              efficiency                                         
+              J. Chem. Theory Comput. 14, 191 (2018).            
+          SCALAR-RELATIVISTIC (LOCAL) EXACT TWO-COMPONENT (X2C)  
+              Y. J. Franzke, F. Weigend                          
+              NMR shielding tensors and chemical shifts in scalar
+              -relativistic local exact two-component theory     
+              J. Chem. Theory Comput. 15, 1028 (2019).           
+          NON-RELATIVISTIC AND SCALAR-RELATIVISTIC PNMR          
+              S. Gillhuber, Y. J. Franzke, F. Weigend            
+              Paramagnetic NMR Shielding Tensors and Ring        
+              Currents: Efficient Implementation and Application 
+              to Heavy Element Compounds                         
+              J. Phys. Chem. A 125, 9707 (2021).                 
+          SPIN-ORBIT EFFECTS FOR PNMR                            
+              F. Bruder, Y. J. Franzke, F. Weigend               
+              Paramagnetic NMR Shielding Tensors Based on Scalar 
+              Exact Two-Component and Spin-Orbit Perturbation    
+              Theory                                             
+              J. Phys. Chem. A  126, 5050 (2022).                
+          RELATIVISTIC HYPERFINE COUPLING CONSTANT               
+              Y. J. Franzke, J. M. Yu                            
+              Hyperfine Coupling Constant in Local Exact         
+              Two-Component Theory                               
+              J. Chem. Theory Comput. 18, 323 (2022).            
+          RELATIVISTIC EPR g-TENSOR                              
+              Y. J. Franzke, J. M. Yu                            
+              Quasi-Relativistic Calculation of EPR g Tensors    
+              with Derivatives of the Decoupling Transformation, 
+              Gauge-Including Atoms Orbitals, and Magnetic       
+              Balance                                            
+              J. Chem. Theory Comput. 18, 2246 (2022).           
+          CURRENT DENSITY IN DFT FOR PNMR AND EPR                
+              Y. J. Franzke, C. Holzer                           
+              Impact of the current density on paramagnetic NMR  
+              properties                                         
+              J. Chem. Phys. 157, 031102 (2022).                 
+                                                                 
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+         25.96762211   22.47800817   30.06049131    c      6.000     0
+         23.61375844   23.92185668   30.33742875    c      6.000     0
+         21.49640055   22.23831710   29.87781130    c      6.000     0
+         22.50756424   19.87187529   28.80901620    c      6.000     0
+         25.32628736   19.89446362   29.01731678    c      6.000     0
+         17.71674216   26.19684910   25.84182878    c      6.000     0
+         17.08208038   23.60668886   24.90037127    c      6.000     0
+         17.99296558   21.70839562   26.61683292    c      6.000     0
+         19.28864318   23.02564005   28.64432067    c      6.000     0
+         19.17936808   25.74805594   28.06555797    c      6.000     0
+         19.20425281   18.82339510   23.26057498    c      6.000     0
+         21.52409132   17.45936182   22.60673282    c      6.000     0
+         22.77482004   17.27195987   24.99360059    c      6.000     0
+         21.31130815   18.45816843   26.98810435    c      6.000     0
+         18.99339076   19.40471534   25.84978393    c      6.000     0
+         26.67596792   17.81166633   22.77681480    c      6.000     0
+         28.68121438   19.39632473   23.24015282    c      6.000     0
+         28.71062487   20.04417352   25.96447001    c      6.000     0
+         26.69691445   18.76676324   27.05480468    c      6.000     0
+         25.41662786   17.42427661   25.02955348    c      6.000     0
+         30.02570049   24.38898748   24.89345845    c      6.000     0
+         29.08374071   26.87681028   25.86289896    c      6.000     0
+         27.68432135   26.29119413   28.08120137    c      6.000     0
+         28.00539285   23.65580434   28.80316343    c      6.000     0
+         29.25138655   22.45924003   26.65374169    c      6.000     0
+         24.55140670   29.63322573   26.97736737    c      6.000     0
+         21.83994316   29.33652705   26.90393707    c      6.000     0
+         21.14304709   27.38517079   28.64376690    c      6.000     0
+         23.51248422   26.41893172   29.75089995    c      6.000     0
+         25.51116228   27.69575291   28.54798408    c      6.000     0
+         21.77862851   29.88342747   22.11716967    c      6.000     0
+         20.50514441   28.51917135   20.10278861    c      6.000     0
+         18.44120793   27.25890475   21.25744034    c      6.000     0
+         18.31992136   27.88036092   23.92137061    c      6.000     0
+         20.47345701   29.43741387   24.49790385    c      6.000     0
+         17.82108019   24.85219905   20.45074077    c      6.000     0
+         19.24494742   23.52721630   18.49089380    c      6.000     0
+         19.60071850   20.88615816   19.22112512    c      6.000     0
+         18.22776479   20.60262291   21.48723523    c      6.000     0
+         17.18495151   22.94186284   22.26451719    c      6.000     0
+         21.79220757   19.64022888   18.61210785    c      6.000     0
+         23.94937510   20.74706139   17.34719822    c      6.000     0
+         26.13080081   19.83685898   18.67286774    c      6.000     0
+         25.53001452   17.88858281   20.38039101    c      6.000     0
+         22.84827944   17.65043431   20.33730920    c      6.000     0
+         28.21820931   21.46163643   19.23139763    c      6.000     0
+         27.90910061   24.03337781   18.55917726    c      6.000     0
+         29.16043241   25.45380348   20.50810909    c      6.000     0
+         30.18052324   23.79445303   22.34834350    c      6.000     0
+         29.64747844   21.20548858   21.66802170    c      6.000     0
+         28.18942863   27.83143993   21.31045719    c      6.000     0
+         25.80008857   28.65844749   20.28666683    c      6.000     0
+         24.39859005   29.97367935   22.27753739    c      6.000     0
+         25.78486830   29.72633805   24.59202776    c      6.000     0
+         28.10617452   28.48099132   23.93448463    c      6.000     0
+         24.71490301   27.34477841   18.39347963    c      6.000     0
+         25.63776155   25.01647652   17.53304228    c      6.000     0
+         23.67451455   23.38395138   16.77212708    c      6.000     0
+         21.28585838   24.78736104   17.32299746    c      6.000     0
+         21.95446917   27.02725064   18.35042116    c      6.000     0
+ 
+       center of nuclear mass  :   23.62133550   23.62374296   23.62172229
+       center of nuclear charge:   23.62133550   23.62374296   23.62172229
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    c       60     28     17   pcSseg-1   [3s3p1d|8s5p1d]
+   ---------------------------------------------------------------------------
+   total:   60   1680   1020
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   14
+   total number of contracted shells         :  420
+   total number of cartesian basis functions : 1080
+   total number of SCF-basis functions       : 1020
+
+ RI-J AUXILIARY BASIS SET information:
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    c       60     70     49   universal   [6s4p3d1f1g|12s5p4d2f1g]
+   ---------------------------------------------------------------------------
+   total:   60   4200   2940
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   24
+   total number of contracted shells         :  900
+   total number of cartesian basis functions : 3660
+   total number of SCF-basis functions       : 2940
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+ integral neglect threshold       :  0.31E-12
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ WARNING : cannot change filename for statistics 
+
+ maximum number of shells which are related by symmetry :  1
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a     1020      180
+ 
+ number of basis functions   :  1020
+ number of occupied orbitals :   180
+ 
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo from file mos
+ orbital characterization : scfconv=8
+
+ -------------------------------------------------
+ ------     SEMINUMERICAL CALCULATION       ------
+ ------     using the semiJK algorithm      ------
+ -------------------------------------------------
+
+ using tight bounds in seminumeric procedure
+ using tight integral bounds for s-junctions
+ using tight integral bounds for p-junctions
+ threshold for f-junctions:   0.100000000000E-12
+ threshold for k-junctions:   0.100000000000E-09
+ threshold for near field :   0.100000000000E-04
+ max. BF   for near field :        0
+ using cholesky decomposed overlap metric in seminumeric procedure
+  
+           ------------------
+           seminumerical grid
+           ------------------
+ spherical integration : Lebedev's spherical grid
+ spherical gridsize    :                     3
+    i.e. gridpoints    :                   302
+  maximum batchsize    :                   100
+ value for diffuse not defined
+ radial integration    : Chebyshev 2nd kind (scaling 3)
+ radial gridsize       :                     3
+ integration cells     :                    60
+ partition function    : becke
+ partition sharpness   :                     3
+  
+ ************************************************
+           DFT is switched ON !!
+ ************************************************
+ 
+ 
+  
+           ------------------
+           density functional
+           ------------------
+ PBE0 hybrid functional
+ exchange:    3/4 (LDA+PBE) + 1/4 HF
+ correlation: LDA (PW) + PBE
+ spherical integration : Lebedev's spherical grid
+ spherical gridsize    :                     4
+    i.e. gridpoints    :                   434
+  maximum batchsize    :                   100
+ value for diffuse not defined
+ radial integration    : Chebyshev 2nd kind (scaling 3)
+ radial gridsize       :                     6
+ integration cells     :                    60
+ partition function    : becke
+ partition sharpness   :                     3
+  
+ grids with increased radial size are used
+  
+           ------------------------
+            MPSHIFT - INFORMATION
+           ------------------------
+  
+ Threshold for integral neglect (rithr2): 1E-10
+
+ biggest AO integral is expected to be     3.525917999
+ Contributions to RI integral batches: 
+  neglected integral batches:                 30665
+  direct contribution:                        57745
+ 
+    +---------------- Multipole Accelerated RI-J ---------------+
+    -------------------------------------------------------------
+      Number of bins for density partition        :  8
+      Maximum multipole moment used               : 14
+      Multipole precision parameter               :  1.0000E-08
+      Threshold for moment summation              :  1.0000E-24
+      Minimum separation between boxes            :  0.0000E+00
+      Maximum allowed extent                      :  2.0000E+01
+    +-----------------------------------------------------------+
+ 
+ Extensions and centers of shell-pairs:
+  number of shells with a single center:    51276
+  number of shells with double centers:      6469
+ 
+ Residuum convergence criterium for CPHF : 0.100E-06
+ 
+ time for          input     12.25
+
+     number of neglected shell pairs due to bound  :      25370
+ percentage of neglected shell pairs due to bounds :         28 %
+
+ Taking SS matrix from dump file >csssmat<
+ Taking HS matrix from dump file >cshsmat<
+ time for        csoneip      0.00
+ time for            csp      0.00
+ time for    1e matrices      6.85
+ Taking undisturbed cs from dump file restartcs
+ time for undisturbed cs      0.91
+
+ shell blocked total number of electrons =    360.00000000
+
+ Taking DGS matrix from dump file >csdgsmat<
+ time for   dgs 2e stuff      7.19
+ 
+ Residuum convergence criterium for CPHF : 0.100E-06
+
+ The magnetic field transforms like a direct sum of 3 real irreps
+
+ 
+ OCCUPIED-VIRTUAL TENSOR SPACES :
+
+          IRREP   tensor space dimension   magnetic field direction
+
+           a            151200               Bx By Bz 
+ 
+ 
+
+ logfile cphf_Bx_a    exists already
+
+ Keyword $title not found in cphf_Bx_a   
+
+
+========================
+ internal module stack: 
+------------------------
+    mpshift
+========================
+
+ mpshift ended abnormally
+ mpshift ended abnormally
