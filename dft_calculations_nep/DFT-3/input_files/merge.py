@@ -1,3 +1,5 @@
+# Assign an xyz-file (ref.xyz) containing an empty C60 structure with reference DFT data (E, F) to train or test dataset with 0.7 and 0.3 probabilities respectively.
+
 import random
 
 ft = open('../train.xyz', "a")
