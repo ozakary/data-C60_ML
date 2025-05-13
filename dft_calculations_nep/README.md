@@ -1,5 +1,5 @@
 # C<sub>60</sub> Fullerene DFT Calculations
-**Author:** Ossi Laurila
+**Author:** Ossi Laurila  
 **E-mail:** [ossi.laurila@oulu.fi](mailto:ossi.laurila@oulu.fi)  
 
 This repository contains the calculation conditions used in the DFT computations for the C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
