@@ -1,14 +1,11 @@
-import os
+# This code removes the helium atom from the He@C60 molecule
 
-C = -51.42208619083232 # Ha/Bohr to eV/Å
+import os
 
 path = os.getcwd()
 xyzfile = path.split("/")[-1].replace("cluster", "coord") + ".xyz"
 
 w = open("ref.xyz", "w")
-#w.write("60\n")
-#w.write(firstline)
-
 
 lines = open(xyzfile, "r")
 for i, val in enumerate(lines.readlines()):
