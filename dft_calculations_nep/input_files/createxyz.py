@@ -1,7 +1,8 @@
+# This code produces an xyz file of empty C60 configuration with reference DFT energy and forces to be used in the training of NEP ML model.
+
 import os
 
-# Force conversion coefficient. The minus sign is here because NEP reads the forces in a peculiar way
-# That is not consistent with other codes. See NEP documentation for details.
+# Force conversion coefficient. The minus sign is here so NEP can read the forces correctly. See NEP documentation for details.
 C = -51.42208619083232 # Ha/Bohr to eV/Å
 
 path = os.getcwd()
