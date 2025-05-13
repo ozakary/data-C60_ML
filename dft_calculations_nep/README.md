@@ -8,7 +8,9 @@ This repository contains the calculation conditions used in the DFT reference da
 
 This project contains computational data for C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. The complete input and output files are available in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
 
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `n`. One example folder `cluster_34000` is included here.
+The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The corresponding DFT data for the structures can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
+
+In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `n`. One example folder `cluster_34000` is included here for each DFT level, and can be found in the corresponding subdirectory.
 
 Directory structure example:
 ```
@@ -54,11 +56,17 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
 
 ### DFT Methods
 - **Functional**: `PBE0` hybrid functional with `25%` exact exchange
-- **Basis Set**: `x2c-TZVPall-s` (relativistically recontracted triple-zeta valence basis set with polarization functions)
+- **Basis Set**:  
+- `DFT-1` and `DFT-2` : `x2c-TZVPall-s` (relativistically recontracted triple-zeta valence basis set with polarization functions)
   - (`11s7p2d1f`) primitive Gaussian functions contracted to `[5s4p2d1f]`
-- **Auxiliary Basis Set**: `x2c-TZVPall-s` (`12s5p4d2f1g`)
+- `DFT-3` : `pcSseg-1` (segmented contracted basis set, optimized for calculating nuclear magnetic shielding constants)
+- **Auxiliary Basis Set**:  
+- `DFT-1` and `DFT-2` : `x2c-TZVPall-s` (`12s5p4d2f1g`)
+- `DFT-3` : `pcSseg-1`
 - **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact Two-Component (`X2C`) Hamiltonian
-- **Dispersion Correction**: `DFT-D4` dispersion model
+- **Dispersion Correction**:  
+- `DFT-1` : `DFT-D4` dispersion model
+- `DFT-2` and `DFT-3:` no dispersion model used
 
 ### SCF Parameters
 - **Convergence Criterion**: 10<sup>-8</sup> atomic units
