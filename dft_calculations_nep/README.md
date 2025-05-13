@@ -101,7 +101,7 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
   - [turbomole_carpo2.job](./DFT-1/input_files/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
   - [createxyz.py](./DFT-1/input_files/createxyz.py): Produces an xyz-file (ref.xyz) with one C<sub>60</sub> structure containing reference DFT values (called after Turbomole DFT calculations are finished)
   - [merge.py](./DFT-1/input_files/merge.py): Assigns the reference C<sub>60</sub> structure (ref.xyz) to train or test dataset
-  - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
+- **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
 
 
 ---
