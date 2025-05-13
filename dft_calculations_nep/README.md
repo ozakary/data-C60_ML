@@ -42,8 +42,8 @@ Directory structure example:
 Each `cluster_<ID>` folder also contains the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
-```
-Additional scripts and the job file `.job` file (`turbomole_carpo2.job`) can be found in the `input_files` folder.
+
+Additional scripts, input files, and the job file `.job` file (`turbomole_carpo2.job`) can be found in the `input_files` folder.
 
 ## Computational Details
 
