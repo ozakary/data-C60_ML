@@ -2,13 +2,13 @@
 **Author:** Ossi Laurila  
 **E-mail:** [ossi.laurila@oulu.fi](mailto:ossi.laurila@oulu.fi)  
 
-This repository contains the calculation conditions used in the DFT computations for the C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This repository contains the calculation conditions used in the DFT reference data computations for the NEP machine learning interatomic potentials of C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
 ## Overview of the Data
 
 This project contains computational data for C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. The complete input and output files are available in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
 
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `1000`.
+In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `n`. One example folder `cluster_34000` is included here.
 
 Directory structure example:
 ```
@@ -39,10 +39,11 @@ Directory structure example:
 ./cluster_n/ridft.out
 ./cluster_n/statistics
 ```
-
-Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the job log files:
+Each `cluster_<ID>` folder also contains the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
+```
+Additional scripts and the job file `.job` file (`turbomole_carpo2.job`) can be found in the `input_files` folder.
 
 ## Computational Details
 
