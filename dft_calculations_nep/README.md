@@ -1,6 +1,16 @@
 # C<sub>60</sub> Fullerene DFT Calculations
-**Author:** Ossi Laurila  
-**E-mail:** [ossi.laurila@oulu.fi](mailto:ossi.laurila@oulu.fi)  
+
+📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+
+---
+
+👤 Corresponding Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
+
+---
 
 This repository contains the calculation conditions used in the DFT reference data computations for the NEP machine learning interatomic potentials of C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
