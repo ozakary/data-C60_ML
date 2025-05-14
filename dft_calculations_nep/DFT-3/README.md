@@ -83,6 +83,7 @@ This can be automated to go through all directories `cluster_<ID>` with a simple
 
 - The dataset is suitable for training NEP or similar neural network architectures for predicting molecular energy and forces
 - The **train.xyz** and **test.xyz** files for MLIP-3 do not use the additional reference data produced from active learning as MLIP-1 does
+- Reference DFT energy from `TURBOMOLE` for each structure in the **train.xyz** and **test.xyz** files has been shifted by +62100 eV
 
 ---
 
