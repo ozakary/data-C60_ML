@@ -12,7 +12,7 @@
 
 ---
 
-This document describes the preparation of datasets for training the MLIP-1 NEP3 architecture.
+This document describes the preparation of datasets for training the MLIP-2 NEP3 architecture.
 
 ## Directory Contents
 
