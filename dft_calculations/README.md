@@ -1,9 +1,16 @@
 # C<sub>60</sub> Fullerene DFT and NMR magnetic Shielding Tensor Calculations
-**Author:** Ouail Zakary  
-**ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
-**E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
-**Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-**Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
+
+📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+
+---
+
+👤 Corresponding Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
+
+---
 
 This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
