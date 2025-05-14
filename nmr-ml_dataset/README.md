@@ -1,9 +1,16 @@
 # C<sub>60</sub> Fullerene Dataset Preparation for Training the NMR-ML SchNet Architecture
-**Author:** Ouail Zakary  
-**ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
-**E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
-**Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-**Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
+
+📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+
+---
+
+👤 Corresponding Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
+
+---
 
 This document describes the preparation of datasets for training the NMR-ML SchNet architecture.
 
