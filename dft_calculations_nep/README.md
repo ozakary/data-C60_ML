@@ -20,7 +20,7 @@ This project contains computational data for C<sub>60</sub> structures. Each str
 
 The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The corresponding DFT data for the structures can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
 
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `n`. One example folder `cluster_34000` is included here for each DFT level, and can be found in the corresponding subdirectory.
+In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`. ID ranges from `0` to `n`, where `n` is the corresponding time step of the given configuration in the [DFTB+](../DFTB-MD/) MD simulation. One example folder `cluster_34000` is included here for each DFT level, and can be found in the corresponding subdirectory.
 
 Directory structure example:
 ```
