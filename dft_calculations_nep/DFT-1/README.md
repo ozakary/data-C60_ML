@@ -28,11 +28,11 @@ The dataset consists of two xyz files:
 Both files have the same, standard xyz file structure
    - `energy` : Gives the target energy of the structure in units of eV
    - `config_type`: An optional keyword for labeling that has no effect on the training process
-   - `Lattice`: Givers the cell vectors  
+   - `Lattice`: Gives the cell vectors  
      **a** = a<sub>x</sub>**e**<sub>x</sub> + a<sub>y</sub>**e**<sub>y</sub> + a<sub>z</sub>**e**<sub>z</sub>  
      **b** = b<sub>x</sub>**e**<sub>x</sub> + b<sub>y</sub>**e**<sub>y</sub> + b<sub>z</sub>**e**<sub>z</sub>  
      **c** = c<sub>x</sub>**e**<sub>x</sub> + c<sub>y</sub>**e**<sub>y</sub> + c<sub>z</sub>**e**<sub>z</sub>  
-   - `Properties`: Provide the structural properties in the form of `properties=property_name:data_type:number_of_columns`
+   - `Properties`: Provide the structural properties in the form of `properties=property_name:data_type:number_of_columns`  
      but only the following items are read
      - `species:S:1` chemical symbol of the element
      - `pos:R:3` position vector of an atom
