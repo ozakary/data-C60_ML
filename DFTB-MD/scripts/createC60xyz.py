@@ -3,7 +3,7 @@ import os
 path = os.getcwd()
 xyzfile = path.split("/")[-1].replace("cluster", "coord") + ".xyz"
 
-w = open("ref.xyz", "w")
+w = open("temp.xyz", "w")
 
 lines = open(xyzfile, "r")
 for i, val in enumerate(lines.readlines()):
