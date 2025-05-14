@@ -4,11 +4,16 @@
 
 ![Graphical Abstract](./blank.png)
 
-**Author:** Ouail Zakary  
+**Authors:** Ouail Zakary and Ossi Laurila  
+
+---
+**Contact Author**  
 **ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 **E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 **Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 **Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
+
+---
 
 This is the Supporting Dataset for the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
