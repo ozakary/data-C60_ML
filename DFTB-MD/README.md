@@ -1,1 +1,1 @@
-This directory contains the semi-empirical MD data produced with DFTB+
+This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model.
