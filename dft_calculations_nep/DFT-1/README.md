@@ -40,7 +40,7 @@ Both files have the same, standard xyz file structure
 
 ## File Structure Example
 
-The dataset files **train.xyz** and **test.xyz** have the same format:
+An example of dataset file **train.xyz** structure:
 ```
 60
 energy=-87.60003760837 config_type=nep3xyz Lattice="25.0 0.0 0.0 0.0 25.0 0.0 0.0 0.0 25.0" Properties=species:S:1:pos:R:3:force:R:3
@@ -53,6 +53,7 @@ energy=-87.31051611906 config_type=nep3xyz Lattice="25.0 0.0 0.0 0.0 25.0 0.0 0.
 C 12.78927368 12.12731931 15.92290154 -2.520181816176924 0.6058518576918551 1.825274041053007
 ...
 ```
+- The **test.xyz** file has similar structure
 
 ## Dataset Preparation
 
