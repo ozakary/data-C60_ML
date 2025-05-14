@@ -1,9 +1,16 @@
 # NMR-ML SchNet Architecture Training, Validation, and Testing
-**Author:** Ouail Zakary  
-**ORCID:** [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
-**E-mail:** [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
-**Website:** [Ouail Zakary - webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-**Portfolio:** [Ouail Zakary - portfolio](https://ozakary.github.io/)
+
+📄 Authors: **Ouail Zakary** and **Ossi Laurila**
+
+---
+
+👤 Corresponding Author: **Ouail Zakary**  
+- 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
+- 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
+- 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
+- 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
+
+---
 
 This sub-repository contains the code and workflows for training a machine learning model to predict NMR magnetic shielding tensors using the SchNet neural network architecture. The model is trained on a dataset of 1001 C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using TURBOMOLE.
 
