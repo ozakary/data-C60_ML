@@ -33,7 +33,7 @@ Directory structure example:
 ./cluster_0/ridft.out
 ./cluster_0/statistics
 ./cluster_1/coord
-./cluster_1/coord_0.xyz
+./cluster_1/coord_1.xyz
 ./cluster_1/energy
 ./cluster_1/gradient
 ./cluster_1/mpshift.out
