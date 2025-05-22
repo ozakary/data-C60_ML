@@ -1,0 +1,12 @@
+potential   nep.txt
+velocity    300
+
+time_step   0.5
+ensemble    pimd 32 300 300 50
+run         10000
+
+dump_exyz   500 1 0
+dump_beads  500 1 0
+dump_thermo 500
+dump_restart 100000
+run 6000000
