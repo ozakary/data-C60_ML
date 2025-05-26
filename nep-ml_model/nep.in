@@ -1,13 +1,13 @@
 type          1 C # this is a mandatory keyword
-version       3       # default
-cutoff        8 4     # default
-n_max         4 6     # default
-basis_size    10 8   # default
-l_max         4 2 1   # default
-neuron        100      # default
-lambda_e      1.0     # default
-lambda_f      10.0     # default
-lambda_v      0     # default
-batch         100    # default
-population    50      # default
-generation    200000  # default
+version       3
+cutoff        8 4
+n_max         4 6
+basis_size    10 8
+l_max         4 2 1
+neuron        100
+lambda_e      1.0
+lambda_f      10.0
+lambda_v      0
+batch         100
+population    50
+generation    200000
