@@ -65,7 +65,7 @@ Here ``<n>``is the n<sup>th</sup> output structure in the beads_dump_**i**.xyz o
 
 
 ***volume_avg.py***
-Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> configuration by taking the average of the volume over all the beads written in the files volumes_**i**bead.txt. The script creates an output file `volumes_avg.txt`, with the format:
+Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> configuration by taking the average of the volume over all the beads written in the files volumes_**i**bead.txt. The script creates an output file `volumes_average.txt`, with the format:
 ```
 <volume (Å)>
 <volume (Å)>
