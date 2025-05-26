@@ -36,6 +36,7 @@ The training process creates the following output files:
      nep.txt                # The trained model parameter file
      run_results.out        # Log file of the training
      run_error.out          # Error file of the training
+```
 
 - Note that we do not use virials in the training process
 
