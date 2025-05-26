@@ -41,4 +41,4 @@ The training process creates the following output files:
 
 ---
 
-For further details, please refer to the original [documentation](https://github.com/brucefan1983/GPUMD) of GPUMD or contact the author via the provided email.
+For further details, please refer to the original [GPUMD](https://github.com/brucefan1983/GPUMD) documentation or contact the author via the provided email.
