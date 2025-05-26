@@ -21,6 +21,7 @@ Three sub-directories
 - [pimd_nmr_hh](./pimd_nmr_hh)
 - [pimd_nmr_hp](./pimd_nmr_hp)
 - [pimd_nmr_single](./pimd_nmr_single)  
+
 are provided. The structure of each directory is:
 
 ```
