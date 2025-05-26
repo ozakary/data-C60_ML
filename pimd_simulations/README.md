@@ -20,12 +20,12 @@ This sub-repository contains example input files for the PIMD simulations, final
 Three sub-directories  
 - [pimd_nmr_hh](./pimd_nmr_hh)
 - [pimd_nmr_hp](./pimd_nmr_hp)
-- [pimd_nmr_single](./pimd_nmr_single)
+- [pimd_nmr_single](./pimd_nmr_single)  
 are provided. The structure of each directory is:
 
 ```
 ./
-    model.xyz             # Input structure of C<sub>60</sub> for the initial configuration of the simulation
+    model.xyz             # Input structure of C60 for the initial configuration of the simulation
     nep.txt               # The trained NEP model MLIP-1, containing the trained parameters of the model
     run.in                # Simulation protocol
 ```
@@ -35,12 +35,12 @@ A directory [pimd_nmr_nte](./pimd_nmr_nte) is provided with the following struct
 
 ```
 ./
-    model.xyz              # Input structure of C<sub>60</sub> for the initial configuration of the simulation
+    model.xyz              # Input structure of C60 for the initial configuration of the simulation
     nep-mlip1.txt          # The trained NEP model MLIP-1, containing the trained parameters of the model
     nep-mlip2.txt          # The trained NEP model MLIP-2, containing the trained parameters of the model
     nep-mlip3.txt          # The trained NEP model MLIP-3, containing the trained parameters of the model
     run.in                 # Simulation protocol
-    volume_avg.py          # Script for calculating the average volume of C<sub>60</sub> over the beads
+    volume_avg.py          # Script for calculating the average volume of C60 over the beads
     volume_beads.py        # Script for calculating the volume of each individual bead
 ```
 
