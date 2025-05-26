@@ -17,8 +17,11 @@ This sub-repository contains example input files for the PIMD simulations, final
 
 
 ### PIMD for NMR chemical shielding
-Three sub-directories [pimd_nmr_hh](./pimd_nmr_hh), [pimd_nmr_hp](./pimd_nmr_hp), [pimd_nmr_single](./pimd_nmr_single) are provided.
-The structure of each directory is:
+Three sub-directories  
+- [pimd_nmr_hh](./pimd_nmr_hh)
+- [pimd_nmr_hp](./pimd_nmr_hp)
+- [pimd_nmr_single](./pimd_nmr_single)
+are provided. The structure of each directory is:
 
 ```
 ./
@@ -80,7 +83,7 @@ python3 volume_beads.py
 python3 volume_avg.py
 ```
 
-In the case of PIMD for NMR chemical shielding, the step 4 may be skipped. In this case the analysis can be continued with the instructions found in [nmr-ml_prediction](../../nmr-ml_prediction).
+In the case of PIMD for NMR chemical shielding, the step 4 may be skipped. In this case the analysis can be continued with the instructions found in [nmr-ml_prediction](../nmr-ml_prediction).
 
 
 ---
