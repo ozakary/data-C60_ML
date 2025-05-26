@@ -32,7 +32,7 @@ The training process creates the following output files:
      force_train.out        # Predicted values of forces for structures in test.xyz
      virial_test.out        # Predicted values of virial for structures in test.xyz
      virial_train.out       # Predicted values of virial for structures in test.xyz
-     loss.out               # Terms of loss function during the training process. logged every 100<sup>th</sup> iteration
+     loss.out               # Terms of loss function during the training process logged every 100<sup>th</sup> iteration
      nep.txt                # The trained model parameter file
      run_results.out        # Log file of the training
      run_error.out          # Error file of the training
