@@ -17,6 +17,11 @@ This folder contains all the needed input files to train a NEP MLIP model
 ## Training process of NEP3 model
 
 Training of a NEP model requires the input file `nep.in` and the training and testing dataset xyz-files `train.xyz` and `test.xyz`.
-The internal hyperparameters and the training process are controlled through the `nep.in` input file.
-With the provided file structure, the training process of NEP can be started with the command `nep`, provided that **GPUMD** and **NEP** are installed.
+The internal hyperparameters of the model and the training process are controlled through the `nep.in` input file.
+With the provided file structure, the training process of NEP model can be started with the command
+```nep```
+provided that **GPUMD** and **NEP** are installed.
 
+---
+
+For further details, please refer to the original [documentation](https://github.com/brucefan1983/GPUMD) of GPUMD or contact the author via the provided email.
