@@ -1,7 +1,7 @@
 import numpy as np
 import os
 
-writefilepath = "volumes_trace.txt"
+writefilepath = "volumes_average.txt"
 beads = 32
 
 # Calculates the average volume over the beads for every sample point
