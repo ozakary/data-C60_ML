@@ -1,5 +1,3 @@
-This folder contains all the needed input files to train a NEP MLIP model
-
 # C<sub>60</sub> NEP3 Machine learning interatomic potentials (MLIP)
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
