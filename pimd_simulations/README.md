@@ -71,7 +71,7 @@ Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> co
 <volume (Å)>
 ...
 ```
-where each line in the file contains the average volume of C<sub>60</sub> calculated from the corresponding lines in the files volumes_**i**bead.txt.
+Here each line in the file contains the average volume of C<sub>60</sub> calculated from the corresponding lines in the files volumes_**i**bead.txt.
 
 
 ## Workflow
