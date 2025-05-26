@@ -17,12 +17,12 @@ This sub-repository contains example input files for the PIMD simulations, final
 
 
 ### PIMD for NMR chemical shielding
-Three sub-directories  
+Three sub-directories are provided  
 - [pimd_nmr_hh](./pimd_nmr_hh)
 - [pimd_nmr_hp](./pimd_nmr_hp)
 - [pimd_nmr_single](./pimd_nmr_single)  
 
-are provided. The structure of each directory is:
+The structure of each directory is:
 
 ```
 ./
