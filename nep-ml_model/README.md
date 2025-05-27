@@ -40,6 +40,7 @@ The training process creates the following output files:
 ```
 
 - Note that we do not use virials in the training process
+- The trained nep model parameter files are available [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
 
 ---
 
