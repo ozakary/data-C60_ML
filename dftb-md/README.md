@@ -16,9 +16,9 @@
 
 This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model.
 
-### Input files
+### DFTB+ input files
 
-All the necessary files needed to start the MD simulation with DFTB+ are provided in the [input_files](./input_files) directory. The structure of the directory is as follows:
+All the necessary files needed to start the MD simulation with DFTB+ are provided here. The structure of the directory is as follows:
 ```
 ./
      dftb_in.hsd        # The main input file for DFTB+
@@ -35,7 +35,7 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 
 ### Scripts
 
-Scripts used to analyze the MD trajectory and to initialize the [DFT calculations](../dft_calculations_nep) for the C<sub>60</sub> structures produced in the MD simulation are presented in the [scripts](./scripts) directory.  
+Scripts used to analyze the MD trajectory and to initialize the [DFT calculations](../dft_calculations_nep) for the C<sub>60</sub> structures produced in the MD simulation are also presented in this directory.  
 
 **prepare.sh**  
 After the DFTB+ calculation has been completed this shell script prepares the results for the DFT calculations of the reference C<sub>60</sub> configurations.  
