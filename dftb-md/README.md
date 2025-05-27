@@ -25,9 +25,12 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
      dftb_pin.hsd       # Processed and parsed input file created by the DFTB+ software, preferred over dftb_in.hsd to repeat the simulation
      geom.out.gen       # The initial He@C<sub>60</sub> configuration in the generic format
      geom.out.xyz       # The initial He@C<sub>60</sub> configuration in the xyz format
+     prepare.sh         # Shell script for preparing DFT calculations, not used in DFTB+ simulation
+     createC60xyz.py    # Python script used to create empty C60 structures from the DFTB+ simulation trajectory
 ```
 
-- Note that if you want to exactly repeat the calculation, you are strongly suggested to remove the `dftb_in.hsd`, and then rename the file `dftb_pin.hsd` as `dftb_in.hsd`.
+- Note that if you want to exactly repeat the calculation, you are strongly suggested to remove the `dftb_in.hsd`, and then rename the file `dftb_pin.hsd` as `dftb_in.hsd`  
+- The additional script files `prepare.sh` and `createC60xyz.py` are only used after the DFTB+ simulation has finished
 
 
 ### Scripts
@@ -38,17 +41,19 @@ Scripts used to analyze the MD trajectory and to initialize the [DFT calculation
 After the DFTB+ calculation has been completed this shell script prepares the results for the DFT calculations of the reference C<sub>60</sub> configurations.  
 Running the script with the command `./prepare.sh` creates the following file structure:
 ```
-./cluster_0
-    coord_0.xyz
+./cluster_34000
+    coord_34000.xyz
     createC60xyz.py
-./cluster_1
-    coord_1.xyz
+./cluster_34500
+    coord_34500.xyz
+    createC60xyz.py
+./cluster_35000
+    coord_35000.xyz
     createC60xyz.py
 ...
-./cluster_1
-    coord_1.xyz
-    createC60xyz.py
 ```
+
+Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations](../dft_calculations) to run the DFT calculations for the C<sub>60</sub> configurations.
 
 **createC60xyz.py**  
 This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene end produced an empty C<sub>60</sub> structure.
