@@ -23,8 +23,8 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 ./
      dftb_in.hsd        # The main input file for DFTB+
      dftb_pin.hsd       # Processed and parsed input file created by the DFTB+ software, preferred over dftb_in.hsd to repeat the simulation
-     geom.out.gen       # The initial He@C<sub>60</sub> configuration in the generic format
-     geom.out.xyz       # The initial He@C<sub>60</sub> configuration in the xyz format
+     geom.out.gen       # The initial He@C60 configuration in the generic format
+     geom.out.xyz       # The initial He@C60 configuration in the xyz format
      prepare.sh         # Shell script for preparing DFT calculations, not used in DFTB+ simulation
      createC60xyz.py    # Python script used to create empty C60 structures from the DFTB+ simulation trajectory
 ```
