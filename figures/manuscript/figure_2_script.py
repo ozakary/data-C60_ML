@@ -1,9 +1,5 @@
 import numpy as np
-import os
 import matplotlib.pyplot as plt
-from ase.units import kcal, mol
-import pandas as pd
-from scipy import stats
 
 
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, layout='none', figsize=(9, 7))
