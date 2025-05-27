@@ -20,7 +20,7 @@ The internal hyperparameters of the model and the training process are controlle
 With the provided file structure, the training process of NEP model may be started simply with the command
 ```nep```
 provided that **GPUMD** and **NEP** are installed.  
-Here we have only provided truncated `train.xyz` and `test.xyz` files as an example. The actual files used to train models **MLIP-1**, **MLIP-2**, and **MLIP-3** can be found [here](../dft_calculations_nep).
+Here we have only provided truncated `train.xyz` and `test.xyz` files as an example. The actual files used to train the models **MLIP-1**, **MLIP-2**, and **MLIP-3** can be found [here](../dft_calculations_nep).
 
 ## Output files
 
