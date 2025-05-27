@@ -18,7 +18,6 @@ for i in $(seq -f "%05g" 34000 500 200000 ); do
     python3 createC60xyz.py
     rm -f coord_$i.xyz
     mv temp.xyz coord_${i}.xyz
-    x2t coord_${i}.xyz > coord
     cd ..
 done
 
