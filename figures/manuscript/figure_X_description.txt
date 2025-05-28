@@ -1,1 +1,0 @@
-# DFT computed versus NMR-ML predicted 13C sigma_iso values from the training (blue dots), validation (green crosses), and testing (orange squares) datasets. The dashed black line represents the linear regression fit model, with the R-squared, MAE, and RMSE values reported (top left corner). The the perfect diagonal line is plotted in red.
