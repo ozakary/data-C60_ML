@@ -64,5 +64,5 @@ ax4.tick_params(axis='x', labelsize=16)
 ax4.tick_params(axis='y', labelsize=16)
 
 
-plt.savefig('reference_data_nep.png', dpi=300)
+plt.savefig('figure_2.png', dpi=300)
 plt.show()
