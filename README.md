@@ -22,9 +22,14 @@ This is the Supporting Dataset for the manuscript “***Neural Networks-Enabled 
 
 The dataset comprises the following sections:
 
-1. DFT calculations for the NMR-ML model. ([directory](./dft_calculations_schnet/))
-2. DFT calculations for the three MLIP models. ([directory](./dft_calculations_nep/))
-3. Dataset preparation for the NMR-ML model. ([directory](./nmr-ml_dataset/))
+1. Dataset preparation for the three MLIP models:
+   i. Configuration generation using semi-empirical MD simulations. ([directory](./dftb-md/))
+   ii. DFT calculations of the generated SE-MD configurations for training the three MLIP models. ([directory](./dft_calculations_nep/))
+2. Machine learning-assisted path-integral MD simulations. ([directory](./dft_calculations_schnet/))
+3. Dataset preparation for the NMR-ML model:
+   i. Configuration generation using semi-empirical MD simulations. ([directory](./dftb-md/))
+   ii. DFT calculations for the NMR-ML model. ([directory](./dft_calculations_schnet/))
+   iii. Dataset preparation for the NMR-ML model. ([directory](./nmr-ml_dataset/))
 4. Training, validation, and testing processes for the NMR-ML model using SchNet architecture on NMR magnetic shielding parameters, including the skew, span, and σ<sub>iso</sub>. ([directory](./nmr-ml_model/))
 5. Prediction of NMR isotropic magnetic shielding values, σ<sub>iso</sub>, from the pre-trained NMR-ML model. ([directory](./nmr-ml_prediction/))
 6. Python scripts and raw numerical data for all figures related to the NMR-ML model included in the main manuscript and the Supporting Information. ([directory](./figures/))
