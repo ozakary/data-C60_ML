@@ -1,4 +1,4 @@
-# Path integral molecular dynamics (PIMD) simulations
+# Machine Learning-Assisted Path Integral Molecular Dynamics (MLAPIMD) Simulations
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
