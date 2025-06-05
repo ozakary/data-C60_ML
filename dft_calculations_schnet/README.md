@@ -1,4 +1,4 @@
-# C<sub>60</sub> Fullerene DFT and NMR magnetic Shielding Tensor Calculations
+# C<sub>60</sub> Fullerene DFT and NMR Magnetic Shielding Tensor Calculations
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
