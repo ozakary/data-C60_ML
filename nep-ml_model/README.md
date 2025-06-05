@@ -1,4 +1,4 @@
-# C<sub>60</sub> NEP3 Machine learning interatomic potentials (MLIP)
+# C<sub>60</sub> NEP3 Machine Learning Interatomic Potentials (MLIP)
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
