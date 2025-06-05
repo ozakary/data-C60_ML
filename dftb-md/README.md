@@ -1,4 +1,4 @@
-# He@C<sub>60</sub> semi-empirical MD with DFTB+ code
+# He@C<sub>60</sub> Semi-Empirical MD Using DFTB+ Code
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
