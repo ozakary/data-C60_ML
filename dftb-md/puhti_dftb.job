@@ -19,8 +19,4 @@ ulimit -s unlimited
 
 dftb+ > dftb.log;
 
-# seff $SLURM_JOBID > ${SLURM_NNODES}_${SLURM_NTASKS}_${SLURM_CPUS_PER_TASK}_seff.report
-
-# ./run_restart.sh
-
 
