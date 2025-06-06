@@ -25,6 +25,7 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
      dftb_pin.hsd       # Processed and parsed input file created by the DFTB+ software, preferred over dftb_in.hsd to repeat the simulation
      geom.out.gen       # The initial He@C60 configuration in the generic format
      geom.out.xyz       # The initial He@C60 configuration in the xyz format
+     puhti_dftb.job     # Job script to run DFTB+ in Puhti HPC
      prepare.sh         # Shell script for preparing DFT calculations, not used in DFTB+ simulation
      createC60xyz.py    # Python script used to create empty C60 structures from the DFTB+ simulation trajectory
 ```
