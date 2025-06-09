@@ -6,7 +6,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(12.4, 5))
 
 #Load data of simulation in folder f and split the data at interval s
 def ld(f, s):
-    return np.concatenate(np.loadtxt('./' + f + '/vol2.txt')[1::s], axis=None)
+    return np.concatenate(np.loadtxt('./' + f + '/allvol.txt')[1::s], axis=None)
 
 #Calculate mean and stdev and standard error
 def calc_stats(data):
