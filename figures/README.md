@@ -29,7 +29,14 @@ To reproduce the figures and analyze the data, you will need the following:
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|-------------|-------------|------------|-----------------|
-| [Figure X-a](./manuscript/figure_X-a.png), [Figure X-b](./manuscript/figure_X-b.png), [Figure X-c](./manuscript/figure_X-c.png) | [Script](./manuscript/figure_X_script.py) | [Data X-a](./manuscript/figure_X-a_data.csv), [Data X-b](./manuscript/figure_X-b_data.csv), [Data X-c](./manuscript/figure_X-c_data.csv) | [Readme](./manuscript/figure_X_readme.txt) | [Description](./manuscript/figure_X_description.txt) |
+| [Figure 1](./manuscript/figure_1.png) | - | - | [Readme](./manuscript/figure_1_readme.txt) | [Description](./manuscript/figure_1_description.txt) |  
+| [Figure 2](./manuscript/figure_2.png) | [Script](./manuscript/figure_2_script.png) | - | [Readme](./manuscript/figure_2_readme.txt) | [Description](./manuscript/figure_2_description.txt) |  
+| [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.png) | - | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
+| [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.png) | - | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
+| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.png) | - | [Readme](./manuscript/figure_5_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
+| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.png) | - | [Readme](./manuscript/figure_6_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
+| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.png) | - | [Readme](./manuscript/figure_7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
+| [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.png) | - | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
 
 ## Table 2: Figures from the Supporting Information
 
