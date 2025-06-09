@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from ase.units import kcal, mol
 import pandas as pd
 
+# Linestyle settings of matplotlib
 linestyle_tuple = [
      ('loosely dotted',        (0, (1, 10))),
      ('dotted',                (0, (1, 5))),
