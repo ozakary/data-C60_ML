@@ -1,1 +1,1 @@
-Evolution of the training process of the NEP MLIP-1 model including the training with active learning-enhanced training dataset.
+Evolution of the training process of the NEP MLIP models.
