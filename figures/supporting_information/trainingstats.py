@@ -2,14 +2,10 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(11, 5))
-fig.subplots_adjust(left=0.08, right=0.968, wspace=0.387, top=0.921, bottom=0.117, hspace=0.2)
-
-plt.rcParams.update({'font.size': 16})
-
-loss_m1 = np.loadtxt('loss.out')
-loss_m2 = np.loadtxt('../nodisp_tzvp/pot12_2_1/loss.out')
-loss_m3 = np.loadtxt('../nodisp_pcsseg-1/run3/loss.out')
+# Load the data
+loss_m1 = np.loadtxt('../manuscript/MLIP-1/loss.out')
+loss_m2 = np.loadtxt('../manuscript/MLIP-2/loss.out')
+loss_m3 = np.loadtxt('../manuscript/MLIP-3/loss.out')
 
 energy_train_m1 = loss_m1[:6000, 4]*1000
 force_train_m1 = loss_m1[:6000, 5]
@@ -20,6 +16,10 @@ force_train_m2 = loss_m2[:, 5]
 energy_train_m3 = loss_m3[:, 4]*1000
 force_train_m3 = loss_m3[:, 5]
 
+#Plot
+plt.rcParams.update({'font.size': 16})
+fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(11, 5))
+fig.subplots_adjust(left=0.08, right=0.968, wspace=0.387, top=0.921, bottom=0.117, hspace=0.2)
 
 #Energy train
 ax1.loglog(energy_train_m1, color='blue', label="MLIP-1")
