@@ -1,1 +1,1 @@
-Evolution of the training process of the NEP MLIP models.
+Evolution of the training process of the NEP MLIP models. Figure (a) shows the energy loss in meV/atom, and (b) shows the force loss in eV/Å.
