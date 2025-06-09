@@ -29,23 +29,23 @@ To reproduce the figures and analyze the data, you will need the following:
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|-------------|-------------|------------|-----------------|
-| [Figure 1](./manuscript/figure_1.png) | - | - | [Readme](./manuscript/figure_1_readme.txt) | [Description](./manuscript/figure_1_description.txt) |  
+| [Figure 1](./manuscript/figure_1.png) | N/A | N/A | [Readme](./manuscript/figure_1_readme.txt) | [Description](./manuscript/figure_1_description.txt) |  
 | [Figure 2](./manuscript/figure_2.png) | [Script](./manuscript/figure_2_script.py) | [Data](./manuscript/MLIP-1) | [Readme](./manuscript/figure_2_readme.txt) | [Description](./manuscript/figure_2_description.txt) |  
 | [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
 | [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.py) | [Data](./manuscript/sigma_dft_data) | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
-| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | - | [Readme](./manuscript/figure_5_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
-| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | - | [Readme](./manuscript/figure_6_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
+| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | N/A | [Readme](./manuscript/figure_5_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
+| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | N/A | [Readme](./manuscript/figure_6_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
 | [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./manuscript/figure_7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
-| [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.py) | - | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
+| [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.py) | N/A | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
 
 ## Table 2: Figures from the Supporting Information
 
 | **Figure** | **Script** | **Dataset** | **Readme** | **Description** |
 |------------|------------|-------------|------------|-----------------|
-| [Figure S1](./supporting_information/figure_S1.png) | - | - | [Readme](./supporting_information/figure_S1_readme.txt) | [Description](./supporting_information/figure_S1_description.txt) |
-| [Figure S2](./supporting_information/figure_S2.png) | - | - | [Readme](./supporting_information/figure_S2_readme.txt) | [Description](./supporting_information/figure_S2_description.txt) |
-| [Figure S3](./supporting_information/figure_S3.png) | - | - | [Readme](./supporting_information/figure_S3_readme.txt) | [Description](./supporting_information/figure_S3_description.txt) |
-| [Figure S4](./supporting_information/figure_S4.png) | - | - | [Readme](./supporting_information/figure_S4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
+| [Figure S1](./supporting_information/figure_S1.png) | N/A | N/A | [Readme](./supporting_information/figure_S1_readme.txt) | [Description](./supporting_information/figure_S1_description.txt) |
+| [Figure S2](./supporting_information/figure_S2.png) | N/A | N/A | [Readme](./supporting_information/figure_S2_readme.txt) | [Description](./supporting_information/figure_S2_description.txt) |
+| [Figure S3](./supporting_information/figure_S3.png) | N/A | N/A | [Readme](./supporting_information/figure_S3_readme.txt) | [Description](./supporting_information/figure_S3_description.txt) |
+| [Figure S4](./supporting_information/figure_S4.png) | N/A | N/A | [Readme](./supporting_information/figure_S4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
 | [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./supporting_information/figure_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
 | [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](./supporting_information/sigma_iso/log/log.csv) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
 
