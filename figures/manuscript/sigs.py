@@ -3,23 +3,23 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 # Load the results
-results260hh = np.loadtxt('./260/hh/sigma2.txt')
-results280hh = np.loadtxt('./280/hh/sigma2.txt')
-results300hh = np.loadtxt('./300/hh/sigma2.txt')
-results320hh = np.loadtxt('./320/hh/sigma2.txt')
-results340hh = np.loadtxt('./340/hh/sigma2.txt')
+results260hh = np.loadtxt('./260/hh/sigma.txt')
+results280hh = np.loadtxt('./280/hh/sigma.txt')
+results300hh = np.loadtxt('./300/hh/sigma.txt')
+results320hh = np.loadtxt('./320/hh/sigma.txt')
+results340hh = np.loadtxt('./340/hh/sigma.txt')
 
-results260hp = np.loadtxt('./260/hp/sigma2.txt')
-results280hp = np.loadtxt('./280/hp/sigma2.txt')
-results300hp = np.loadtxt('./300/hp/sigma2.txt')
-results320hp = np.loadtxt('./320/hp/sigma2.txt')
-results340hp = np.loadtxt('./340/hp/sigma2.txt')
+results260hp = np.loadtxt('./260/hp/sigma.txt')
+results280hp = np.loadtxt('./280/hp/sigma.txt')
+results300hp = np.loadtxt('./300/hp/sigma.txt')
+results320hp = np.loadtxt('./320/hp/sigma.txt')
+results340hp = np.loadtxt('./340/hp/sigma.txt')
 
-results260single = np.loadtxt('./260/single/sigma2.txt')
-results280single = np.loadtxt('./280/single/sigma2.txt')
-results300single = np.loadtxt('./300/single/sigma2.txt')
-results320single = np.loadtxt('./320/single/sigma2.txt')
-results340single = np.loadtxt('./340/single/sigma2.txt')
+results260single = np.loadtxt('./260/single/sigma.txt')
+results280single = np.loadtxt('./280/single/sigma.txt')
+results300single = np.loadtxt('./300/single/sigma.txt')
+results320single = np.loadtxt('./320/single/sigma.txt')
+results340single = np.loadtxt('./340/single/sigma.txt')
 
 sig260hh = np.concatenate((results260hh), axis=None)
 sig280hh = np.concatenate((results280hh), axis=None)
