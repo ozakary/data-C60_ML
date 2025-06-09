@@ -46,7 +46,7 @@ To reproduce the figures and analyze the data, you will need the following:
 | [Figure S2](./supporting_information/figure_S2.png) | - | - | [Readme](./supporting_information/figure_S2_readme.txt) | [Description](./supporting_information/figure_S2_description.txt) |
 | [Figure S3](./supporting_information/figure_S3.png) | - | - | [Readme](./supporting_information/figure_S3_readme.txt) | [Description](./supporting_information/figure_S3_description.txt) |
 | [Figure S4](./supporting_information/figure_S4.png) | - | - | [Readme](./supporting_information/figure_S4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
-| [Figure S5](./supporting_information/figure_S5.png) | - | - | [Readme](./supporting_information/figure_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
+| [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./supporting_information/figure_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
 | [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](./supporting_information/sigma_iso/log/log.csv) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
 
 ---
