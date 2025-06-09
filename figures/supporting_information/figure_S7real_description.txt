@@ -1,0 +1,1 @@
+Correlation figure of the potential energy in a test PIMD simulation of C60 at T = 300 K with P = 32. Based on the figure, the correlation time is determined to be approximately 1000 simulation time steps.
