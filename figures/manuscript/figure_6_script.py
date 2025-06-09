@@ -141,5 +141,5 @@ axins2.set_xticks([100, 200, 300, 400, 500])
 axins2.set_yticks([184.600, 184.650, 184.700])
 axins2.tick_params(axis='both', labelsize=11, which='both', bottom=True, left=True, zorder=True)
 
-plt.savefig('myfig.png', dpi=300, transparent=True)
+plt.savefig('figure_6.png', dpi=300, transparent=True)
 plt.show()
