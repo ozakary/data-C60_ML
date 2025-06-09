@@ -1,0 +1,1 @@
+RMSE values for energy (E, meV/atom) and forces (F, eV/Å) with varying angular descriptor term cutoff radii. The training is stopped at iteration 100 000.
