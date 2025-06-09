@@ -95,7 +95,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
   - [coord](./input_files/coord): Cartesian coordinates file
   - [auxbasis](./input_files/auxbasis): Auxiliary basis set for RI approximation
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
-- The Turbomole calculations can be started with the job script found [here](../dft_calculations_nep/DFT-2/input_files/tm77_puhti.job)
+- The Turbomole calculations can be started in Puhti with the job script found [here](../dft_calculations_nep/DFT-2/input_files/tm77_puhti.job)
 
 
 ---
