@@ -162,5 +162,5 @@ axins1.errorbar(beads[0:6], vol_500, yerr=sem_500, capsize=2.0, fmt="o", label="
 axins1.set_xticks([2, 4, 8, 16, 32, 64, 128])
 axins1.tick_params(axis='both', labelsize=11, which='both', bottom=True, left=True, zorder=True)
 
-plt.savefig('myfig.png', dpi=300, transparent=True)
+plt.savefig('figure_5.png', dpi=300, transparent=True)
 plt.show()
