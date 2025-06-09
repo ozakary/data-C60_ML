@@ -28,7 +28,8 @@ Directory structure example:
 ./cluster_0/auxbasis
 ./cluster_0/mpshift.out
 ./cluster_0/rdgrad.out
-./cluster_0/ridft.out
+./cluster_0/ridft.out  
+
 ./cluster_1/basis
 ./cluster_1/control
 ./cluster_1/coord
