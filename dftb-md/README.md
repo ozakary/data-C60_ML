@@ -54,7 +54,7 @@ Running the script with the command `./prepare.sh` creates the following file st
 ...
 ```
 
-Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations](../dft_calculations) to run the DFT calculations for the C<sub>60</sub> configurations.
+Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations_schnet](../dft_calculations_schnet) to run the DFT calculations for the C<sub>60</sub> configurations.
 
 **createC60xyz.py**  
 This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene end produced an empty C<sub>60</sub> structure.
