@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 
-fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(12.4, 5))
-
 #Load data of simulation in folder f and split the data at interval s
 def ld(f, s):
     return np.concatenate(np.loadtxt('./' + f + '/allvol.txt')[1::s], axis=None)
@@ -70,6 +68,7 @@ ref_data_abs_diff = [a - volumedata_ref[3] for a in volumedata_ref]
 
 # Plot the data
 
+fig, (ax1, ax2) = plt.subplots(1, 2, layout='none', figsize=(12.4, 5))
 fig.subplots_adjust(left=0.105, right=0.952, wspace=0.5, top=0.921, bottom=0.117, hspace=0.2)
 
 ax1.scatter(temps, m1_data, color='black', s=22)
