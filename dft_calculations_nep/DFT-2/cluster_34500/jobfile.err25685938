@@ -1,0 +1,16 @@
+Turbomole version 7.7  environment loaded 
+Including TmoleX23
+For further instructions, see
+https://docs.csc.fi/apps/turbomole/
+ ridft ended normally
+ rdgrad ended normally
+forrtl: No such file or directory
+forrtl: severe (28): CLOSE error, unit 81, file "Unknown"
+Image              PC                Routine            Line        Source             
+mpshift_omp        00000000071584CB  Unknown               Unknown  Unknown
+mpshift_omp        000000000714A84F  Unknown               Unknown  Unknown
+mpshift_omp        0000000000683239  bfield_cphf_             2039  bfield_cphf.f
+mpshift_omp        00000000004836B6  MAIN__                   3739  mpshift.f
+mpshift_omp        000000000045D022  Unknown               Unknown  Unknown
+libc-2.28.so       000014BD09B8E7E5  __libc_start_main     Unknown  Unknown
+mpshift_omp        000000000045CF29  Unknown               Unknown  Unknown

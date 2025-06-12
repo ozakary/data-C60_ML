@@ -1,0 +1,353 @@
+
+   OpenMP run-time library returned nthreads = 10
+
+ rdgrad (r06c36.bullx) : TURBOMOLE rev. V7-7 compiled 19 Oct 2022 at 02:10:57
+ Copyright (C) 2022 TURBOMOLE GmbH, Karlsruhe
+
+
+    2025-01-08 14:29:27.471 
+
+
+
+                                 r d g r a d
+
+                          gradient for ridft program 
+
+                        by K.Eichkorn, O.Treutler, H.Oehm, 
+                             M.Haeser and R.Ahlrichs
+                  (Chemical Physics Letters 242 (1995) 652-660)
+                    parallel version: M.v.Arnim  &  R.Ahlrichs
+                            quantum chemistry group
+                             university  karlsruhe
+                                   germany
+
+
+
+
+                          References             
+                                                 
+          Density Functional:                              
+              O. Treutler and R. Ahlrichs                      
+              Efficient Molecular Numerical Integration Schemes
+              J. Chem. Phys. 102: 346 (1995)                   
+          Parallel Version:                                
+              Performance of parallel TURBOMOLE for Density    
+              Functional Calculations                          
+              M. v. Arnim and R. Ahlrichs                      
+              J. Comp. Chem. 19: 1746 (1998)                   
+          RI-J Method:                                     
+              Auxiliary Basis Sets to approximate Coulomb      
+              Potentials                                       
+              Chem. Phys. Lett. 240: 283 (1995)                
+              K. Eichkorn, O. Treutler, H. Oehm, M. Haeser     
+              and R. Ahlrichs                                  
+              Chem. Phys. Lett. 242: 652 (1995)                
+                                                           
+              Auxiliary Basis Sets for Main Row Atoms and their
+              Use to approximate Coulomb Potentials            
+              K. Eichkorn, F. Weigend, O. Treutler and         
+              R. Ahlrichs                                      
+              Theo. Chem. Acc. 97: 119 (1997)                  
+          Relativistic Two-component ECP formalism             
+              Efficient two-component self-consistent field    
+              procedures and gradients: implementation in      
+              TURBOMOLE and application to Au20-               
+              A. Baldes and F. Weigend                         
+              Mol. Phys. 111: 2617 (2013)                      
+          Relativistic all-electron 2c calculations (X2C, DLU) 
+              Efficient implementation of one- and two-component
+              analytical energy gradients in exact two-component
+              theory                                           
+              Y. J. Franzke, N. Middendorf and F. Weigend      
+              J. Chem. Phys. 148: 104110 (2018)                
+          Exploitation of symmetry in scalar X2C response      
+              NMR shielding tensors and chemical shifts in     
+              scalar-relativistic local exact two-component    
+              theory                                           
+              Y. J. Franzke and F. Weigend                     
+              J. Chem. Theory Comput. 15: 1028 (2019)          
+                                                              
+
+
+
+
+
+          OpenMP Shared-Memory Parallelization: 10 CPUs.
+
+            By: Yannick J. Franzke and Christof Holzer
+ 
+
+ integral neglect threshold       :  0.14E-12
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+ PBE0 hybrid functional
+ exchange:    3/4 (LDA+PBE) + 1/4 HF
+ correlation: LDA (PW) + PBE
+ A Hybrid-DFT gradient calculation
+  using seminumeric exchange will be carried out.
+  
+  
+ AUXILIARY BASIS SET information:
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+ maximum number of shells which are related by symmetry :  1
+
+
+    mo occupation :
+   irrep   mo's   occupied
+    a     2040      180
+ 
+ number of basis functions   :  2040
+ number of occupied orbitals :   180
+ 
+
+ number of off-diagonal lagrangians expected :  0
+
+ biggest AO integral is expected to be     5.730030563
+  
+           ------------------
+           seminumerical grid
+           ------------------
+ iterations will be done with small grid
+  
+ spherical integration : Lebedev's spherical grid
+ spherical gridsize    :                     3
+    i.e. gridpoints    :                   302
+  maximum batchsize    :                   100
+ value for diffuse not defined
+ radial integration    : Chebyshev 2nd kind (scaling 3)
+ radial gridsize       :                     3
+ integration cells     :                    60
+ partition function    : becke
+ partition sharpness   :                     3
+  
+  
+           ------------------
+           density functional
+           ------------------
+ PBE0 hybrid functional
+ exchange:    3/4 (LDA+PBE) + 1/4 HF
+ correlation: LDA (PW) + PBE
+ spherical integration : Lebedev's spherical grid
+ spherical gridsize    :                     4
+    i.e. gridpoints    :                   434
+  maximum batchsize    :                   100
+ value for diffuse not defined
+ radial integration    : Chebyshev 2nd kind (scaling 3)
+ radial gridsize       :                     6
+ integration cells     :                    60
+ partition function    : becke
+ partition sharpness   :                     3
+  
+ grids with increased radial size are used
+
+ Using current-dependent DFT
+
+  
+           ------------------------
+             RDGRAD - INFORMATION
+           ------------------------
+  
+
+ -------------------------------------------------
+ ------     SEMINUMERICAL CALCULATION       ------
+ ------     using the semiJK algorithm      ------
+ -------------------------------------------------
+
+ using tight bounds in seminumeric procedure
+ using tight integral bounds for s-junctions
+ using tight integral bounds for p-junctions
+ threshold for f-junctions:   0.100000000000E-12
+ threshold for k-junctions:   0.100000000000E-09
+ threshold for near field :   0.100000000000E-04
+ max. BF   for near field :        0
+ using cholesky decomposed overlap metric in seminumeric procedure
+ Threshold for integral neglect (rithr1): 1E-10
+ Threshold for integral neglect (rithr2): 1E-10
+ Contributions to RI integral batches: 
+  neglected integral batches:                 92793
+  direct contribution:                       166767
+     
+ 
+    +---------------- Multipole Accelerated RI-J ---------------+
+    -------------------------------------------------------------
+      Number of bins for density partition        :  8
+      Maximum multipole moment used               : 14
+      Multipole precision parameter               :  1.0000E-08
+      Threshold for moment summation              :  1.0000E-24
+      Minimum separation between boxes            :  0.0000E+00
+      Maximum allowed extent                      :  2.0000E+01
+    +-----------------------------------------------------------+
+ 
+ Extensions and centers of shell-pairs:
+  number of shells with a single center:   154778
+  number of shells with double centers:     11989
+ ****************************************
+ Memory allocated for RDGRAD: 193 MiB
+ ****************************************
+                                            
+     
+
+ nuclear repulsion energy  :   8382.12815807    
+
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo  from file mos
+ orbital characterization : scfconv=8
+  Deviation of MOs from orthonormality   4.516314145580624E-011
+
+    ----------------------------------------
+     S+T+V CONTRIBUTIONS TO ENERGY GRADIENT 
+    ----------------------------------------
+ DLU scheme used in X2C
+ 
+ ---------------------------------------------------------------
+ Performing 1c X2C gradient calculation with local approximation
+ ---------------------------------------------------------------
+
+ maximum number of shells which are related by symmetry :  1
+
+ Setup local relativistic approximation
+ 
+ Estimated memory requirements for X2C quantities in MB on 1 CPU:
+                   769
+ 
+ Evaluating integrals
+
+ Using finite size model (Gaussian charge distribution) for the nuclei. 
+ RMS radius: c        0.248455E-02 pm,    0.469513E-04 a.u.
+
+ 1e-integrals will be neglected if expon. factor < 0.142819E-13
+
+ Constructing 1c X2C/DLU-Dirac matrix
+ Calculate unperturbed atomic block matrices
+ Evaluating integral derivatives
+ Constructing 1c X2C/DLU-transformed 1e gradient contribution
+ Calculate nuclear repulsion gradient
+ X2C 1e gradient contribution done.
+ 
+
+ setting up bound for integral derivative estimation
+
+ increment for numerical differentiation : 0.00050000
+
+ biggest AO integral is expected to be     5.730030563
+ biggest cartesian 1st derivative AO integral is expected to be    10.761314692
+
+     number of neglected shell pairs due to bound  :      71976
+ percentage of neglected shell pairs due to bounds :         27 %
+
+          Overall gridpoints after grid construction =        339217
+          Overall gridpoints after grid construction =        661479
+
+ Integrated ground state density     :   359.9995071667391    
+
+
+          ------------------------------------------------
+           cartesian gradient of the energy (hartree/bohr)
+          ------------------------------------------------
+
+  ATOM      1 c           2 c           3 c           4 c           5 c 
+dE/dx -0.1843467D-01  0.4119809D-01 -0.3690245D-01 -0.3471330D-01  0.3374507D-02
+dE/dy  0.4687678D-01 -0.5339691D-01  0.1246431D-01 -0.2047036D-01  0.1524193D-01
+dE/dz  0.1216476D-01 -0.1121231D-01 -0.2547378D-01 -0.2617035D-01  0.1001002D-01
+
+  ATOM      6 c           7 c           8 c           9 c          10 c 
+dE/dx  0.5907095D-01 -0.1379164D-01  0.2248995D-01  0.1683042D-01 -0.2647535D-01
+dE/dy  0.8389780D-01  0.2814280D-01  0.2392922D-01 -0.3619095D-01  0.1350955D-01
+dE/dz  0.3186376D-01 -0.4725218D-01  0.1294409D-01  0.3761795D-01 -0.5733465D-01
+
+  ATOM     11 c          12 c          13 c          14 c          15 c 
+dE/dx  0.6078244D-03 -0.2356241D-01 -0.1845073D-01  0.2128169D-01  0.3698286D-01
+dE/dy -0.3800972D-02  0.2454954D-01  0.7265355D-02  0.3138628D-01 -0.4723284D-01
+dE/dz -0.6057470D-01  0.1018957D-01  0.1478124D-01  0.5504002D-03  0.4518389D-01
+
+  ATOM     16 c          17 c          18 c          19 c          20 c 
+dE/dx -0.1569755D-01  0.5046831D-02 -0.6710026D-02 -0.1401559D-01  0.2221597D-01
+dE/dy  0.2770265D-01 -0.3165277D-01  0.1197343D-01 -0.3420311D-01  0.1348721D-02
+dE/dz -0.2907239D-01 -0.2043925D-01  0.3657698D-01 -0.1768404D-01  0.3227012D-01
+
+  ATOM     21 c          22 c          23 c          24 c          25 c 
+dE/dx -0.9307647D-02  0.2089131D-01 -0.4410816D-01  0.2179566D-01 -0.4010989D-02
+dE/dy -0.1493256D-01  0.2138905D-01  0.2445549D-01 -0.2495513D-01 -0.1270488D-01
+dE/dz -0.5582232D-01 -0.2189782D-01  0.2469894D-02  0.1653038D-02  0.1508683D-01
+
+  ATOM     26 c          27 c          28 c          29 c          30 c 
+dE/dx -0.2351463D-01 -0.2146183D-01  0.1804091D-01 -0.2237699D-01  0.1698643D-01
+dE/dy  0.4090089D-01 -0.1957792D-02 -0.2157319D-01  0.3014959D-01 -0.2152851D-01
+dE/dz -0.9308234D-02  0.6471567D-02  0.2144997D-01 -0.1627609D-03  0.2342155D-01
+
+  ATOM     31 c          32 c          33 c          34 c          35 c 
+dE/dx -0.1987989D-01  0.6379144D-01 -0.2795357D-01 -0.1912583D-01  0.1182925D-01
+dE/dy  0.1242540D-01  0.3504217D-01 -0.4175444D-01 -0.1062469D-01 -0.4476750D-01
+dE/dz -0.1235688D-01 -0.2075850D-01  0.1522260D-01  0.4456304D-01 -0.1194023D-02
+
+  ATOM     36 c          37 c          38 c          39 c          40 c 
+dE/dx  0.1438447D-01 -0.2345610D-01  0.1312122D-01  0.2490558D-01  0.2304869D-02
+dE/dy  0.2962588D-02 -0.1557980D-01 -0.2183425D-01  0.3699978D-02 -0.1061848D-01
+dE/dz  0.3330552D-01  0.1360493D-01  0.6445345D-02 -0.2591212D-01 -0.1920639D-01
+
+  ATOM     41 c          42 c          43 c          44 c          45 c 
+dE/dx -0.9168601D-02  0.2945007D-01 -0.5244901D-01  0.5079375D-02  0.3188898D-01
+dE/dy  0.5204604D-01 -0.4405122D-01  0.2355935D-01 -0.1101114D-01 -0.2173319D-01
+dE/dz -0.2221102D-01  0.6342253D-01 -0.1643936D-01  0.1731047D-01 -0.2757581D-01
+
+  ATOM     46 c          47 c          48 c          49 c          50 c 
+dE/dx  0.3903803D-03 -0.3381801D-02 -0.3354002D-02  0.4373587D-02  0.3485616D-01
+dE/dy -0.1990095D-01 -0.3239772D-01  0.3928461D-01 -0.1799370D-01  0.8379205D-02
+dE/dz -0.4609753D-02  0.2023446D-01 -0.3284640D-02 -0.1654389D-02  0.2030655D-01
+
+  ATOM     51 c          52 c          53 c          54 c          55 c 
+dE/dx -0.1311174D-01 -0.5849137D-02  0.7448961D-02  0.3438769D-02  0.1590263D-02
+dE/dy -0.3787706D-01  0.6488165D-01 -0.4091829D-02 -0.2369895D-01  0.1969099D-01
+dE/dz  0.1787449D-01  0.7400808D-02  0.2651755D-01 -0.3982560D-01  0.2056380D-01
+
+  ATOM     56 c          57 c          58 c          59 c          60 c 
+dE/dx  0.2972454D-01  0.1393923D-01 -0.3387070D-01  0.2273158D-01 -0.7678484D-01
+dE/dy -0.4491429D-01  0.4631530D-01 -0.3541000D-01  0.6269814D-01 -0.5312561D-01
+dE/dz -0.1556221D-01 -0.4703059D-02 -0.3936559D-01  0.2514137D-01 -0.9691990D-02
+ 
+ resulting FORCE  (fx,fy,fz) = (0.143D-03,0.184D-03,-.137D-03)
+ resulting MOMENT (mx,my,mz) = (-.752D-02,0.657D-02,0.593D-03)
+
+
+ exx =      -0.445368 eyy =       0.315884 ezz =       0.035746
+ eyz =       0.245244 exz =      -0.026127 exy =      -0.246686
+
+
+ **********************************************************************
+  |maximum component of gradient| : 0.83897803E-01  (atom  6 c )       
+   gradient norm                  : 0.38140141    
+ **********************************************************************
+   ***  cartesian gradients written onto <gradient>  ***
+
+
+     --- calculation of the energy gradient finished ---
+
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :  2 hours 45 minutes and 55 seconds
+         total wall-time : 16 minutes and 51 seconds
+    ------------------------------------------------------------------------
+
+   ****  rdgrad : all done  ****
+
+
+    2025-01-08 14:46:17.744 
+
+ done  ****
+
+
+    2025-01-08 14:44:58.772 
+
