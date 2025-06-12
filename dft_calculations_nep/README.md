@@ -20,7 +20,7 @@ This project contains computational data for C<sub>60</sub> structures. Each str
 
 The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The corresponding DFT data for the structures can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
 
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`. ID ranges from `0` to `n`, where `n` is the corresponding time step of the given configuration in the [DFTB+](../DFTB-MD/) MD simulation. One example folder `cluster_34000` is included here for each DFT level, and can be found in the corresponding subdirectory.
+In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`. ID ranges from `0` to `n`, where `n` is the corresponding time step of the given configuration in the [DFTB+](../DFTB-MD/) MD simulation. One example folder `cluster_34500` is included here for each DFT level, and can be found in the corresponding subdirectory.
 
 Directory structure example:
 ```
@@ -103,7 +103,7 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
   - [basis](./DFT-1/input_files/basis): Basis set definition
   - [control](./DFT-1/input_files/control): Main input control file
   - [coord](./DFT-1/input_files/coord): Cartesian coordinates file
-  - [coord_ID.xyz](./DFT-1/input_files/coord_34000.xyz): Coordinate file in xyz format
+  - [coord_ID.xyz](./DFT-1/input_files/coord_34500.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/input_files/auxbasis): Auxiliary basis set for RI approximation
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/input_files/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
