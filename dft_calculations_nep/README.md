@@ -24,32 +24,30 @@ In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Tu
 
 Directory structure example:
 ```
-./cluster_0/coord
-./cluster_0/coord_0.xyz
 ./cluster_0/energy
 ./cluster_0/gradient
 ./cluster_0/mpshift.out
 ./cluster_0/rdgrad.out
 ./cluster_0/ridft.out
 ./cluster_0/statistics
-./cluster_1/coord
-./cluster_1/coord_1.xyz
+./ref.xyz
+
 ./cluster_1/energy
 ./cluster_1/gradient
 ./cluster_1/mpshift.out
 ./cluster_1/rdgrad.out
 ./cluster_1/ridft.out
 ./cluster_1/statistics
+./ref.xyz
 ...
 ...
-./cluster_n/coord
-./cluster_n/coord_n.xyz
 ./cluster_n/energy
 ./cluster_n/gradient
 ./cluster_n/mpshift.out
 ./cluster_n/rdgrad.out
 ./cluster_n/ridft.out
 ./cluster_n/statistics
+./ref.xyz
 ```
 Each `cluster_<ID>` folder also contains the job log files:
 - Output log: `jobfile.out<JOB_ID>`
@@ -105,12 +103,20 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
   - [basis](./DFT-1/input_files/basis): Basis set definition
   - [control](./DFT-1/input_files/control): Main input control file
   - [coord](./DFT-1/input_files/coord): Cartesian coordinates file
+  - [coord_<ID>.xyz](./DFT-1/input_files/coord_34000.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/input_files/auxbasis): Auxiliary basis set for RI approximation
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/input_files/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
   - [turbomole_carpo2.job](./DFT-1/input_files/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
   - [createxyz.py](./DFT-1/input_files/createxyz.py): Produces an xyz-file (ref.xyz) with one C<sub>60</sub> structure containing reference DFT values (called after Turbomole DFT calculations are finished)
   - [merge.py](./DFT-1/input_files/merge.py): Assigns the reference C<sub>60</sub> structure (ref.xyz) to train or test dataset
+ 
+### Workflow of DFT calculations
+
+1. With the input files specified above, produce the initial molecular orbitals by running the Turbomole command ´define´and selecting the option ´eht´
+2. Call the job script to start the calculation
+
+
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
 
 
