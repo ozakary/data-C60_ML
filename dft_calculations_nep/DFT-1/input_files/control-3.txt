@@ -1,0 +1,40 @@
+$title
+$symmetry c1
+$coord    file=coord
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+$atoms
+    basis =x2c-TZVPall-s
+    jbas  =x2c-TZVPall-s
+$basis    file=basis
+$scfmo   file=mos
+$closed shells
+ a       1-180                                  ( 2 )
+$scfiterlimit      300
+$scfdamp   start=  3.300  step=  0.050  min=  0.100
+$scfdump
+$scfdiis
+$maxcor   3500 MiB  per_core
+$scforbitalshift  automatic=.1
+$energy    file=energy
+$grad    file=gradient
+$rx2c
+$rlocal
+$finnuc
+$dft
+    functional   pbe
+    gridsize   4a
+$scfconv   7
+$disp4
+$ricore        0
+$rij
+$jbas    file=auxbasis
+$shiftconv        5
+$csmaxiter       70
+$denconv     0.10000000E-06
+$rundimensions
+   natoms=60
+$last step     define
+$end
