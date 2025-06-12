@@ -113,7 +113,7 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
  
 ### Workflow of DFT calculations
 
-1. With the input files specified above, produce the initial molecular orbitals by running the Turbomole command ´define´and selecting the option ´eht´
+1. With the input files specified above, produce the initial molecular orbitals by running the Turbomole command `define` and selecting the option `eht`
 2. Call the job script to start the calculation
 
 
