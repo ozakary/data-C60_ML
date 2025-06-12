@@ -1,0 +1,2491 @@
+
+   OpenMP run-time library returned nthreads = 20
+
+ mpshift (ca5) : TURBOMOLE rev. V7-8-1 compiled 23 Jan 2024 at 17:35:01
+ Copyright (C) 2024 TURBOMOLE GmbH, Karlsruhe
+
+
+    2024-05-17 13:24:41.047 
+
+
+
+
+                             m p s h i f t
+
+                             TURBOMOLE GmbH
+
+          integral direct evaluation of NMR and EPR properties
+
+
+          OpenMP Shared-Memory Parallelization: 20 CPUs.
+
+            By: K. Reiter, F. Mack, Y. J. Franzke, C. Holzer, F. Weigend
+
+              +--------------------------------------------------+
+              |                    References                    |
+              +--------------------------------------------------+
+
+     RHF NMR chemical shifts
+     M. Haser, R. Ahlrichs, H.P. Baron, P. Weis, H. Horn,
+     Theor. Chim. Acta 83, 455 (1992).
+
+     RKS DFT NMR chemical shifts
+     U. Huniar,
+     Diploma thesis, University of Karlsruhe (1999).
+     K. Reiter, F. Mack, F. Weigend,
+     J. Chem. Theory Comput. 14, 191 (2018).
+
+     MP2 chemical shift
+     M.Kollwitz, J.Gauss,
+     Chem. Phys. Lett. 260, 639 (1996).
+     M.Kollwitz, M.Haser, J.Gauss,
+     J. Chem. Phys. 108, 8295 (1998).
+
+     VCD spectra with RHF and RKS
+     K. Reiter, M. Kuehn, F. Weigend,
+     J. Chem. Phys. 146, 054102 (2017).
+
+     MARI-J/RI-J approximation
+     K. Reiter, F. Mack, F. Weigend,
+     J. Chem. Theory Comput. 14, 191 (2018).
+
+     Seminumerical algorithm for response part
+     C. Holzer,
+     J. Chem. Phys. 153, 184115 (2020).
+
+     Effective core potentials
+     K. Reiter, M. Kuehn, F. Weigend,
+     J. Chem. Phys. 146, 054102 (2017).
+
+     Scalar-relativistic all-electron X2C
+     Y. J. Franzke, F. Weigend,
+     J. Chem. Theory Comput. 15, 1028 (2019).
+
+     Spin-orbit two-component relativistic all-electron X2C
+     Y. J. Franzke, C. Holzer,
+     J. Chem. Phys. 159, 184102 (2023).
+
+     Non-relativistic and scalar-relativistic pNMR
+     S. Gillhuber, Y. J. Franzke, F. Weigend,
+     J. Phys. Chem. A 125, 9707 (2021).
+
+     Spin-orbit perturbation theory for pNMR
+     F. Bruder, Y. J. Franzke, F. Weigend,
+     J. Phys. Chem. A 126, 5050 (2022).
+
+     Non-relativistic and scalar-relativistic HFC
+     S. Gillhuber, Y. J. Franzke, F. Weigend,
+     J. Phys. Chem. A 125, 9707 (2021).
+
+     Spin-orbit perturbation theory for HFC and g-tensor
+     F. Bruder, Y. J. Franzke, F. Weigend,
+     J. Phys. Chem. A 126, 5050 (2022).
+
+     Relativistic two-component HFC
+     Y. J. Franzke, J. M. Yu,
+     J. Chem. Theory Comput. 18, 323 (2022).
+
+     Relativistic two-component g-tensor
+     Y. J. Franzke, J. M. Yu,
+     J. Chem. Theory Comput. 18, 2246 (2022).
+
+     EFG and NQI for EPR spectra
+     M. Kehry, Y. J. Franzke, C. Holzer, and W. Klopper,
+     Mol. Phys. 118, e1755064 (2020).
+     Y. J. Franzke, J. M. Yu,
+     J. Chem. Theory Comput. 18, 2246 (2022).
+
+     Current density for RKS NMR
+     C. J. Schattenberg, M. Kaupp,
+     J. Chem. Theory Comput. 17, 1469 (2021).
+     C. Holzer, Y. J. Franzke, and M. Kehry, 
+     J. Chem. Theory Comput. 17, 2928 (2021).
+
+     Current density for pNMR and EPR
+     Y. J. Franzke, C. Holzer,
+     J. Chem. Phys. 157, 031102 (2022).
+
+     Current density two-component NMR and EPR
+     C. Holzer, Y. J. Franzke, A. Pausch,
+     J. Chem. Phys. 157, 204102 (2022).
+
+     Zero-field splitting parameters
+     F. Bruder, Y. J. Franzke, C. Holzer, F. Weigend,
+     J. Chem. Phys. 159, 194117 (2023).
+
+     GIMIC Interface
+     S. Gillhuber, Y. J. Franzke, F. Weigend,
+     J. Phys. Chem. A 125, 9707 (2021).
+
+     PNMRShift Interface
+     Y. J. Franzke, F. Bruder, S. Gillhuber, C. Holzer, F. Weigend,
+     ChemRxiv DOI 10.26434/chemrxiv-2023-w2db0-v2.
+
+
+
+              +--------------------------------------------------+
+              | Atomic coordinate, charge and isotop information |
+              +--------------------------------------------------+
+
+                    atomic coordinates            atom    charge  isotop
+         25.86066002   22.48466101   29.79805833    c      6.000     0
+         23.68047052   23.86231296   30.24456953    c      6.000     0
+         21.42176333   22.37920015   29.70192596    c      6.000     0
+         22.28355856   19.93048038   28.91886730    c      6.000     0
+         25.03063015   19.96657804   29.00781565    c      6.000     0
+         17.99820350   26.58883703   25.83522264    c      6.000     0
+         17.15655794   24.02861294   24.82063507    c      6.000     0
+         18.11944748   22.15847701   26.67578537    c      6.000     0
+         19.29151736   23.40948655   28.75530115    c      6.000     0
+         19.26462714   26.12339896   28.05806296    c      6.000     0
+         18.84218512   19.03662770   23.15467094    c      6.000     0
+         21.04051050   17.59230632   22.74656204    c      6.000     0
+         22.40038465   17.31218936   25.13494095    c      6.000     0
+         21.11769933   18.72670029   27.00108020    c      6.000     0
+         18.89549286   19.68855628   25.96168748    c      6.000     0
+         26.34188057   17.64567097   22.81506569    c      6.000     0
+         28.65878429   18.97049983   23.32527905    c      6.000     0
+         28.54747243   19.70720274   26.08741266    c      6.000     0
+         26.33543039   18.52486552   27.19066633    c      6.000     0
+         25.03725863   17.24763015   25.23266912    c      6.000     0
+         30.01472018   23.92924689   24.72225710    c      6.000     0
+         29.24957472   26.48117461   25.59474254    c      6.000     0
+         27.79064345   26.18750083   27.95746821    c      6.000     0
+         27.99506794   23.50661930   28.66338833    c      6.000     0
+         29.30018213   22.12012662   26.73248711    c      6.000     0
+         24.82684076   29.59858862   26.71894411    c      6.000     0
+         22.11526967   29.41532564   26.77714899    c      6.000     0
+         21.38051677   27.54404560   28.65836460    c      6.000     0
+         23.57703558   26.50483789   29.77813748    c      6.000     0
+         25.76732185   27.66486027   28.61604137    c      6.000     0
+         22.18078116   30.07007929   22.06554424    c      6.000     0
+         20.95211056   28.68710989   20.10178747    c      6.000     0
+         18.70237561   27.41589540   21.38112654    c      6.000     0
+         18.67687511   28.20322110   24.02869804    c      6.000     0
+         20.94182949   29.52349645   24.44227084    c      6.000     0
+         18.04055334   25.05495244   20.63231064    c      6.000     0
+         19.25586560   23.71806907   18.60211802    c      6.000     0
+         19.34412529   21.06051238   19.14060406    c      6.000     0
+         18.05230851   20.78416985   21.44464426    c      6.000     0
+         17.16272183   23.22740819   22.34102570    c      6.000     0
+         21.46876707   19.67833504   18.66674697    c      6.000     0
+         23.67768534   20.77927580   17.75645749    c      6.000     0
+         25.79813011   19.67668412   18.79106015    c      6.000     0
+         25.05039277   17.76037225   20.57497922    c      6.000     0
+         22.35216250   17.68234177   20.43678355    c      6.000     0
+         28.00506757   21.02005034   19.22866082    c      6.000     0
+         27.82918007   23.68576451   18.64821044    c      6.000     0
+         29.17045729   25.18552775   20.47955620    c      6.000     0
+         30.18077737   23.28946054   22.25422618    c      6.000     0
+         29.52621649   20.75056481   21.55570904    c      6.000     0
+         28.22623311   27.45472163   21.32127793    c      6.000     0
+         26.16676237   28.82948490   20.07731590    c      6.000     0
+         24.79989920   30.03613593   22.11064758    c      6.000     0
+         26.12055133   29.67465431   24.39392945    c      6.000     0
+         28.37231818   28.25349524   23.93450846    c      6.000     0
+         24.93456477   27.25760402   18.23527091    c      6.000     0
+         25.80499025   24.88775230   17.38577588    c      6.000     0
+         23.52250787   23.25243164   16.80429202    c      6.000     0
+         21.35914183   24.86038295   17.51019541    c      6.000     0
+         22.06851338   27.23731040   18.24180764    c      6.000     0
+ 
+       center of nuclear mass  :   23.61809289   23.62223141   23.62121332
+       center of nuclear charge:   23.61809289   23.62223141   23.62121332
+
+              +--------------------------------------------------+
+              |               basis set information              |
+              +--------------------------------------------------+
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    c       60     49     34   x2c-TZVPall-s   [5s4p2d1f|11s7p2d1f]
+   ---------------------------------------------------------------------------
+   total:   60   2940   2040
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   21
+   total number of contracted shells         :  720
+   total number of cartesian basis functions : 2340
+   total number of SCF-basis functions       : 2040
+
+ RI-J AUXILIARY BASIS SET information:
+
+              we will work with the 1s 3p 5d 7f 9g ... basis set
+              ...i.e. with spherical basis functions...
+
+   type   atoms  prim   cont   basis
+   ---------------------------------------------------------------------------
+    c       60     70     70   x2c-TZVPall-s   [12s5p4d2f1g|12s5p4d2f1g]
+   ---------------------------------------------------------------------------
+   total:   60   4200   4200
+   ---------------------------------------------------------------------------
+
+   total number of primitive shells          :   24
+   total number of contracted shells         : 1440
+   total number of cartesian basis functions : 5160
+   total number of SCF-basis functions       : 4200
+
+
+ symmetry group of the molecule :   c1 
+
+ the group has the following generators :
+   c1(z)
+
+    1 symmetry operations found
+
+ there are 1 real representations :   a   
+
+ integral neglect threshold       :  0.14E-11
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+
+ WARNING : cannot change filename for statistics 
+
+ maximum number of shells which are related by symmetry :  1
+
+ Performing scalar X2C shift calculation
+ DLU scheme used in X2C
+
+    mo occupation :
+   irrep   mo's   occupied
+    a     2040      180
+ 
+ number of basis functions   :  2040
+ number of occupied orbitals :   180
+ 
+  MOs are in ASCII format !
+
+
+ reading orbital data $scfmo from file mos
+ orbital characterization : scfconv=7
+ ************************************************
+           DFT is switched ON !!
+ ************************************************
+ 
+ 
+  
+           ------------------
+           density functional
+           ------------------
+ PBE functional
+ exchange:    LDA + PBE
+ correlation: LDA (PW) + PBE
+ spherical integration : Lebedev's spherical grid
+ spherical gridsize    :                     4
+    i.e. gridpoints    :                   434
+  maximum batchsize    :                   100
+ value for diffuse not defined
+ radial integration    : Chebyshev 2nd kind (scaling 3)
+ radial gridsize       :                     6
+ integration cells     :                    60
+ partition function    : becke
+ partition sharpness   :                     3
+  
+ grids with increased radial size are used
+  
+           ------------------------
+            MPSHIFT - INFORMATION
+           ------------------------
+  
+ Threshold for integral neglect (rithr2): 1E-10
+
+ biggest AO integral is expected to be     5.730030563
+ Contributions to RI integral batches: 
+  neglected integral batches:                 92793
+  direct contribution:                       166767
+ 
+ Residuum convergence criterium for CPHF : 0.100E-04
+ 
+ time for          input     30.04
+
+
+ ==============================================================================
+         One-Electron Integral Derivatives
+ ==============================================================================
+
+
+ maximum number of shells which are related by symmetry :  1
+
+
+ Using finite size model (Gaussian charge distribution) for the nuclei. 
+ RMS radius: c        0.248455E-02 pm,    0.469513E-04 a.u.
+
+ 1e-integrals will be neglected if expon. factor < 0.142819E-12
+
+ 
+ Estimated memory requirements for X2C quantities in MB on 1 CPU:
+ Magnetic field derivatives:                    1177
+ Magnetic moment derivatives:                    441
+ Second derivatives:                            1265
+ 
+ Calculating magnetic-field derivatives
+ 
+ time for    1e matrices    177.44
+
+Calculating unperturbed density contribution of atom   1
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   2
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   3
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   4
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   5
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   6
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   7
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   8
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom   9
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  10
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  11
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  12
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  13
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  14
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  15
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  16
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  17
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  18
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  19
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  20
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  21
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  22
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  23
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  24
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  25
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  26
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  27
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  28
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  29
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  30
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  31
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  32
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  33
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  34
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  35
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  36
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  37
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  38
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  39
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  40
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  41
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  42
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  43
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  44
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  45
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  46
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  47
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  48
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  49
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  50
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  51
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  52
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  53
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  54
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  55
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  56
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  57
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  58
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  59
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating unperturbed density contribution of atom  60
+
+ maximum number of shells which are related by symmetry :  1
+
+
+ time for unperturbed cs  12971.09
+
+
+ ==============================================================================
+         Two-Electron Magnetic Field Derivatives
+ ==============================================================================
+
+
+ shell blocked total number of electrons =    360.00000000
+
+
+ setting up bound for integral derivative estimation
+
+ increment for numerical differentiation : 0.00050000
+
+ biggest AO integral is expected to be     5.730030563
+ biggest cartesian 1st derivative AO integral is expected to be    10.761314692
+ Contributions to RI integral batches: 
+  neglected integral batches:                 92793
+  direct contribution:                       166767
+ time for         twoder    821.40
+ 
+ Entering DFT part...
+ 
+          Overall gridpoints after grid construction =        661479
+
+ time for   dgs 2e stuff   2064.42
+time after convergence:         0.844727
+
+Calculating magnetic-moment derivatives of atom c   1
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   2
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   3
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   4
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   5
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   6
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   7
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   8
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c   9
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  10
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  11
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  12
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  13
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  14
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  15
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  16
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  17
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  18
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  19
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  20
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  21
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  22
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  23
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  24
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  25
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  26
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  27
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  28
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  29
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  30
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  31
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  32
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  33
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  34
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  35
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  36
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  37
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  38
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  39
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  40
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  41
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  42
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  43
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  44
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  45
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  46
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  47
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  48
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  49
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  50
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  51
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  52
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  53
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  54
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  55
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  56
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  57
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  58
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  59
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Calculating magnetic-moment derivatives of atom c  60
+
+ maximum number of shells which are related by symmetry :  1
+
+
+Atom No.     Isotropic               Disturbed density contribution
+             shielding                   xx               yy               zz
+c     1           35.73931136         -262.80142581       -206.02588293       -204.18126097
+c     2           32.22133414         -308.74568915       -171.25758375       -214.52096736
+c     3           30.07894688         -297.16122263       -291.57284348       -261.03309232
+c     4           38.04416268         -316.15000164       -311.84880744       -306.39293879
+c     5           21.28792473         -302.49737523       -289.91728071       -303.55857085
+c     6           40.01533338         -274.45267494       -371.72973409       -313.67960254
+c     7           20.77946473         -305.06726999       -451.65105370       -413.02277665
+c     8           19.71299415         -324.88495749       -378.54950278       -467.83168604
+c     9           36.50614845         -195.91386641       -296.15011706       -382.69570802
+c    10           35.96145168          -65.57917272       -370.94982972       -266.44879851
+c    11           33.14404528         -397.46524083       -305.48428938       -464.20902347
+c    12           23.45738688         -424.67690643       -263.57511691       -467.47739705
+c    13           27.57133055         -369.26788141       -237.38980237       -421.56567956
+c    14           39.90487198         -274.38491670       -201.79422402       -373.72090247
+c    15           30.40656277         -367.45318130       -285.55855030       -459.39266926
+c    16           30.80038710         -431.82033521       -299.21205885       -386.52628072
+c    17           21.53422594         -380.66258284       -235.26454293       -346.49682265
+c    18           21.23111479         -251.48550798        -94.72735819       -279.68167066
+c    19           38.03417183         -314.01637780       -238.37620125       -327.85768369
+c    20           29.28596488         -379.21326622       -231.80604542       -420.96126305
+c    21           27.80538010         -316.10101378       -274.89783836       -141.41440780
+c    22           28.33427771         -203.87214431       -257.43965257       -122.88900930
+c    23           25.52198379         -137.91631430       -255.50398251       -208.40348356
+c    24           28.35023847         -229.12553201       -190.69456474       -287.62948077
+c    25           31.40408994         -162.28069117       -134.74707950       -313.54034565
+c    26           31.53581576         -223.29538536       -169.93634119       -171.78771441
+c    27           35.17553423         -166.57484720       -280.56394210       -257.12697796
+c    28           38.19159970         -252.05707132       -315.40942428       -267.64471702
+c    29           34.40199346         -259.40898538       -176.70128635       -198.04060566
+c    30           33.29370484         -250.92011661       -146.97779128       -176.82444416
+c    31           40.78348549         -177.52421813       -307.38559340       -321.03233020
+c    32           26.36454505         -324.11381197       -351.89706911       -353.18740628
+c    33           29.70659112         -336.49896398       -419.68830851       -413.15777707
+c    34           43.91787732         -171.14140350       -283.27331601       -388.95333432
+c    35           25.33989292         -174.18194373       -175.43799401       -321.07372100
+c    36           38.78404809         -190.00712377       -412.15424221       -353.72773275
+c    37           33.51819197         -342.48946957       -408.21190595       -387.08485407
+c    38           39.98217693         -263.13812990       -411.46005192       -421.08769301
+c    39           36.57830069         -297.42014619       -376.87789811       -449.36180177
+c    40           38.90866844         -230.37018909       -376.63426529       -439.04551213
+c    41           30.66161796         -418.52615495       -389.70809194       -308.94975209
+c    42           36.28114887         -385.44112530       -391.59679814       -313.06041600
+c    43           35.27491175         -427.55374245       -294.27088844       -299.08327477
+c    44           44.22068817         -434.61650483       -282.35548088       -300.50843056
+c    45           30.49602520         -434.97590621       -304.33828668       -424.39237365
+c    46           29.61316650         -353.42988173       -405.97725549       -323.73594403
+c    47           24.68338324         -317.17710672       -364.78204440       -153.53295299
+c    48           38.70565637         -300.63303255       -306.12988517       -151.49814011
+c    49           41.37713367         -106.25674905       -265.84683870       -126.33350179
+c    50           31.07503342         -289.71085682       -319.63252578       -270.17551456
+c    51           24.95613180         -366.79453079       -191.10694728       -187.70904135
+c    52           29.34950057         -290.62622402       -218.59052659       -142.01184702
+c    53           29.48240482         -208.36522720       -244.03636469       -264.33652707
+c    54           33.52979431         -296.11327476       -225.82241110       -162.65223729
+c    55           37.30646691         -278.43552271       -205.93793732       -143.42167690
+c    56            8.65116105         -388.75223673       -377.26467398        -88.95076846
+c    57           32.79650305         -395.17841160       -346.79585445       -185.08875372
+c    58           30.41613397         -517.09409766       -417.75210793       -123.17686913
+c    59           37.27407482         -348.75110962       -428.36743076       -365.72002147
+c    60           31.56314645         -352.96037779       -426.66887586       -240.15127656
+
+ No CPHF-iterations due to non-hybrid functional
+
+ time for last cphf step   1983.92
+ time for           cphf     1983.92
+
+
+ ==============================================================================
+         NMR shielding tensor
+ ==============================================================================
+
+
+        >>>>> DFT MAGNETIC SHIELDINGS <<<<<
+
+Unperturbed density contribution to shielding:  full
+Perturbed density contribution to shielding:  full
+ 
+
+ATOM  c    1      ISOTROPIC:        35.739311       ANISOTROPIC:       163.016602
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     260.07550126
+    Tensor :
+              256.05171932         12.39603538         -2.69969814
+              -48.64823335        192.13506784         14.17608715
+              119.36124843         89.51946947        332.03971663
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -224.33618990
+    Tensor :
+             -262.80142581        -14.11620581         57.87754251
+               63.12977126       -206.02588293        -46.65434113
+             -118.32367279       -138.28602025       -204.18126097
+
+  total magnetic shielding:
+    Trace =      35.73931136
+    Tensor :
+                   -6.74970650             -1.72017043             55.17784437
+                   14.48153790            -13.89081509            -32.47825398
+                    1.03757564            -48.76655077            127.85845566
+
+
+ATOM  c    2      ISOTROPIC:        32.221334       ANISOTROPIC:       158.751317
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     263.72941423
+    Tensor :
+              272.82608729          9.51556792        -22.98951390
+              -40.05493598        172.79647300         25.33004673
+               87.25216570        123.45363335        345.56568239
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -231.50808008
+    Tensor :
+             -308.74568915         -7.86536943         22.35819048
+               42.65841583       -171.25758375        -18.29727169
+              -87.46774875       -184.17541354       -214.52096736
+
+  total magnetic shielding:
+    Trace =      32.22133414
+    Tensor :
+                  -35.91960186              1.65019849             -0.63132341
+                    2.60347986              1.53888925              7.03277504
+                   -0.21558305            -60.72178019            131.04471503
+
+
+ATOM  c    3      ISOTROPIC:        30.078947       ANISOTROPIC:       162.171517
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     313.33466636
+    Tensor :
+              281.14608650        -45.64934925        -60.17974698
+              -34.33791794        274.83208970         -5.90205113
+               65.77338458         68.12512812        384.02582289
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -283.25571948
+    Tensor :
+             -297.16122263         50.31863930          9.36263475
+               12.46213090       -291.57284348        -31.20998615
+              -51.70090426       -117.73369358       -261.03309232
+
+  total magnetic shielding:
+    Trace =      30.07894688
+    Tensor :
+                  -16.01513613              4.66929005            -50.81711222
+                  -21.87578705            -16.74075378            -37.11203728
+                   14.07248032            -49.60856546            122.99273056
+
+
+ATOM  c    4      ISOTROPIC:        38.044163       ANISOTROPIC:       163.218278
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     349.50807864
+    Tensor :
+              303.25065422        -42.00386557        -56.28139891
+             -101.53285693        325.22466598        -56.66020404
+              104.60833046         39.27479885        420.04891573
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -311.46391596
+    Tensor :
+             -316.15000164         55.81381475         19.84507378
+              110.42860172       -311.84880744        -32.70261573
+             -107.40992654        -74.90512316       -306.39293879
+
+  total magnetic shielding:
+    Trace =      38.04416268
+    Tensor :
+                  -12.89934743             13.80994918            -36.43632513
+                    8.89574479             13.37585854            -89.36281978
+                   -2.80159608            -35.63032431            113.65597694
+
+
+ATOM  c    5      ISOTROPIC:        21.287925       ANISOTROPIC:       165.230542
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     319.94566699
+    Tensor :
+              273.44627983          9.30935403          3.60510304
+              -69.67890819        274.85988008       -112.60826838
+              101.86257530         24.82966272        411.53084107
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -298.65774227
+    Tensor :
+             -302.49737523        -32.77098863         19.88163453
+               58.55038718       -289.91728071         20.25814813
+             -124.55704356        -44.13101728       -303.55857085
+
+  total magnetic shielding:
+    Trace =      21.28792473
+    Tensor :
+                  -29.05109540            -23.46163460             23.48673757
+                  -11.12852101            -15.05740064            -92.35012025
+                  -22.69446826            -19.30135456            107.97227022
+
+
+ATOM  c    6      ISOTROPIC:        40.015333       ANISOTROPIC:       157.810791
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     359.96933724
+    Tensor :
+              377.08573661       -101.41215724        -17.47100738
+              -67.84633037        379.22795043         18.74336467
+               30.37494542         18.83490451        323.59432467
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -319.95400386
+    Tensor :
+             -274.45267494         86.67090405        -64.03539231
+               14.89409527       -371.72973409         -2.41026152
+              -78.59127320        -30.02141836       -313.67960254
+
+  total magnetic shielding:
+    Trace =      40.01533338
+    Tensor :
+                  102.63306168            -14.74125319            -81.50639969
+                  -52.95223510              7.49821634             16.33310315
+                  -48.21632778            -11.18651385              9.91472213
+
+
+ATOM  c    7      ISOTROPIC:        20.779465       ANISOTROPIC:       156.238028
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     410.69316484
+    Tensor :
+              401.28041582        -72.84603100        -63.94274047
+              -65.09835785        409.10670950        -50.01950371
+               18.06365005        -32.74058529        421.69236921
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -389.91370012
+    Tensor :
+             -305.06726999         64.45398024        -33.42570888
+               67.58381172       -451.65105370         55.82651622
+              -33.83731635         31.11457483       -413.02277665
+
+  total magnetic shielding:
+    Trace =      20.77946473
+    Tensor :
+                   96.21314582             -8.39205077            -97.36844935
+                    2.48545387            -42.54434420              5.80701251
+                  -15.77366630             -1.62601046              8.66959256
+
+
+ATOM  c    8      ISOTROPIC:        19.712994       ANISOTROPIC:       175.207122
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     410.13504292
+    Tensor :
+              420.70042944        -93.71241635       -145.78326232
+              -58.63601663        349.60784669        -39.51142017
+               -5.43946579         54.93402288        460.09685263
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -390.42204877
+    Tensor :
+             -324.88495749         79.74497199         72.32261507
+               97.80886224       -378.54950278         21.23942204
+              -70.94742966        -32.66723782       -467.83168604
+
+  total magnetic shielding:
+    Trace =      19.71299415
+    Tensor :
+                   95.81547194            -13.96744437            -73.46064726
+                   39.17284560            -28.94165609            -18.27199813
+                  -76.38689545             22.26678506             -7.73483341
+
+
+ATOM  c    9      ISOTROPIC:        36.506148       ANISOTROPIC:       153.460134
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     328.09271227
+    Tensor :
+              276.71206771        -59.23614652       -110.29363779
+              -56.45350438        275.49791529        -27.01550006
+               78.75914287         86.66582235        432.06815382
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -291.58656383
+    Tensor :
+             -195.91386641         44.34880266         68.29179748
+               66.24852942       -296.15011706         20.46469173
+             -180.22255407        -81.84641636       -382.69570802
+
+  total magnetic shielding:
+    Trace =      36.50614845
+    Tensor :
+                   80.79820131            -14.88734386            -42.00184031
+                    9.79502503            -20.65220177             -6.55080833
+                 -101.46341120              4.81940599             49.37244581
+
+
+ATOM  c   10      ISOTROPIC:        35.961452       ANISOTROPIC:       166.180203
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     270.28738533
+    Tensor :
+              153.24395643       -100.75597450          0.40550042
+               -4.40034821        364.13274312         50.61109309
+              126.01485849         52.02724691        293.48545645
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -234.32593365
+    Tensor :
+              -65.57917272        111.11371489        -46.66102780
+              -37.17302963       -370.94982972         -7.62785579
+             -227.78549147        -25.95104278       -266.44879851
+
+  total magnetic shielding:
+    Trace =      35.96145168
+    Tensor :
+                   87.66478371             10.35774039            -46.25552738
+                  -41.57337784             -6.81708661             42.98323730
+                 -101.77063298             26.07620414             27.03665794
+
+
+ATOM  c   11      ISOTROPIC:        33.144045       ANISOTROPIC:       157.093917
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     422.19689650
+    Tensor :
+              437.09659068        -70.84926755        -96.58947390
+              -73.09071285        387.56097204        -39.25672142
+               -7.95452624         25.14327375        441.93312679
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -389.05285123
+    Tensor :
+             -397.46524083        167.97625080         84.95242726
+              117.83614439       -305.48428938          0.12091746
+               19.94547527        -27.97223282       -464.20902347
+
+  total magnetic shielding:
+    Trace =      33.14404528
+    Tensor :
+                   39.63134985             97.12698325            -11.63704664
+                   44.74543154             82.07668266            -39.13580395
+                   11.99094903             -2.82895907            -22.27589668
+
+
+ATOM  c   12      ISOTROPIC:        23.457387       ANISOTROPIC:       168.827208
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     408.70052701
+    Tensor :
+              421.75159342         26.13577400        -95.16825665
+              -56.16004207        360.10819650        -27.62852001
+              -34.31209100        -30.13877506        444.24179111
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -385.24314013
+    Tensor :
+             -424.67690643         28.49913288         61.57887891
+              140.30469487       -263.57511691         -0.01260929
+               20.47450914         49.92241709       -467.47739705
+
+  total magnetic shielding:
+    Trace =      23.45738688
+    Tensor :
+                   -2.92531302             54.63490688            -33.58937774
+                   84.14465281             96.53307959            -27.64112931
+                  -13.83758185             19.78364202            -23.23560593
+
+
+ATOM  c   13      ISOTROPIC:        27.571331       ANISOTROPIC:       152.286083
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     370.31245166
+    Tensor :
+              377.87970069        -31.62311862        -18.57352015
+             -104.57571006        335.10214822        -71.30036417
+               31.43845151         32.33894234        397.95550608
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -342.74112111
+    Tensor :
+             -369.26788141         47.95014689         12.50077903
+              184.42530760       -237.38980237         37.42164400
+              -50.05027756        -71.01769725       -421.56567956
+
+  total magnetic shielding:
+    Trace =      27.57133055
+    Tensor :
+                    8.61181928             16.32702827             -6.07274113
+                   79.84959754             97.71234585            -33.87872018
+                  -18.61182605            -38.67875490            -23.61017349
+
+
+ATOM  c   14      ISOTROPIC:        39.904872       ANISOTROPIC:       166.655964
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     323.20488637
+    Tensor :
+              294.12610351        -26.76848619        -16.68185176
+              -84.17633689        293.23956861        -36.56416720
+               98.89893465         54.09843297        382.24898700
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -283.30001439
+    Tensor :
+             -274.38491670         91.35532330         15.87812088
+              158.04020076       -201.79422402         21.43612270
+             -139.71445321       -128.61706935       -373.72090247
+
+  total magnetic shielding:
+    Trace =      39.90487198
+    Tensor :
+                   19.74118682             64.58683711             -0.80373088
+                   73.86386388             91.44534458            -15.12804449
+                  -40.81551856            -74.51863639              8.52808453
+
+
+ATOM  c   15      ISOTROPIC:        30.406563       ANISOTROPIC:       148.046969
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     401.20802972
+    Tensor :
+              401.83166604        -57.06177773       -111.76251243
+              -43.50343055        355.39408364        -38.40827940
+                0.71949448         29.44727494        446.39833949
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -370.80146695
+    Tensor :
+             -367.45318130        151.91143704         81.71996036
+               71.80593087       -285.55855030         32.77310205
+              -37.47951925        -75.64567621       -459.39266926
+
+  total magnetic shielding:
+    Trace =      30.40656277
+    Tensor :
+                   34.37848474             94.84965932            -30.04255207
+                   28.30250032             69.83553335             -5.63517734
+                  -36.76002477            -46.19840126            -12.99432976
+
+
+ATOM  c   16      ISOTROPIC:        30.800387       ANISOTROPIC:       160.904729
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     403.31994536
+    Tensor :
+              442.73061730        -31.60538246          9.21672317
+             -131.19207569        401.73887234        -52.06843675
+              -20.07827821        -13.74215193        365.49034644
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -372.51955826
+    Tensor :
+             -431.82033521        -18.90993899         21.17060010
+               52.44108383       -299.21205885         10.12231309
+               19.38620202         33.91091144       -386.52628072
+
+  total magnetic shielding:
+    Trace =      30.80038710
+    Tensor :
+                   10.91028209            -50.51532145             30.38732328
+                  -78.75099186            102.52681349            -41.94612365
+                   -0.69207619             20.16875951            -21.03593428
+
+
+ATOM  c   17      ISOTROPIC:        21.534226       ANISOTROPIC:       167.696594
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     342.34220874
+    Tensor :
+              412.79663867         23.80647050         21.78277568
+              -78.80692314        300.73092822        -19.66396481
+              -23.92060757         -3.38726258        313.49905934
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -320.80798281
+    Tensor :
+             -380.66258284       -121.95315867        -15.41468252
+               15.35931832       -235.26454293        -14.38711351
+                9.44816890          1.58387069       -346.49682265
+
+  total magnetic shielding:
+    Trace =      21.53422594
+    Tensor :
+                   32.13405583            -98.14668817              6.36809316
+                  -63.44760482             65.46638529            -34.05107832
+                  -14.47243867             -1.80339189            -32.99776331
+
+
+ATOM  c   18      ISOTROPIC:        21.231115       ANISOTROPIC:       163.458485
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     229.86262707
+    Tensor :
+              282.38564121         63.73041798         55.86003354
+               18.03830113        155.76675348         29.94527013
+               57.70749238         60.27368664        251.43548651
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -208.63151228
+    Tensor :
+             -251.48550798       -172.48996561        -26.88398165
+              -46.95113690        -94.72735819        -42.00902253
+              -17.06490125       -107.97678568       -279.68167066
+
+  total magnetic shielding:
+    Trace =      21.23111479
+    Tensor :
+                   30.90013323           -108.75954763             28.97605189
+                  -28.91283577             61.03939528            -12.06375240
+                   40.64259114            -47.70309904            -28.24618415
+
+
+ATOM  c   19      ISOTROPIC:        38.034172       ANISOTROPIC:       169.477233
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     331.45092608
+    Tensor :
+              326.77972940          0.67547040          4.05182757
+              -71.91292276        324.11696127        -26.20994744
+               64.70559680         -1.14924523        343.45608757
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -293.41675425
+    Tensor :
+             -314.01637780        -68.74957914         -5.41650944
+               -5.31738936       -238.37620125          8.67330715
+              -31.02612038        -77.76770988       -327.85768369
+
+  total magnetic shielding:
+    Trace =      38.03417183
+    Tensor :
+                   12.76335159            -68.07410874             -1.36468186
+                  -77.23031213             85.74076002            -17.53664029
+                   33.67947642            -78.91695511             15.59840388
+
+
+ATOM  c   20      ISOTROPIC:        29.285965       ANISOTROPIC:       164.716252
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     373.27948977
+    Tensor :
+              387.53940917        -18.04142478        -14.44813029
+             -118.33153952        342.03610403        -78.23438866
+               26.92120174         10.57920898        390.26295612
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -343.99352490
+    Tensor :
+             -379.21326622          0.14090620         11.06959322
+               38.41816695       -231.80604542         38.54083264
+               -6.39450551        -42.54383567       -420.96126305
+
+  total magnetic shielding:
+    Trace =      29.28596488
+    Tensor :
+                    8.32614296            -17.90051858             -3.37853707
+                  -79.91337256            110.23005860            -39.69355601
+                   20.52669624            -31.96462669            -30.69830694
+
+
+ATOM  c   21      ISOTROPIC:        27.805380       ANISOTROPIC:       152.380648
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     271.94313341
+    Tensor :
+              411.86024779         91.94423074        115.51756099
+              -50.12383703        239.25377578         30.79506393
+              -30.60937257        -20.70985041        164.71537664
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -244.13775331
+    Tensor :
+             -316.10101378        -64.77440369        -22.09673391
+               55.14416884       -274.89783836        -13.60835224
+               46.56643952         28.67051349       -141.41440780
+
+  total magnetic shielding:
+    Trace =      27.80538010
+    Tensor :
+                   95.75923402             27.16982705             93.42082708
+                    5.02033182            -35.64406257             17.18671170
+                   15.95706696              7.96066309             23.30096884
+
+
+ATOM  c   22      ISOTROPIC:        28.334278       ANISOTROPIC:       155.608108
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     223.06787978
+    Tensor :
+              296.47021985         16.95491811         69.32612670
+               38.00536314        245.54220334        121.09312271
+               14.26103651         75.42781377        127.19121614
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -194.73360206
+    Tensor :
+             -203.87214431          4.18576056         -4.47586962
+               26.86896237       -257.43965257       -107.43137356
+               31.02010025        -78.80671868       -122.88900930
+
+  total magnetic shielding:
+    Trace =      28.33427771
+    Tensor :
+                   92.59807554             21.14067867             64.85025707
+                   64.87432551            -11.89744923             13.66174915
+                   45.28113676             -3.37890492              4.30220684
+
+
+ATOM  c   23      ISOTROPIC:        25.521984       ANISOTROPIC:       162.225073
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     226.12991059
+    Tensor :
+              222.96058240         64.23477153         39.61183601
+               61.96683765        232.04917341         90.53737925
+               69.48328841         44.30149649        223.37997595
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -200.60792679
+    Tensor :
+             -137.91631430        -76.82957869         -1.90499001
+              -11.21703939       -255.50398251        -55.25032625
+               32.45733763        -34.57291468       -208.40348356
+
+  total magnetic shielding:
+    Trace =      25.52198379
+    Tensor :
+                   85.04426810            -12.59480716             37.70684600
+                   50.74979826            -23.45480910             35.28705299
+                  101.94062604              9.72858181             14.97649239
+
+
+ATOM  c   24      ISOTROPIC:        28.350238       ANISOTROPIC:       157.912516
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     264.16676431
+    Tensor :
+              290.26199673         29.23108138         19.83135110
+             -129.37198397        168.85879132        -22.69534936
+              167.57399228        104.08459608        333.37950488
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -235.81652584
+    Tensor :
+             -229.12553201         -0.13968583         32.74039503
+              133.71229995       -190.69456474         18.46340028
+              -64.31860708        -92.36535712       -287.62948077
+
+  total magnetic shielding:
+    Trace =      28.35023847
+    Tensor :
+                   61.13646472             29.09139555             52.57174613
+                    4.34031598            -21.83577342             -4.23194908
+                  103.25538520             11.71923896             45.75002412
+
+
+ATOM  c   25      ISOTROPIC:        31.404090       ANISOTROPIC:       154.307225
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     234.92679537
+    Tensor :
+              260.74040187        103.42799160         36.99366738
+               -0.66951505        130.09015485        -15.86223641
+               94.88555750         51.53098286        313.94982940
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -203.52270544
+    Tensor :
+             -162.28069117        -66.13068934         28.17820774
+              -24.73829237       -134.74707950          0.98138217
+              -25.84835891        -27.75331226       -313.54034565
+
+  total magnetic shielding:
+    Trace =      31.40408994
+    Tensor :
+                   98.45971070             37.29730226             65.17187511
+                  -25.40780742             -4.65692465            -14.88085425
+                   69.03719858             23.77767060              0.40948375
+
+
+ATOM  c   26      ISOTROPIC:        31.535816       ANISOTROPIC:       169.761330
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     219.87562942
+    Tensor :
+              191.46255133         56.91907307         31.81864821
+              108.45533052        257.77382369         95.89129664
+                3.97358340         43.52084268        210.39051322
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -188.33981365
+    Tensor :
+             -223.29538536        -26.35028182        -15.82206785
+             -115.97680403       -169.93634119          7.57208221
+              -15.27623233          5.99025074       -171.78771441
+
+  total magnetic shielding:
+    Trace =      31.53581576
+    Tensor :
+                  -31.83283402             30.56879125             15.99658036
+                   -7.52147351             87.83748251            103.46337885
+                  -11.30264893             49.51109342             38.60279881
+
+
+ATOM  c   27      ISOTROPIC:        35.175534       ANISOTROPIC:       163.858571
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     269.93078998
+    Tensor :
+              152.77763325          3.54478655        -16.13977836
+               95.34454496        370.10841399         67.96425853
+               47.63543146        -23.49995600        286.90632270
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -234.75525575
+    Tensor :
+             -166.57484720        -43.37302081          0.05804601
+             -103.75470743       -280.56394210         30.83432227
+              -40.86820944         75.09733568       -257.12697796
+
+  total magnetic shielding:
+    Trace =      35.17553423
+    Tensor :
+                  -13.79721395            -39.82823426            -16.08173234
+                   -8.41016247             89.54447189             98.79858079
+                    6.76722202             51.59737967             29.77934474
+
+
+ATOM  c   28      ISOTROPIC:        38.191600       ANISOTROPIC:       155.603728
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     316.56200391
+    Tensor :
+              257.48678707       -139.14197901        -77.73575751
+              -24.03451895        364.03663125         68.91703332
+               82.13087470         81.75552698        328.16259340
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -278.37040421
+    Tensor :
+             -252.05707132        111.49102325         32.78578738
+               40.09242396       -315.40942428          6.37040669
+              -84.68809658          5.83925128       -267.64471702
+
+  total magnetic shielding:
+    Trace =      38.19159970
+    Tensor :
+                    5.42971575            -27.65095576            -44.94997013
+                   16.05790501             48.62720697             75.28744001
+                   -2.55722188             87.59477826             60.51787637
+
+
+ATOM  c   29      ISOTROPIC:        34.401993       ANISOTROPIC:       170.932973
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     245.78561926
+    Tensor :
+              225.24133708        -12.83314552         18.21768482
+              -48.20743256        212.21791690         23.12453912
+              126.54078210        119.24686537        299.89760381
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -211.38362580
+    Tensor :
+             -259.40898538         21.50253061        -21.30199188
+               52.03984183       -176.70128635         17.94071693
+             -138.09314717        -18.60650073       -198.04060566
+
+  total magnetic shielding:
+    Trace =      34.40199346
+    Tensor :
+                  -34.16764830              8.66938509             -3.08430706
+                    3.83240927             35.51663055             41.06525606
+                  -11.55236507            100.64036464            101.85699814
+
+
+ATOM  c   30      ISOTROPIC:        33.293705       ANISOTROPIC:       152.669801
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     224.86782219
+    Tensor :
+              249.15060837         91.24870039         82.92117732
+              -12.42113836        189.27815199         40.45065967
+               89.08397492         76.11594295        236.17470622
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -191.57411735
+    Tensor :
+             -250.92011661        -56.68144883        -39.84086953
+               -2.89705606       -146.97779128         27.14954502
+              -92.60752326         14.91290063       -176.82444416
+
+  total magnetic shielding:
+    Trace =      33.29370484
+    Tensor :
+                   -1.76950825             34.56725156             43.08030780
+                  -15.31819442             42.30036071             67.60020469
+                   -3.52354833             91.02884358             59.35026206
+
+
+ATOM  c   31      ISOTROPIC:        40.783485       ANISOTROPIC:       154.889040
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     309.43086607
+    Tensor :
+              210.10405369        -21.06575443         20.87985046
+               76.53206174        422.69486138          5.54419623
+               12.73933787        -96.36398183        295.49368312
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -268.64738058
+    Tensor :
+             -177.52421813          0.31606539        -19.72240152
+             -146.24993711       -307.38559340        -37.06826509
+                8.70077862         70.85804682       -321.03233020
+
+  total magnetic shielding:
+    Trace =      40.78348549
+    Tensor :
+                   32.57983556            -20.74968905              1.15744894
+                  -69.71787537            115.30926797            -31.52406886
+                   21.44011649            -25.50593501            -25.53864708
+
+
+ATOM  c   32      ISOTROPIC:        26.364545       ANISOTROPIC:       173.499058
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     369.43064083
+    Tensor :
+              346.94655483        -60.98180094         18.72127637
+               10.97157678        418.87019152        -20.99255842
+              -39.29494778        -69.55364413        342.47517614
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -343.06609579
+    Tensor :
+             -324.11381197         -9.30308770        -15.81306511
+              -94.52653889       -351.89706911         11.82415894
+               85.53130668        -10.61761252       -353.18740628
+
+  total magnetic shielding:
+    Trace =      26.36454505
+    Tensor :
+                   22.83274286            -70.28488864              2.90821126
+                  -83.55496210             66.97312241             -9.16839947
+                   46.23635889            -80.17125664            -10.71223013
+
+
+ATOM  c   33      ISOTROPIC:        29.706591       ANISOTROPIC:       153.069094
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     419.48827431
+    Tensor :
+              376.42760077       -130.23357559        -41.73806777
+              -14.12911114        489.38194623        -11.20632519
+              -14.88581685        -91.41832002        392.65527592
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -389.78168319
+    Tensor :
+             -336.49896398         30.37345665         66.65042186
+               -5.43736054       -419.68830851         -5.48660435
+               44.21896231         33.37104860       -413.15777707
+
+  total magnetic shielding:
+    Trace =      29.70659112
+    Tensor :
+                   39.92863679            -99.86011894             24.91235409
+                  -19.56647168             69.69363772            -16.69292954
+                   29.33314546            -58.04727141            -20.50250115
+
+
+ATOM  c   34      ISOTROPIC:        43.917877       ANISOTROPIC:       158.355519
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     325.04056193
+    Tensor :
+              227.09742704        -93.06095580        -15.96795908
+               53.01698116        373.67897027        -25.61405197
+               12.96089004         20.20224222        374.34528847
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -281.12268461
+    Tensor :
+             -171.14140350          5.31969031         22.35086717
+             -109.37442855       -283.27331601          2.59777340
+              -33.62740110        -28.87516571       -388.95333432
+
+  total magnetic shielding:
+    Trace =      43.91787732
+    Tensor :
+                   55.95602354            -87.74126548              6.38290808
+                  -56.35744739             90.40565426            -23.01627858
+                  -20.66651106             -8.67292349            -14.60804585
+
+
+ATOM  c   35      ISOTROPIC:        25.339893       ANISOTROPIC:       161.000658
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     248.90444583
+    Tensor :
+              184.21532442          7.43776002        -25.51147790
+              118.33151944        270.46740331         62.88396862
+              -11.76335018         89.89865954        292.03060976
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -223.56455291
+    Tensor :
+             -174.18194373        -57.90101098         49.79228441
+             -201.45603965       -175.43799401        -99.84758946
+               11.26478332        -60.24735144       -321.07372100
+
+  total magnetic shielding:
+    Trace =      25.33989292
+    Tensor :
+                   10.03338069            -50.46325096             24.28080651
+                  -83.12452021             95.02940930            -36.96362084
+                   -0.49856686             29.65130810            -29.04311123
+
+
+ATOM  c   36      ISOTROPIC:        38.784048       ANISOTROPIC:       158.532943
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     357.41374767
+    Tensor :
+              291.71809899        -40.65925574        -42.22469586
+               42.56141201        408.35282442          1.40890117
+               -7.51287303        -48.19979905        372.17031959
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -318.62969958
+    Tensor :
+             -190.00712377         64.96974129        118.25572509
+              -71.81349432       -412.15424221        -24.41043329
+               76.37699029         60.38256496       -353.72773275
+
+  total magnetic shielding:
+    Trace =      38.78404809
+    Tensor :
+                  101.71097522             24.31048555             76.03102923
+                  -29.25208232             -3.80141780            -23.00153213
+                   68.86411725             12.18276590             18.44258684
+
+
+ATOM  c   37      ISOTROPIC:        33.518192       ANISOTROPIC:       149.344543
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     412.78026850
+    Tensor :
+              413.24465149         -4.71092348        -41.09614543
+               16.17922458        391.30900756        -28.76258034
+              -88.60499928        -67.15659252        433.78714645
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -379.26207653
+    Tensor :
+             -342.48946957         21.87623561         86.74345810
+              -12.37463992       -408.21190595         11.92051861
+              187.29603549         67.88363704       -387.08485407
+
+  total magnetic shielding:
+    Trace =      33.51819197
+    Tensor :
+                   70.75518192             17.16531213             45.64731267
+                    3.80458466            -16.90289839            -16.84206173
+                   98.69103621              0.72704452             46.70229238
+
+
+ATOM  c   38      ISOTROPIC:        39.982177       ANISOTROPIC:       165.482649
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     405.21080187
+    Tensor :
+              355.45992091        -62.11142367        -74.42736480
+                4.49646849        402.92835119        -29.75546367
+              -14.71142648        -10.38398925        457.24413352
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -365.22862494
+    Tensor :
+             -263.13812990         66.56643841        116.10988723
+               47.01631904       -411.46005192         68.35417205
+              113.94936554         29.28631686       -421.08769301
+
+  total magnetic shielding:
+    Trace =      39.98217693
+    Tensor :
+                   92.32179101              4.45501474             41.68252243
+                   51.51278752             -8.53170072             38.59870838
+                   99.23793906             18.90232761             36.15644052
+
+
+ATOM  c   39      ISOTROPIC:        36.578301       ANISOTROPIC:       150.942997
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     411.13158271
+    Tensor :
+              394.67001591         18.24511084        -25.03442721
+              -93.82946606        374.09637745       -110.85756522
+               56.75820018        -57.44689357        464.62835478
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -374.55328202
+    Tensor :
+             -297.42014619        -12.79334491         97.45139092
+              159.59442860       -376.87789811        120.73296435
+              -11.95411952         33.53803124       -449.36180177
+
+  total magnetic shielding:
+    Trace =      36.57830069
+    Tensor :
+                   97.24986971              5.45176593             72.41696371
+                   65.76496254             -2.78152066              9.87539913
+                   44.80408066            -23.90886234             15.26655301
+
+
+ATOM  c   40      ISOTROPIC:        38.908668       ANISOTROPIC:       155.194055
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     387.59199061
+    Tensor :
+              350.37688096        -13.20798719        -83.65442375
+               47.10893861        347.10085778        -70.30386653
+              -60.27608696         -9.95669060        465.29823311
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -348.68332217
+    Tensor :
+             -230.37018909         31.93438379        161.01032146
+              -45.37581552       -376.63426529         71.74874414
+               76.89174501          3.86559520       -439.04551213
+
+  total magnetic shielding:
+    Trace =      38.90866844
+    Tensor :
+                  120.00669187             18.72639660             77.35589771
+                    1.73312308            -29.53340752              1.44487761
+                   16.61565805             -6.09109540             26.25272098
+
+
+ATOM  c   41      ISOTROPIC:        30.661618       ANISOTROPIC:       159.902535
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     403.05628429
+    Tensor :
+              399.07481633         61.67926376         32.02516432
+                8.67439723        429.48727503        -66.54986747
+              -83.01990238       -155.16152537        380.60676150
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -372.39466633
+    Tensor :
+             -418.52615495        -26.49621197          3.63152776
+              -33.87581416       -389.70809194        136.06081737
+               65.78596090        244.08860479       -308.94975209
+
+  total magnetic shielding:
+    Trace =      30.66161796
+    Tensor :
+                  -19.45133862             35.18305179             35.65669208
+                  -25.20141694             39.77918309             69.51094990
+                  -17.23394148             88.92707942             71.65700941
+
+
+ATOM  c   42      ISOTROPIC:        36.281149       ANISOTROPIC:       165.105202
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     399.64726201
+    Tensor :
+              348.40588980         29.57040640        -58.78911961
+                6.84854047        437.00320199         -2.97827097
+              -27.49600406       -160.59643570        413.53269423
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -363.36611315
+    Tensor :
+             -385.44112530        -25.23515116         52.33207263
+               -2.95516408       -391.59679814         46.33970858
+               13.06812135        246.40266434       -313.06041600
+
+  total magnetic shielding:
+    Trace =      36.28114887
+    Tensor :
+                  -37.03523549              4.33525523             -6.45704698
+                    3.89337639             45.40640385             43.36143761
+                  -14.42788271             85.80622865            100.47227823
+
+
+ATOM  c   43      ISOTROPIC:        35.274912       ANISOTROPIC:       155.494924
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     375.57754697
+    Tensor :
+              418.27084562         47.39603427        -32.62314120
+               -6.72873023        342.24805420         -3.65293672
+             -114.11319182        -72.04792299        366.21374109
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -340.30263522
+    Tensor :
+             -427.55374245        -64.59544617        -17.44482513
+               26.01732669       -294.27088844         71.41605892
+              118.29270935        158.57371949       -299.08327477
+
+  total magnetic shielding:
+    Trace =      35.27491175
+    Tensor :
+                   -9.28289683            -17.19941190            -50.06796633
+                   19.28859646             47.97716576             67.76312220
+                    4.17951753             86.52579649             67.13046632
+
+
+ATOM  c   44      ISOTROPIC:        44.220688       ANISOTROPIC:       160.903418
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     383.38082692
+    Tensor :
+              423.61966226         12.59143368        -17.78008450
+              -86.32820979        372.49859969          1.19898234
+              -29.11251764        -39.88925482        354.02421881
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -339.16013876
+    Tensor :
+             -434.61650483        -48.42264174         -4.94957100
+               85.41570155       -282.35548088        101.33082154
+               37.63419401         87.29084878       -300.50843056
+
+  total magnetic shielding:
+    Trace =      44.22068817
+    Tensor :
+                  -10.99684256            -35.83120806            -22.72965550
+                   -0.91250824             90.14311881            102.52980388
+                    8.52167637             47.40159397             53.51578825
+
+
+ATOM  c   45      ISOTROPIC:        30.496025       ANISOTROPIC:       166.646540
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     418.39821404
+    Tensor :
+              401.49878957        -13.62732468        -73.85139108
+              -29.67085829        388.37506619        -50.49638935
+              -46.85830800        -13.66581381        465.32078637
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -387.90218885
+    Tensor :
+             -434.97590621         55.46036185         84.45975740
+               33.04186419       -304.33828668        148.66304870
+               23.40593661         59.31743758       -424.39237365
+
+  total magnetic shielding:
+    Trace =      30.49602520
+    Tensor :
+                  -33.47711664             41.83303718             10.60836633
+                    3.37100590             84.03677951             98.16665936
+                  -23.45237139             45.65162377             40.92841272
+
+
+ATOM  c   46      ISOTROPIC:        29.613167       ANISOTROPIC:       164.723574
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     390.66086025
+    Tensor :
+              420.56331108         43.04821638        -27.22162619
+              -64.59131044        385.95586533          0.63804013
+              -63.58879264       -112.59157304        365.46340433
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -361.04769375
+    Tensor :
+             -353.42988173        -41.99834198        -23.58632701
+               20.83846603       -405.97725549         43.86731007
+              -33.05763311        135.73166485       -323.73594403
+
+  total magnetic shielding:
+    Trace =      29.61316650
+    Tensor :
+                   67.13342936              1.04987440            -50.80795320
+                  -43.75284442            -20.02139016             44.50535019
+                  -96.64642576             23.14009181             41.72746030
+
+
+ATOM  c   47      ISOTROPIC:        24.683383       ANISOTROPIC:       162.896476
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     303.18075128
+    Tensor :
+              388.30852952         31.83382836         68.83681884
+               15.59774429        328.54073952         36.01997604
+              -89.31172199        -41.04565754        192.69298481
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -278.49736804
+    Tensor :
+             -317.17710672        -55.77472646       -119.36550902
+               -8.51805189       -364.78204440        -41.43608986
+              -11.40411984         54.43156822       -153.53295299
+
+  total magnetic shielding:
+    Trace =      24.68338324
+    Tensor :
+                   71.13142280            -23.94089810            -50.52869018
+                    7.07969240            -36.24130489             -5.41611382
+                 -100.71584183             13.38591068             39.16003182
+
+
+ATOM  c   48      ISOTROPIC:        38.705656       ANISOTROPIC:       152.434044
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     291.45934231
+    Tensor :
+              393.94866928         89.94053493         16.84724857
+                9.89685283        292.56280505         94.62060899
+              -73.82390459        -73.82184796        187.86655261
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -252.75368594
+    Tensor :
+             -300.63303255       -103.39965816        -90.77430622
+               31.11199785       -306.12988517       -113.16391815
+               10.70327013         91.96976608       -151.49814011
+
+  total magnetic shielding:
+    Trace =      38.70565637
+    Tensor :
+                   93.31563673            -13.45912323            -73.92705765
+                   41.00885068            -13.56708012            -18.54330916
+                  -63.12063446             18.14791812             36.36841250
+
+
+ATOM  c   49      ISOTROPIC:        41.377134       ANISOTROPIC:       155.092097
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     207.52283018
+    Tensor :
+              231.38220728         73.39950103         97.00832657
+               50.12002356        234.73908164         34.72499792
+              114.31144866          2.08948371        156.44720163
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -166.14569651
+    Tensor :
+             -106.25674905        -82.68885664       -167.68710622
+              -41.54309621       -265.84683870        -25.24127287
+             -126.99411196          6.65757445       -126.33350179
+
+  total magnetic shielding:
+    Trace =      41.37713367
+    Tensor :
+                  125.12545823             -9.28935561            -70.67877965
+                    8.57692736            -31.10775705              9.48372505
+                  -12.68266331              8.74705816             30.11369984
+
+
+ATOM  c   50      ISOTROPIC:        31.075033       ANISOTROPIC:       169.505789
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     324.24799914
+    Tensor :
+              385.65441441         17.45766560         18.21591314
+              -71.64579239        303.23831313         12.52386798
+               -1.90594556         -4.01129260        283.85126987
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -293.17296572
+    Tensor :
+             -289.71085682        -19.41763028       -102.62043411
+                7.08979778       -319.63252578         11.83104560
+              -56.33372826        -23.48977156       -270.17551456
+
+  total magnetic shielding:
+    Trace =      31.07503342
+    Tensor :
+                   95.94355759             -1.95996467            -84.40452097
+                  -64.55599461            -16.39421266             24.35491358
+                  -58.23967382            -27.50106416             13.67575531
+
+
+ATOM  c   51      ISOTROPIC:        24.956132       ANISOTROPIC:       162.801135
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     273.49297161
+    Tensor :
+              409.87569609        132.10855682         26.32461244
+               -0.87510239        254.12172580        106.95964481
+              -93.53120738        -44.80810541        156.48149293
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -248.53683981
+    Tensor :
+             -366.79453079        -31.12260841        -46.43447798
+               36.34497131       -191.10694728       -116.76111561
+               66.05516655        -13.11907962       -187.70904135
+
+  total magnetic shielding:
+    Trace =      24.95613180
+    Tensor :
+                   43.08116531            100.98594841            -20.10986554
+                   35.46986892             63.01477851             -9.80147081
+                  -27.47604082            -57.92718503            -31.22754843
+
+
+ATOM  c   52      ISOTROPIC:        29.349501       ANISOTROPIC:       167.064754
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     246.42569978
+    Tensor :
+              311.36541204         41.00282530        -16.51289309
+               54.40064562        282.80312188        143.43257555
+              -50.94243922         28.60252768        145.10856543
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -217.07619921
+    Tensor :
+             -290.62622402         30.26501773         14.30943954
+               25.17857000       -218.59052659       -162.15970235
+                9.40773548       -102.55091814       -142.01184702
+
+  total magnetic shielding:
+    Trace =      29.34950057
+    Tensor :
+                   20.73918802             71.26784303             -2.20345355
+                   79.57921562             64.21259530            -18.72712680
+                  -41.53470375            -73.94839046              3.09671841
+
+
+ATOM  c   53      ISOTROPIC:        29.482405       ANISOTROPIC:       167.463860
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     268.39511114
+    Tensor :
+              223.57079769        -11.47942233         40.87483177
+               83.50283654        356.03794838         32.92005385
+                9.44993256        -20.77559802        225.57658734
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -238.91270632
+    Tensor :
+             -208.36522720         33.02923861        -37.76629510
+               -2.81011905       -244.03636469        -59.39007290
+              -34.83957880         -8.44718375       -264.33652707
+
+  total magnetic shielding:
+    Trace =      29.48240482
+    Tensor :
+                   15.20557049             21.54981628              3.10853667
+                   80.69271749            112.00158369            -26.47001905
+                  -25.38964623            -29.22278178            -38.75993973
+
+
+ATOM  c   54      ISOTROPIC:        33.529794       ANISOTROPIC:       152.564146
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     261.72576869
+    Tensor :
+              295.63009576         55.46299121         77.11869978
+               26.82740080        325.33127638         78.03365945
+               13.24784059        -31.17040250        164.21593393
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -228.19597438
+    Tensor :
+             -296.11327476          0.12378983       -104.35774852
+               48.30107816       -225.82241110       -111.30004114
+              -13.52534311         53.17258770       -162.65223729
+
+  total magnetic shielding:
+    Trace =      33.52979431
+    Tensor :
+                   -0.48317900             55.58678104            -27.23904875
+                   75.12847896             99.50886528            -33.26638169
+                   -0.27750252             22.00218520              1.56369664
+
+
+ATOM  c   55      ISOTROPIC:        37.306467       ANISOTROPIC:       157.405820
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     246.57151256
+    Tensor :
+              329.58293146         50.02609290         74.15363827
+               68.22088941        279.01830535         98.79969613
+              -63.33557553         15.12783188        131.11330087
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -209.26504565
+    Tensor :
+             -278.43552271         41.36936511        -82.48068549
+               -7.80430169       -205.93793732       -138.59278364
+               76.40868492        -21.16138595       -143.42167690
+
+  total magnetic shielding:
+    Trace =      37.30646691
+    Tensor :
+                   51.14740875             91.39545800             -8.32704722
+                   60.41658772             73.08036803            -39.79308751
+                   13.07310939             -6.03355408            -12.30837603
+
+
+ATOM  c   56      ISOTROPIC:         8.651161       ANISOTROPIC:       176.835038
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     293.64038745
+    Tensor :
+              341.80978307         27.95616664         71.26115074
+               72.88373295        353.85014975         33.84704205
+             -111.50461592        -66.47656737        185.26122952
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -284.98922639
+    Tensor :
+             -388.75223673        -10.39653316        -98.41584544
+              -48.28618144       -377.26467398       -127.18561136
+              125.43012221         32.78792609        -88.95076846
+
+  total magnetic shielding:
+    Trace =       8.65116105
+    Tensor :
+                  -46.94245366             17.55963348            -27.15469470
+                   24.59755151            -23.41452422            -93.33856932
+                   13.92550629            -33.68864128             96.31046105
+
+
+ATOM  c   57      ISOTROPIC:        32.796503       ANISOTROPIC:       171.222744
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     341.81750965
+    Tensor :
+              389.55694927         86.17878961         16.75023517
+               28.97187649        324.28300273          2.41826463
+             -114.08633621       -105.26348998        311.61257694
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -309.02100659
+    Tensor :
+             -395.17841160        -68.76419283        -72.19074943
+              -37.95436108       -346.79585445        -38.23841276
+              107.74989473         48.55043398       -185.08875372
+
+  total magnetic shielding:
+    Trace =      32.79650305
+    Tensor :
+                   -5.62146233             17.41459678            -55.44051426
+                   -8.98248459            -22.51285173            -35.82014812
+                   -6.33644148            -56.71305600            126.52382322
+
+
+ATOM  c   58      ISOTROPIC:        30.416134       ANISOTROPIC:       162.142620
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     383.09049221
+    Tensor :
+              486.78961942         11.90581934         20.32009343
+              -11.72513497        408.57700058         46.01577816
+             -197.89252698       -132.65501521        253.90485662
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -352.67435824
+    Tensor :
+             -517.09409766         -5.87363358        -17.26747594
+               21.09967891       -417.75210793        -28.80561823
+              206.29945764         51.79663141       -123.17686913
+
+  total magnetic shielding:
+    Trace =      30.41613397
+    Tensor :
+                  -30.30447824              6.03218576              3.05261748
+                    9.37454395             -9.17510735             17.21015993
+                    8.40693065            -80.85838379            130.72798749
+
+
+ATOM  c   59      ISOTROPIC:        37.274075       ANISOTROPIC:       172.804248
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     418.22026210
+    Tensor :
+              355.10886931        -15.41838567        -85.23584073
+               35.30468375        407.57199346        -32.79585140
+              -65.87018408        -88.56595567        491.97992353
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -380.94618728
+    Tensor :
+             -348.75110962         10.63023863        138.42490384
+              -23.28532980       -428.36743076         -5.93903842
+               71.27233129         18.50227478       -365.72002147
+
+  total magnetic shielding:
+    Trace =      37.27407482
+    Tensor :
+                    6.35775969             -4.78814703             53.18906311
+                   12.01935395            -20.79543729            -38.73488983
+                    5.40214721            -70.06368089            126.25990205
+
+
+ATOM  c   60      ISOTROPIC:        31.563146       ANISOTROPIC:       154.833017
+
+  unperturbed density contribution to magnetic shielding:
+    Trace =     371.48998985
+    Tensor :
+              348.10452570        -47.74912710          3.03150903
+               31.90463635        424.55103303         -4.96464149
+              -64.52486988        -78.07391947        341.81441082
+
+  perturbed density contribution to magnetic shielding:
+    Trace =    -339.92684340
+    Tensor :
+             -352.96037779         30.61233996         23.73091412
+              -56.15050494       -426.66887586        -78.24278179
+               68.75145317         40.69118332       -240.15127656
+
+  total magnetic shielding:
+    Trace =      31.56314645
+    Tensor :
+                   -4.85585209            -17.13678714             26.76242315
+                  -24.24586859             -2.11784283            -83.20742327
+                    4.22658329            -37.38273615            101.66313426
+
+
+   ***  nmr shielding constants written onto general input/output file!  ***
+
+
+
+    ------------------------------------------------------------------------
+         total  cpu-time :  4 hours 47 minutes and 18 seconds
+         total wall-time : 15 minutes and 26 seconds
+    ------------------------------------------------------------------------
+
+   ****  mpshift : all done  ****
+
+
+    2024-05-17 13:40:06.759 
+
