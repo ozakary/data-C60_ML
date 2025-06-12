@@ -103,7 +103,7 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
   - [basis](./DFT-1/input_files/basis): Basis set definition
   - [control](./DFT-1/input_files/control): Main input control file
   - [coord](./DFT-1/input_files/coord): Cartesian coordinates file
-  - [coord_<ID>.xyz](./DFT-1/input_files/coord_34000.xyz): Coordinate file in xyz format
+  - [coord_ID.xyz](./DFT-1/input_files/coord_34000.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/input_files/auxbasis): Auxiliary basis set for RI approximation
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/input_files/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
@@ -116,10 +116,8 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
 1. With the input files specified above, produce the initial molecular orbitals by running the Turbomole command `define` and selecting the option `eht`
 2. Call the job script to start the calculation
 
+---
 
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
-
-
----
 
 For further details, please refer to the respective folders or contact the author via the provided email.
