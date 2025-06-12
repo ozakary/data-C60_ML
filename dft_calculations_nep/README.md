@@ -77,8 +77,8 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
 - `DFT-2` and `DFT-3:` no dispersion model used
 
 ### SCF Parameters
-- **Convergence Criterion**: 10<sup>-8</sup> atomic units
-- **Maximum Iterations**: 100
+- **Convergence Criterion**: 10<sup>-8</sup> (DFT-1) or 10<sup>-8</sup> (DFT-2 and DFT-3) atomic units
+- **Maximum Iterations**: 300 (DFT-1) or 100 (DFT-2 and DFT-3)
 - **Convergence Acceleration**:
   - Damping (start=3.300, step=0.050, min=0.100)
   - Direct Inversion in the Iterative Subspace (`DIIS`)
