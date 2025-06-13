@@ -32,7 +32,7 @@ The structure of each directory is:
 ```
 
 ### PIMD for NTE of C<sub>60</sub>
-A directory [pimd_nmr_nte](./pimd_nmr_nte) is provided with the following structure:
+A directory [pimd_nmr_nte](./pimd_nte) is provided with the following structure:
 
 ```
 ./
