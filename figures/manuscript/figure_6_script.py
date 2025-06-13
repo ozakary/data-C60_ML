@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from ase.units import kcal, mol
 import pandas as pd
 
 # Linestyle settings of matplotlib
