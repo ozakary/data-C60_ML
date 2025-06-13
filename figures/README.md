@@ -33,9 +33,9 @@ To reproduce the figures and analyze the data, you will need the following:
 | [Figure 2](./manuscript/figure_2.png) | [Script](./manuscript/figure_2_script.py) | [Data](./manuscript/MLIP-1) | [Readme](./manuscript/figure_2_readme.txt) | [Description](./manuscript/figure_2_description.txt) |  
 | [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
 | [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.py) | [Data](./manuscript/sigma_dft_data) | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
-| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | N/A | [Readme](./manuscript/figures_5-6_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
-| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | N/A | [Readme](./manuscript/figures_5-6_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
-| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./manuscript/figure_7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
+| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | N/A | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
+| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | N/A | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
+| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
 | [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.py) | N/A | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
 
 ## Table 2: Figures from the Supporting Information
