@@ -31,16 +31,16 @@ The training process creates the following output files:
      energy_train.out       # Predicted values of energy for structures in train.xyz
      force_test.out         # Predicted values of forces for structures in test.xyz
      force_train.out        # Predicted values of forces for structures in train.xyz
-     virial_test.out        # Predicted values of virial for structures in test.xyz
-     virial_train.out       # Predicted values of virial for structures in train.xyz
-     loss.out               # Terms of loss function during the training process logged every 100th iteration
+     loss.out               # Values of loss function terms during the training process logged every 100th iteration
      nep.txt                # The trained model parameter file
+     nep.restart            # Restart file
      run_results.out        # Log file of the training
      run_error.out          # Error file of the training
 ```
 
 - Note that we do not use virials in the training process
-- The trained NEP model parameter files are available [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
+- All trained NEP model parameter files are available [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
+- In the [output_files](./output_files) directory the output files of the training process (iterations 600 000 - 800 000) of the MLIP-1 model are provided.
 
 ---
 
