@@ -1,1 +1,1 @@
-RMSE values for energy (E, meV/atom) and forces (F, eV/Å) of test NEP MLIP models with various numbers of neurons in the hidden layer of NEP architecture. The training of the models were stopped at iteration 200 000.
+RMSE values for energy ($E_{RMSE}$, meV/atom) and forces ($F_{RMSE}$, eV/Å) of test NEP MLIP models with various numbers of neurons in the hidden layer of NEP architecture. The training of the models were stopped at iteration 200 000. We choose to use 100 neurons for the final NEP models.
