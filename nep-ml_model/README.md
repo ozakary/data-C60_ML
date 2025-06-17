@@ -30,9 +30,9 @@ The training process creates the following output files:
      energy_test.out        # Predicted values of energy for structures in test.xyz
      energy_train.out       # Predicted values of energy for structures in train.xyz
      force_test.out         # Predicted values of forces for structures in test.xyz
-     force_train.out        # Predicted values of forces for structures in test.xyz
+     force_train.out        # Predicted values of forces for structures in train.xyz
      virial_test.out        # Predicted values of virial for structures in test.xyz
-     virial_train.out       # Predicted values of virial for structures in test.xyz
+     virial_train.out       # Predicted values of virial for structures in train.xyz
      loss.out               # Terms of loss function during the training process logged every 100th iteration
      nep.txt                # The trained model parameter file
      run_results.out        # Log file of the training
