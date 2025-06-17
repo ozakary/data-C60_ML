@@ -1,1 +1,1 @@
-RMSE values for energy (E, meV/atom) and forces (F, eV/Å) of test NEP MLIP models with various numbers of angular terms. The training of the test models were stopped at iteration 40 000.
+RMSE values for energy ($E_{RMSE}$, meV/atom) and forces ($F_{RMSE}$, eV/Å) of test NEP MLIP models with various numbers of angular and radial terms. The training of the test models were stopped at iteration 40 000. Based on the tests, 4 radial and 6 angular terms were chosen to be used for the training of the final NEP models.
