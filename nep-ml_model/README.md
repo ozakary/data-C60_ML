@@ -37,15 +37,15 @@ Here we have only provided truncated `train.xyz` and `test.xyz` files as an exam
 The training process creates the following output files:
 ```
 ./
-  energy_test.out        # Predicted values of energy for structures in test.xyz
-  energy_train.out       # Predicted values of energy for structures in train.xyz
-  force_test.out         # Predicted values of forces for structures in test.xyz
-  force_train.out        # Predicted values of forces for structures in train.xyz
-  loss.out               # Values of loss function terms during the training process logged every 100th generation
-  nep.txt                # The trained model parameter file
-  nep.restart            # Restart file
-  run_results.out        # Log file of the training
-  run_error.out          # Error file of the training
+  energy_test.out     # Predicted values of energy for structures in test.xyz
+  energy_train.out    # Predicted values of energy for structures in train.xyz
+  force_test.out      # Predicted values of forces for structures in test.xyz
+  force_train.out     # Predicted values of forces for structures in train.xyz
+  loss.out            # Values of loss function terms during the training process logged every 100th generation
+  nep.txt             # The trained model parameter file
+  nep.restart         # Restart file
+  run_results.out     # Log file of the training
+  run_error.out       # Error file of the training
 ```
 
 - Note that we do not use virials in the training process
