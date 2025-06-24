@@ -1,1 +1,1 @@
-RMSE values for energy (E, meV/atom) and forces (F, eV/Å) of test NEP MLIP models with using various sizes of training dataset. The training was stopped at iteration 200 000.
+RMSE values for energy E_RMSE (meV/atom) and forces F_RMSE (eV/Å) of test NEP MLIP models with using various sizes of training dataset. The training was stopped at iteration 200 000.
