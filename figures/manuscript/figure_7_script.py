@@ -4,7 +4,7 @@ from matplotlib.ticker import FormatStrFormatter
 
 #Load data of simulation in folder f and split the data at interval s
 def ld(f, s):
-    return np.concatenate(np.loadtxt('./' + f + '/allvol.txt')[1::s], axis=None)
+    return np.concatenate(np.loadtxt('./' + f + '/allvol.txt')[0::s], axis=None)
 
 #Calculate mean and stdev and standard error
 def calc_stats(data):
