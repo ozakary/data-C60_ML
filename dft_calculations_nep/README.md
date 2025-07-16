@@ -24,36 +24,29 @@ In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Tu
 
 Directory structure example:
 ```
-./cluster_0/energy
-./cluster_0/gradient
-./cluster_0/mpshift.out
-./cluster_0/rdgrad.out
-./cluster_0/ridft.out
-./cluster_0/statistics
-./ref.xyz
+./cluster_0/
+    energy
+    gradient
+    mpshift.out
+    rdgrad.out
+    ridft.out
+    statistics
+    ref.xyz
+./input_files/
+    auxbasis
+    control
+    coord
+    coord_34500.xyz
+    createxyz.py
+    merge.py
+    turbomole_carpo2.job OR tm77_puhti.job
 
-./cluster_1/energy
-./cluster_1/gradient
-./cluster_1/mpshift.out
-./cluster_1/rdgrad.out
-./cluster_1/ridft.out
-./cluster_1/statistics
-./ref.xyz
-...
-...
-./cluster_n/energy
-./cluster_n/gradient
-./cluster_n/mpshift.out
-./cluster_n/rdgrad.out
-./cluster_n/ridft.out
-./cluster_n/statistics
-./ref.xyz
 ```
-Each `cluster_<ID>` folder also contains the job log files:
+Each `cluster` folder also contains the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
 
-Additional scripts, input files, and the corresponding `.job` file (`turbomole_carpo2.job` or `tm77_puhti.job`) can be found in the `input_files` folder.
+All scripts, input files, and the corresponding `.job` file (`turbomole_carpo2.job` or `tm77_puhti.job`) can be found in the `input_files` folder.
 
 ## Computational Details
 
@@ -70,7 +63,7 @@ Additional scripts, input files, and the corresponding `.job` file (`turbomole_c
 - `DFT-3` : `pcSseg-1` (segmented contracted basis set, optimized for calculating nuclear magnetic shielding constants)
 - **Auxiliary Basis Set**:  
 - `DFT-1` and `DFT-2` : `x2c-TZVPall-s` (`12s5p4d2f1g`)
-- `DFT-3` : `pcSseg-1`
+- `DFT-3` : `pcSseg-1` (`12s5p4d2f1g`)
 - **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact Two-Component (`X2C`) Hamiltonian
 - **Dispersion Correction**:  
 - `DFT-1` : `DFT-D4` dispersion model
