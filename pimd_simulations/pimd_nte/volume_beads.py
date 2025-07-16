@@ -1,6 +1,3 @@
-import ase.io as io
-from ase import Atoms
-import math
 import numpy as np
 import os
 
@@ -31,10 +28,16 @@ def gyrtensor(coords):
     return gyrtensor
 
 # Calculate the volume of C60 from the gyration tensor
-def calcvolume(tensor):
+def calcvolume_sphere(tensor):
     eigenvalues = np.linalg.eigvals(tensor)
     radius_gyr = (eigenvalues[0] + eigenvalues[1] + eigenvalues[2])**0.5
     volume = 4/3 * math.pi * radius_gyr**3
+    return volume
+
+# Laskee tilavuuden gyraatiotensorin avulla mallintaen kappaleen ellipsoidina
+def calcvolume_ell(tensor):
+    eigenvalues = np.linalg.eigvals(tensor)
+    volume = 4 * math.pi * 3**(1/2) * eigenvalues[0]**(1/2) * eigenvalues[1]**(1/2) * eigenvalues[2]**(1/2)
     return volume
 
 # Main function: Loops through all the beads and calculates the volume of each configuration and writes results to a txt file
@@ -43,11 +46,10 @@ for i in range(beads):
     atomspath = path + "/beads_dump_" + str(i) + ".xyz"
     atoms = io.read(atomspath, index=':')
 
-    writefilepath = path + "/volumes_" + str(i) + "bead.txt"
+    writefilepath = path + "/volumes_ell_" + str(i) + "bead.txt"
 
     with open(writefilepath, 'a') as f:
         for k in range(len(atoms)) :
             molecule = atoms[k].get_positions()
-            vol = calcvolume(gyrtensor(molecule))
+            vol = calcvolume_ell(gyrtensor(molecule))
             f.write(str(k) + ';' + str(vol) + '\n')
-
