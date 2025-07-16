@@ -27,14 +27,14 @@ def gyrtensor(coords):
                 gyrtensor[i][j] /= 60
     return gyrtensor
 
-# Calculate the volume of C60 from the gyration tensor
+# Calculate the volume of C60 from the gyration tensor treating the molecule as a sphere
 def calcvolume_sphere(tensor):
     eigenvalues = np.linalg.eigvals(tensor)
     radius_gyr = (eigenvalues[0] + eigenvalues[1] + eigenvalues[2])**0.5
     volume = 4/3 * math.pi * radius_gyr**3
     return volume
 
-# Laskee tilavuuden gyraatiotensorin avulla mallintaen kappaleen ellipsoidina
+# Calculates the volume of the fullerene by treating the molecule as an ellipsoid
 def calcvolume_ell(tensor):
     eigenvalues = np.linalg.eigvals(tensor)
     volume = 4 * math.pi * 3**(1/2) * eigenvalues[0]**(1/2) * eigenvalues[1]**(1/2) * eigenvalues[2]**(1/2)
