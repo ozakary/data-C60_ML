@@ -32,6 +32,7 @@ Directory structure example:
     ridft.out
     statistics
     ref.xyz
+
 ./input_files/
     auxbasis
     control
