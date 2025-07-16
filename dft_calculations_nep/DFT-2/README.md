@@ -16,7 +16,7 @@ This document describes the preparation of datasets for training the MLIP-2 NEP3
 
 ## Directory Contents
 
-The `DFT-2` directory contains the processed data files necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components acting on each atom calculated using `TURBOMOLE`.
+The `DFT-2` directory contains the processed data files necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components (as well as magnetic shielding tensor, which will be ignored for now) acting on each atom calculated using `TURBOMOLE`.
 
 ## Dataset Files
 
