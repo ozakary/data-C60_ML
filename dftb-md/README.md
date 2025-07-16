@@ -53,11 +53,12 @@ Running the script with the command `./prepare.sh` creates the following file st
     createC60xyz.py
 ...
 ```
+Note that the first selected configuration is `cluster_34000`, in order to neglect the configurations in the equilibration stage of the simulation.
 
 Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations_schnet](../dft_calculations_schnet) to run the DFT calculations for the C<sub>60</sub> configurations.
 
 **createC60xyz.py**  
-This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene end produced an empty C<sub>60</sub> structure.
+This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene, producing an empty C<sub>60</sub> structure.
 
 ---
 
