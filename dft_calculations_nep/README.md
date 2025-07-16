@@ -42,11 +42,11 @@ Directory structure example:
     merge.py
     turbomole_carpo2.job OR tm77_puhti.job
 ```
-Each `cluster` folder also contains the job log files:
+To start the calculation and process the results, all files in `input_files` should be included in the `cluster_<ID>` folder. For simplicity we have omitted the input files in the `cluster_34500` example folder, which includes only the output files of the calculation and the produced reference dataset structure `ref.xyz`.
+
+Each `cluster_<ID>` folder contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
-
-All scripts, input files, and the corresponding `.job` file (`turbomole_carpo2.job` or `tm77_puhti.job`) can be found in the `input_files` folder.
 
 ## Computational Details
 
