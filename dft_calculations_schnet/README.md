@@ -16,7 +16,7 @@ This repository contains the calculation conditions used in the DFT and NMR magn
 
 ## Overview of the Data
 
-This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example folder `cluster_34500` with the output files can be found [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the calculations of the 1001 structures were carried out as described in this page.
+This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example folder `cluster_34500` with the output files can be found [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the DFT calculations of the 1001 structures were carried out as described in this page.
 
 Directory structure example:
 ```
