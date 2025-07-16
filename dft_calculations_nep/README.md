@@ -35,6 +35,7 @@ Directory structure example:
 
 ./input_files/
     auxbasis
+    basis
     control
     coord
     coord_34500.xyz
