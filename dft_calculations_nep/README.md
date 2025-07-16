@@ -24,7 +24,7 @@ In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Tu
 
 Directory structure example:
 ```
-./cluster_0/
+./cluster_34500/
     energy
     gradient
     mpshift.out
@@ -41,7 +41,6 @@ Directory structure example:
     createxyz.py
     merge.py
     turbomole_carpo2.job OR tm77_puhti.job
-
 ```
 Each `cluster` folder also contains the job log files:
 - Output log: `jobfile.out<JOB_ID>`
