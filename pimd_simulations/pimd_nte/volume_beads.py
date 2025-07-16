@@ -1,4 +1,7 @@
+import ase.io as io
+from ase import Atoms
 import numpy as np
+import math
 import os
 
 #This script reads a GPUMD PIMD trajectory file in xyz format, calculates and writes average volume over the beads of each step into a separate file
