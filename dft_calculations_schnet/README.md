@@ -16,33 +16,21 @@ This repository contains the calculation conditions used in the DFT and NMR magn
 
 ## Overview of the Data
 
-This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example structure calculation folder `cluster_34500` is provided [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the calculations of the 1001 structures were carried out as described here.
+This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example folder `cluster_34500` with the output files can be found [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the calculations of the 1001 structures were carried out as described in this page.
 
 Directory structure example:
 ```
-./cluster_34500/
-    energy
-    gradient
-    mpshift.out
-    rdgrad.out
-    ridft.out
-    statistics
-    ref.xyz
-
 ./input_files/
     auxbasis
+    basis
     control
     coord
-    coord_34500.xyz
-    createxyz.py
-    merge.py
+    coord.xyz
     turbomole_carpo2.job OR tm77_puhti.job
 ```
-To start the calculation and process the results, all files in `input_files` should be included in the `cluster_<ID>` folder. For simplicity we have omitted the input files in the `cluster_34500` example folder, which includes only the output files of the calculation and the produced reference dataset structure `ref.xyz`.
+To start the calculation all files in `input_files` should be included in the desired `cluster_<ID>` calculation folder. 
 
-Each `cluster_<ID>` folder contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
-- Output log: `jobfile.out<JOB_ID>`
-- Error log: `jobfile.err<JOB_ID>`
+Each calculation produces output files identical to the example `cluster_<ID>` folder found [here](../dft_calculations_nep/DFT-1/cluster_34500).
 
 ## Computational Details
 
