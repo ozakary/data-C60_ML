@@ -16,39 +16,31 @@ This repository contains the calculation conditions used in the DFT and NMR magn
 
 ## Overview of the Data
 
-This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. The complete input and output files are available in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
-
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`, where ID ranges from `0` to `1000`.
+This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example structure calculation folder `cluster_34500` is provided [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the calculations of the 1001 structures were carried out as described here.
 
 Directory structure example:
 ```
-./cluster_0/basis
-./cluster_0/control
-./cluster_0/coord
-./cluster_0/auxbasis
-./cluster_0/mpshift.out
-./cluster_0/rdgrad.out
-./cluster_0/ridft.out  
+./cluster_34500/
+    energy
+    gradient
+    mpshift.out
+    rdgrad.out
+    ridft.out
+    statistics
+    ref.xyz
 
-./cluster_1/basis
-./cluster_1/control
-./cluster_1/coord
-./cluster_1/auxbasis
-./cluster_1/mpshift.out
-./cluster_1/rdgrad.out
-./cluster_1/ridft.out
-...
-...
-./cluster_1000/basis
-./cluster_1000/control
-./cluster_1000/coord
-./cluster_1000/auxbasis
-./cluster_1000/mpshift.out
-./cluster_1000/rdgrad.out
-./cluster_1000/ridft.out
+./input_files/
+    auxbasis
+    control
+    coord
+    coord_34500.xyz
+    createxyz.py
+    merge.py
+    turbomole_carpo2.job OR tm77_puhti.job
 ```
+To start the calculation and process the results, all files in `input_files` should be included in the `cluster_<ID>` folder. For simplicity we have omitted the input files in the `cluster_34500` example folder, which includes only the output files of the calculation and the produced reference dataset structure `ref.xyz`.
 
-Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job`) as well as the job log files:
+Each `cluster_<ID>` folder contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
 
