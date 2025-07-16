@@ -57,7 +57,9 @@ C 12.53116534 12.62739222 16.00473695 -2.1184917036309847 2.745780572969543 0.57
 
 ## Dataset Preparation
 
-The datasets **train.xyz** and **test.xyz** were prepared using Python scripts (`createxyz.py` and `merge.py`) that process the output files from TURBOMOLE calculations. The script `createxyz.py`:
+The datasets **train.xyz** and **test.xyz** were prepared using Python scripts (`createxyz.py` and `merge.py`) that process the output files from TURBOMOLE calculations.  
+
+The script `createxyz.py`:
 
 1. Extracts atomic coordinates from `coord_<ID>.xyz` file
 2. Reads DFT energy and forces from TURBOMOLE output files `energy` and `gradient`
@@ -66,11 +68,10 @@ The datasets **train.xyz** and **test.xyz** were prepared using Python scripts (
 The script `merge.py`:
 
 1. Assigns reference structure (`ref.xyz`) into training (70%) and test (30%) set with the given probability
-The script processes 1001 C60 structures, with each structure containing 60 carbon atoms, resulting in a dataset with 60,060 atomic entries.
 
 ### Running the Script
 
-To generate the dataset, run the Python scripts independently for all directories (`cluster_<ID>`) each containing a single C<sub>60</sub> reference structure:
+To generate the dataset, run the Python scripts independently in all directories (`cluster_<ID>`) each containing a single C<sub>60</sub> reference structure:
 
 ```bash
 python3 createxyz.py
