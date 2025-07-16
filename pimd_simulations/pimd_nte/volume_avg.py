@@ -8,7 +8,7 @@ beads = 32
 
 full_results = []
 for i in range(beads):
-    full_results.append(np.loadtxt('volumes_' + str(i) + 'bead.txt', delimiter=';')[:,1])
+    full_results.append(np.loadtxt('volumes_ell_' + str(i) + 'bead.txt', delimiter=';')[:,1])
 
 with open(writefilepath, 'w') as f:
     for j in range(len(full_results[0])):
