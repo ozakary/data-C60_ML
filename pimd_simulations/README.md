@@ -46,7 +46,7 @@ A directory [pimd_nmr_nte](./pimd_nte) is provided with the following structure:
 ```
 
 ***volume_beads.py***  
-Python script `volume_beads.py` calculates for each bead **<i>** in the PIMD simulation the volume of C<sub>60</sub> from the samples written in the file beads_dump_**<i>**.xyz. The script creates the output files:
+Python script `volume_beads.py` calculates for each bead **\<i\>** in the PIMD simulation the volume of C<sub>60</sub> from the samples written in the file beads_dump_**<i>**.xyz. The script creates the output files:
 
 ```
 ./
