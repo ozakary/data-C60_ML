@@ -61,7 +61,7 @@ Here ``P`` is the number of beads used in the simulation. Each line in the outpu
 ...
 <n>:<volume (Å)>
 ````
-Here ``<n>``is the n<sup>th</sup> output structure in the beads_dump_**\<i\>**.xyz output file.
+Here ``<n>``is the n<sup>th</sup> output structure in the beads_dump_\<i\>.xyz output file.
 
 
 ***volume_avg.py***  
