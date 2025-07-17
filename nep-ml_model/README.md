@@ -49,8 +49,8 @@ The training process creates the following output files:
 ```
 
 - Note that we do not use virials in the training process
-- All trained NEP model parameter files are available [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
 - In the [output_files](./output_files) directory, the output files of the training process of the three NEP3 MLIP models are provided.
+- All trained NEP model parameter files can be found in the corresponding `output_files` directories, or additionally [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
 
 ---
 
