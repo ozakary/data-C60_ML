@@ -54,7 +54,7 @@ Python script `volume_beads.py` calculates for each bead **\<i\>** in the PIMD s
      volumes_1bead.txt
      volumes_(P-1)bead.txt
 ```
-Here ``P``is the number of beads used in the simulation. Each line in output file volumes_ell_**\<i\>**bead.txt contains the volume of C<sub>60</sub> calculated from the bead **\<i\>** of the simulation, with the format:
+Here ``P``is the number of beads used in the simulation. Each line in the output file volumes_ell_**\<i\>**bead.txt contains the volume of C<sub>60</sub> calculated from the bead **\<i\>** of the simulation, with the format:
 ```
 <0>:<volume (Å)>
 <1>:<volume (Å)>
