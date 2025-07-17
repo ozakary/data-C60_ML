@@ -36,7 +36,7 @@ A directory [pimd_nmr_nte](./pimd_nte) is provided with the following structure:
 
 ```
 ./
-    model.xyz              # Input structure of C60 for the initial configuration of the simulation
+    model.xyz              # An example input structure of C60 for the initial configuration of the simulation
     nep-mlip1.txt          # The trained NEP model MLIP-1, containing the trained parameters of the model
     nep-mlip2.txt          # The trained NEP model MLIP-2, containing the trained parameters of the model
     nep-mlip3.txt          # The trained NEP model MLIP-3, containing the trained parameters of the model
@@ -54,7 +54,7 @@ Python script `volume_beads.py` calculates for each bead **i** in the PIMD simul
      volumes_1bead.txt
      volumes_(P-1)bead.txt
 ```
-Here ``P``is the number of beads used in the simulation. Each line in output file volumes_**i**bead.txt contains the volume of C<sub>60</sub> calculated from the bead **i** of the simulation, with the format:
+Here ``P``is the number of beads used in the simulation. Each line in output file volumes_ell_**i**bead.txt contains the volume of C<sub>60</sub> calculated from the bead **i** of the simulation, with the format:
 ```
 <0>:<volume (Å)>
 <1>:<volume (Å)>
@@ -65,13 +65,13 @@ Here ``<n>``is the n<sup>th</sup> output structure in the beads_dump_**i**.xyz o
 
 
 ***volume_avg.py***  
-Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> configuration by taking the average of the volume over all the beads written in the files volumes_**i**bead.txt. The script creates an output file `volumes_average.txt`, with the format:
+Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> configuration by taking the average of the volume over all the beads written in the files volumes_ell_**i**bead.txt. The script creates an output file `volumes_ell_average.txt`, with the format:
 ```
 <volume (Å)>
 <volume (Å)>
 ...
 ```
-Here each line in the file contains the average volume of C<sub>60</sub> calculated from the corresponding lines in the files volumes_**i**bead.txt.
+Here each line in the file contains the average volume of C<sub>60</sub> calculated from the corresponding lines in the files volumes_ell_**i**bead.txt.
 
 
 ## Workflow
