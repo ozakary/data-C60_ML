@@ -1,4 +1,4 @@
-# C<sub>60</sub> NEP3 Machine Learning Interatomic Potentials (MLIP)
+# NEP3 Machine Learning Interatomic Potentials (MLIP) for C<sub>60</sub>
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
@@ -50,7 +50,7 @@ The training process creates the following output files:
 
 - Note that we do not use virials in the training process
 - All trained NEP model parameter files are available [here](../pimd_simulations/pimd_nte), or in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
-- In the [output_files](./output_files) directory, the output files of the training process (generations 600 000 - 800 000) of the MLIP-1 model are provided.
+- In the [output_files](./output_files) directory, the output files of the training process of the three NEP3 MLIP models are provided.
 
 ---
 
