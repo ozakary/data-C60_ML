@@ -1,1 +1,0 @@
-Convergence plot of the volume of of C60 as a function of the bead number at various temperatures. At high temperatures the convergence is reached with lower number of beads. At T = 100 K the convergence is still questionable with P = 128.

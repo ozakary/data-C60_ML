@@ -1,1 +1,0 @@
-(a, b, c) The energy (meV/atom) correlation plots of the trained NEP MLIP models 1, 2, and 3 respectively compared to DFT level reference energies. Figures (d, e, f) show the force (eV/Å) correlation of the trained models compared to DFT forces.

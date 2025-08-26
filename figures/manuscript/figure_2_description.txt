@@ -1,1 +1,0 @@
-Distributions of the C60 reference energies and force components of atoms in the training and test data calculated at the DFT-1 theory level.

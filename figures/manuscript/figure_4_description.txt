@@ -1,1 +1,0 @@
-Distributions of the C60 reference σiso in the training (a), validation (b), and test (c) data calculated at the DFT-1 theory level. The isotropic chemical shielding (ppm) correlation plots of the trained SchNet NMR-ML model compared to DFT-1 level reference values for (d) training, (e) validation, and (f) test data.

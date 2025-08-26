@@ -1,1 +1,0 @@
-Convergence plot of the volume of of C60 as a function of temperature with varying the bead number of the PIMD simulation. With one bead the simulation is classical and the volume increases linearly as a function of temperature. At low temperatures more beads are needed to fully capture the quantum nuclear effects as compared to high temperatures.
