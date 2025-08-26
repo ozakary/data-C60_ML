@@ -1,0 +1,1 @@
+(a) Absolute volume and (b) absolute volume difference with respect to volume at T = 150 K of C60 for MLIP-1, MLIP-2, MLIP-3, and rovibrational reference volume data of C60 by Jacklin et al.

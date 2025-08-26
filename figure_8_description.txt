@@ -1,0 +1,1 @@
+Isotropic chemical shielding of the three isotopes of C60 as a function of temperature. The temperature dependence is linear in this temperature range.
