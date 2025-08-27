@@ -11,7 +11,8 @@
 - 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
 
 ---
-*UPDATE FIGURE DESCRIPTION FILES AFTER FINAL MANUSCRIPT*
+*UPDATE FIGURE DESCRIPTION FILES AFTER FINAL MANUSCRIPT*  
+
 This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the manuscript and supporting information documents of “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”.
 
 ## Requirements
