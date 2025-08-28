@@ -111,5 +111,5 @@ ax6.set_xlim([-20, 75])
 ax6.set_ylim([-20, 75])
 
 
-plt.savefig('figure_4.png', dpi=300, transparent=True)
+plt.savefig('figure_4.png', dpi=300)
 plt.show()
