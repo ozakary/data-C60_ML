@@ -108,5 +108,5 @@ print("\n" + "MLIP-3:")
 for i in range(len(volumedata_m3)):
     print(str(m2_3_temps[i]) + 'K avg volume = ' + str(m3_data[i]) + ' and std = ' + str(m3_data_std[i]) + ' and SEM: ' + str(m3_data_sem[i]) + " data: " + str(len(volumedata_m3[i])))
 
-plt.savefig('figure_7.png', dpi=300, transparent=True)
+plt.savefig('figure_7.png', dpi=300)
 plt.show()
