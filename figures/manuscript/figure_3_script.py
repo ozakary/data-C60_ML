@@ -147,5 +147,5 @@ ax6.tick_params(axis='y', labelsize=13)
 ax6.set_xlim([-10, 10])
 ax6.set_ylim([-10, 10])
 
-plt.savefig('figure_3.png', dpi=300, transparent=True)
+plt.savefig('figure_3.png', dpi=300)
 plt.show()
