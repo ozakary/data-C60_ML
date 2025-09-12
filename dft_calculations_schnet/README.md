@@ -32,7 +32,8 @@ To start the calculation all files in `input_files` should be included in the de
 
 Each calculation produces output files identical to the example `cluster_<ID>` folder found [here](../dft_calculations_nep/DFT-1/cluster_34500).
 
-The results are collected, and the processed data files used for the training of the SchNet model can be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60). Details of generating the training data files can be found [here](../nmr-ml_dataset/).
+The results are collected, and the processed data files used for the training of the SchNet model can be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60).
+Details of generating the training dataset files can be found [here](../nmr-ml_dataset/).
 
 ## Computational Details
 
