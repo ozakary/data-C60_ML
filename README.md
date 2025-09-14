@@ -1,4 +1,4 @@
-# Supporting Data for “*Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
+# Supporting COde for “*Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
 
 ## Graphical Abstract
 
@@ -18,9 +18,9 @@
 
 ---
 
-This is the Supporting Dataset for the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This is the Supporting Code for the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
-The dataset comprises the following sections:
+The repository comprises the following sections:
 
 1. Dataset preparation for the three MLIP models:  
    i. Configuration generation using semi-empirical MD simulations. ([directory](./dftb-md/))  
