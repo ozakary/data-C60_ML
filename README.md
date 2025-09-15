@@ -1,4 +1,4 @@
-# Supporting Code for “*Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
+# Supporting Code for “*Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
 
 ## Graphical Abstract
 
@@ -14,11 +14,11 @@
 - 📧 Email: [Ouail.Zakary@oulu.fi](mailto:Ouail.Zakary@oulu.fi)  
 - 🔗 ORCID: [0000-0002-7793-3306](https://orcid.org/0000-0002-7793-3306)  
 - 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
-- 📁 Portfolio: [GitHub Portfolio](https://ozakary.github.io/)
+- 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
 
 ---
 
-This is the supporting code for the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This is the supporting code for the manuscript “***Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
 The repository comprises the following sections:
 
@@ -36,14 +36,25 @@ The repository comprises the following sections:
 7. Python scripts and raw numerical data for all figures related to the NMR-ML model included in the main manuscript and the Supporting Information. ([directory](./figures/))  
 
 ## Citations
+If you use this data, please cite the following:
 
-If you use this data, please cite the following: \
-\
-**Paper:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene. *In preparation* **2025**. [DOI: TBA]
+```bibtex
+@article{laurila2025_ml_c60,
+  title={Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene},
+  author={Laurila, Ossi, Jacklin, Tiia, Zakary, Ouail and Lantto, Perttu},
+  journal={In preparation},
+  year={2025},
+  note={DOI: To be announced}
+}
 
-\
-**Dataset:** Laurila O.; Jacklin T.; Zakary, O.; Lantto P. (**2025**). Supporting Data for “Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene”. *Zenodo. Dataset.* [DOI: TBA]
+@dataset{laurila2025_data_c60,
+  author = {Laurila, Ossi, Jacklin, Tiia, Zakary, Ouail and Lantto, Perttu},
+  title = {Supporting Data for "Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene"},
+  year = {2025},
+  publisher = {In preparation},
+  note = {DOI: To be announced},
+}
+```
 
 ---
-
 For further details, please refer to the respective folders or contact the author via the provided email.
