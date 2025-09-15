@@ -40,16 +40,16 @@ If you use this data, please cite the following:
 
 ```bibtex
 @article{laurila2025_ml_c60,
-  title={Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene},
-  author={Laurila, Ossi, Jacklin, Tiia, Zakary, Ouail and Lantto, Perttu},
+  title={Machine Learning-Enabled Insights Into Quantum Effects on Structure and $^{13}$C NMR of C$_{60}$ Fullerene},
+  author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   journal={In preparation},
   year={2025},
   note={DOI: To be announced}
 }
 
 @dataset{laurila2025_data_c60,
-  author = {Laurila, Ossi, Jacklin, Tiia, Zakary, Ouail and Lantto, Perttu},
-  title = {Supporting Data for "Machine Learning-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene"},
+  author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
+  title = {Supporting Data for "Machine Learning-Enabled Insights Into Quantum Effects on Structure and $^{13}$C NMR of C$_{60}$ Fullerene"},
   year = {2025},
   publisher = {In preparation},
   note = {DOI: To be announced},
