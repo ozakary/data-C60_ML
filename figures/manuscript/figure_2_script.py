@@ -22,71 +22,71 @@ ax22.yaxis.set_visible(False)
 fig.subplots_adjust(left=0.118, right=0.985, wspace=0.25, top=0.955, bottom=0.1, hspace=0.274)
 
 # Load predicted and DFT energy values (train and test) and print some key values of the data
-energy_test = np.loadtxt('MLIP-1/energy_test.out')[:, 0]
-energy_train = np.loadtxt('MLIP-1/energy_train.out')[:, 0]
-energy_test_true = np.loadtxt('MLIP-1/energy_test.out')[:, 1]
-energy_train_true = np.loadtxt('MLIP-1/energy_train.out')[:, 1]
+energy_test = np.loadtxt('log/MLIP-1/energy_test.out')[:, 0]
+energy_train = np.loadtxt('log/MLIP-1/energy_train.out')[:, 0]
+energy_test_true = np.loadtxt('log/MLIP-1/energy_test.out')[:, 1]
+energy_train_true = np.loadtxt('log/MLIP-1/energy_train.out')[:, 1]
 print("MLIP-1 energy train MAE: ", np.average(np.absolute(energy_train-energy_train_true))*1000)
 print("MLIP-1 energy test MAE: ", np.average(np.absolute(energy_test-energy_test_true))*1000)
 print("\n")
-energy_test_m2 = np.loadtxt('MLIP-2/energy_test.out')[:, 0]
-energy_train_m2 = np.loadtxt('MLIP-2/energy_train.out')[:, 0]
-energy_test_true_m2 = np.loadtxt('MLIP-2/energy_test.out')[:, 1]
-energy_train_true_m2 = np.loadtxt('MLIP-2/energy_train.out')[:, 1]
+energy_test_m2 = np.loadtxt('log/MLIP-2/energy_test.out')[:, 0]
+energy_train_m2 = np.loadtxt('log/MLIP-2/energy_train.out')[:, 0]
+energy_test_true_m2 = np.loadtxt('log/MLIP-2/energy_test.out')[:, 1]
+energy_train_true_m2 = np.loadtxt('log/MLIP-2/energy_train.out')[:, 1]
 print("MLIP-2 energy train MAE: ", np.average(np.absolute(energy_train_m2-energy_train_true_m2))*1000)
 print("MLIP-2 energy test MAE: ", np.average(np.absolute(energy_test_m2-energy_test_true_m2))*1000)
 print("\n")
-energy_test_m3 = np.loadtxt('MLIP-3/energy_test.out')[:, 0]
-energy_train_m3 = np.loadtxt('MLIP-3/energy_train.out')[:, 0]
-energy_test_true_m3 = np.loadtxt('MLIP-3/energy_test.out')[:, 1]
-energy_train_true_m3 = np.loadtxt('MLIP-3/energy_train.out')[:, 1]
+energy_test_m3 = np.loadtxt('log/MLIP-3/energy_test.out')[:, 0]
+energy_train_m3 = np.loadtxt('log/MLIP-3/energy_train.out')[:, 0]
+energy_test_true_m3 = np.loadtxt('log/MLIP-3/energy_test.out')[:, 1]
+energy_train_true_m3 = np.loadtxt('log/MLIP-3/energy_train.out')[:, 1]
 print("MLIP-3 energy train MAE: ", np.average(np.absolute(energy_train_m3-energy_train_true_m3))*1000)
 print("MLIP-3 energy test MAE: ", np.average(np.absolute(energy_test_m3-energy_test_true_m3))*1000)
 print("\n")
 
 # Load force predicted components
-force_test_x = np.loadtxt('MLIP-1/force_test.out')[:, 0]
-force_train_x = np.loadtxt('MLIP-1/force_train.out')[:, 0]
-force_test_y = np.loadtxt('MLIP-1/force_test.out')[:, 1]
-force_train_y = np.loadtxt('MLIP-1/force_train.out')[:, 1]
-force_test_z = np.loadtxt('MLIP-1/force_test.out')[:, 2]
-force_train_z = np.loadtxt('MLIP-1/force_train.out')[:, 2]
+force_test_x = np.loadtxt('log/MLIP-1/force_test.out')[:, 0]
+force_train_x = np.loadtxt('log/MLIP-1/force_train.out')[:, 0]
+force_test_y = np.loadtxt('log/MLIP-1/force_test.out')[:, 1]
+force_train_y = np.loadtxt('log/MLIP-1/force_train.out')[:, 1]
+force_test_z = np.loadtxt('log/MLIP-1/force_test.out')[:, 2]
+force_train_z = np.loadtxt('log/MLIP-1/force_train.out')[:, 2]
 
-force_test_x_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 0]
-force_train_x_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 0]
-force_test_y_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 1]
-force_train_y_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 1]
-force_test_z_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 2]
-force_train_z_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 2]
+force_test_x_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 0]
+force_train_x_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 0]
+force_test_y_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 1]
+force_train_y_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 1]
+force_test_z_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 2]
+force_train_z_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 2]
 
-force_test_x_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 0]
-force_train_x_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 0]
-force_test_y_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 1]
-force_train_y_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 1]
-force_test_z_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 2]
-force_train_z_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 2]
+force_test_x_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 0]
+force_train_x_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 0]
+force_test_y_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 1]
+force_train_y_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 1]
+force_test_z_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 2]
+force_train_z_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 2]
 
 # Load DFT force components
-force_test_x_true = np.loadtxt('MLIP-1/force_test.out')[:, 3]
-force_train_x_true = np.loadtxt('MLIP-1/force_train.out')[:, 3]
-force_test_y_true = np.loadtxt('MLIP-1/force_test.out')[:, 4]
-force_train_y_true = np.loadtxt('MLIP-1/force_train.out')[:, 4]
-force_test_z_true = np.loadtxt('MLIP-1/force_test.out')[:, 5]
-force_train_z_true = np.loadtxt('MLIP-1/force_train.out')[:, 5]
+force_test_x_true = np.loadtxt('log/MLIP-1/force_test.out')[:, 3]
+force_train_x_true = np.loadtxt('log/MLIP-1/force_train.out')[:, 3]
+force_test_y_true = np.loadtxt('log/MLIP-1/force_test.out')[:, 4]
+force_train_y_true = np.loadtxt('log/MLIP-1/force_train.out')[:, 4]
+force_test_z_true = np.loadtxt('log/MLIP-1/force_test.out')[:, 5]
+force_train_z_true = np.loadtxt('log/MLIP-1/force_train.out')[:, 5]
 
-force_test_x_true_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 3]
-force_train_x_true_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 3]
-force_test_y_true_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 4]
-force_train_y_true_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 4]
-force_test_z_true_m2 = np.loadtxt('MLIP-2/force_test.out')[:, 5]
-force_train_z_true_m2 = np.loadtxt('MLIP-2/force_train.out')[:, 5]
+force_test_x_true_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 3]
+force_train_x_true_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 3]
+force_test_y_true_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 4]
+force_train_y_true_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 4]
+force_test_z_true_m2 = np.loadtxt('log/MLIP-2/force_test.out')[:, 5]
+force_train_z_true_m2 = np.loadtxt('log/MLIP-2/force_train.out')[:, 5]
 
-force_test_x_true_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 3]
-force_train_x_true_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 3]
-force_test_y_true_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 4]
-force_train_y_true_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 4]
-force_test_z_true_m3 = np.loadtxt('MLIP-3/force_test.out')[:, 5]
-force_train_z_true_m3 = np.loadtxt('MLIP-3/force_train.out')[:, 5]
+force_test_x_true_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 3]
+force_train_x_true_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 3]
+force_test_y_true_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 4]
+force_train_y_true_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 4]
+force_test_z_true_m3 = np.loadtxt('log/MLIP-3/force_test.out')[:, 5]
+force_train_z_true_m3 = np.loadtxt('log/MLIP-3/force_train.out')[:, 5]
 
 # Print key values of the data
 print("MLIP-1 force train MAE: ", (np.average(np.absolute(force_train_x-force_train_x_true)) + np.average(np.absolute(force_train_y-force_train_y_true)) + np.average(np.absolute(force_train_z-force_train_z_true)))/3)
@@ -156,17 +156,17 @@ ax22.tick_params(axis='x', labelsize=20)
 ax22.tick_params(axis='y', labelsize=20)
 ax22.legend(["DFT-1", "DFT-2", "DFT-3"], loc="upper right", fontsize=18)
 
-plot3 = ax3.hist(force_train_comb_true, 15, alpha=0.7, facecolor='blue', edgecolor='blue', linewidth=5, histtype='step')
-plot3_2 = ax3.hist(force_train_comb_true_m2, 15, alpha=0.7, facecolor='green', edgecolor='green', linewidth=5, histtype='step')
-plot3_3 = ax3.hist(force_train_comb_true_m3, 15, alpha=0.7, facecolor='red', edgecolor='red', linewidth=5, histtype='step')
+plot3 = ax3.hist(force_train_comb_true, 15, alpha=0.7, facecolor='blue', edgecolor='blue', linewidth=2, histtype='step')
+plot3_2 = ax3.hist(force_train_comb_true_m2, 15, alpha=0.7, facecolor='green', edgecolor='green', linewidth=2, histtype='step')
+plot3_3 = ax3.hist(force_train_comb_true_m3, 15, alpha=0.7, facecolor='red', edgecolor='red', linewidth=2, histtype='step')
 ax3.set_ylabel('Number of datapoints', fontsize=20)
 ax3.set_xlabel(r'$F_{DFT}$ (eV/Å)', fontsize=20)
 ax3.tick_params(axis='x', labelsize=20)
 ax3.tick_params(axis='y', labelsize=20)
 
-plot4 = ax4.hist(force_test_comb_true, 15, facecolor='blue', alpha=0.7, edgecolor='blue', linewidth=5, histtype='step')
-plot4_2 = ax4.hist(force_test_comb_true_m2, 15, facecolor='green', alpha=0.7, edgecolor='green', linewidth=5, histtype='step')
-plot4_3 = ax4.hist(force_test_comb_true_m3, 15, facecolor='red', alpha=0.7, edgecolor='red', linewidth=5, histtype='step')
+plot4 = ax4.hist(force_test_comb_true, 15, facecolor='blue', alpha=0.7, edgecolor='blue', linewidth=2, histtype='step')
+plot4_2 = ax4.hist(force_test_comb_true_m2, 15, facecolor='green', alpha=0.7, edgecolor='green', linewidth=2, histtype='step')
+plot4_3 = ax4.hist(force_test_comb_true_m3, 15, facecolor='red', alpha=0.7, edgecolor='red', linewidth=2, histtype='step')
 ax4.set_xlabel(r'$F_{DFT}$ (eV/Å)', fontsize=20)
 ax4.tick_params(axis='x', labelsize=20)
 ax4.tick_params(axis='y', labelsize=20)
@@ -176,16 +176,16 @@ ax4.tick_params(axis='y', labelsize=20)
 d1 = -1  # proportion of vertical to horizontal extent of the slanted line
 kwargs_bottom = dict(marker=[(-d1, -1), (d1, 1)], markersize=12,
               linestyle="none", color='k', mec='k', mew=1, clip_on=False)
-ax11.plot([0, -0.25], [0, 0], transform=ax11.transAxes, **kwargs_bottom)
-ax22.plot([0, -0.25], [0, 0], transform=ax22.transAxes, **kwargs_bottom)
+ax11.plot([0, -0.19], [0, 0], transform=ax11.transAxes, **kwargs_bottom)
+ax22.plot([0, -0.19], [0, 0], transform=ax22.transAxes, **kwargs_bottom)
 
 d2 = -1  # proportion of vertical to horizontal extent of the slanted line
 kwargs_top = dict(marker=[(-d2, -1), (d2, 1)], markersize=12,
               linestyle="none", color='k', mec='k', mew=1, clip_on=False)
 
 # Plot the broken axis lines
-ax11.plot([0, -0.25], [1, 1], transform=ax11.transAxes, **kwargs_top)
-ax22.plot([0, -0.25], [1, 1], transform=ax22.transAxes, **kwargs_top)
+ax11.plot([0, -0.19], [1, 1], transform=ax11.transAxes, **kwargs_top)
+ax22.plot([0, -0.19], [1, 1], transform=ax22.transAxes, **kwargs_top)
 
 
 plt.savefig('figure_2.png', dpi=300)
