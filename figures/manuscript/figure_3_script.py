@@ -7,28 +7,28 @@ fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(2, 3, layout='none', figs
 fig.subplots_adjust(left=0.074, right=0.945, wspace=0.257, top=0.954, bottom=0.082, hspace=0.244)
 
 # Load energy results of MLIP-1
-energy_test_m1 = np.loadtxt('MLIP-1/energy_test.out')
-energy_train_m1 = np.loadtxt('MLIP-1/energy_train.out')
+energy_test_m1 = np.loadtxt('./log/MLIP-1/energy_test.out')
+energy_train_m1 = np.loadtxt('./log/MLIP-1/energy_train.out')
 
 # Load energy results of MLIP-2
-energy_test_m2 = np.loadtxt('MLIP-2/energy_test.out')
-energy_train_m2 = np.loadtxt('MLIP-2/energy_train.out')
+energy_test_m2 = np.loadtxt('./log/MLIP-2/energy_test.out')
+energy_train_m2 = np.loadtxt('./log/MLIP-2/energy_train.out')
 
 # Load energy results of MLIP-3
-energy_test_m3 = np.loadtxt('MLIP-3/energy_test.out')
-energy_train_m3 = np.loadtxt('MLIP-3/energy_train.out')
+energy_test_m3 = np.loadtxt('./log/MLIP-3/energy_test.out')
+energy_train_m3 = np.loadtxt('./log/MLIP-3/energy_train.out')
 
 # Load force results of MLIP-1
-force_test_m1 = np.loadtxt('MLIP-1/force_test.out')
-force_train_m1 = np.loadtxt('MLIP-1/force_train.out')
+force_test_m1 = np.loadtxt('./log/MLIP-1/force_test.out')
+force_train_m1 = np.loadtxt('./log/MLIP-1/force_train.out')
 
 # Load force results of MLIP-2
-force_test_m2 = np.loadtxt('MLIP-2/force_test.out')
-force_train_m2 = np.loadtxt('MLIP-2/force_train.out')
+force_test_m2 = np.loadtxt('./log/MLIP-2/force_test.out')
+force_train_m2 = np.loadtxt('./log/MLIP-2/force_train.out')
 
 # Load force results of MLIP-3
-force_test_m3 = np.loadtxt('MLIP-3/force_test.out')
-force_train_m3 = np.loadtxt('MLIP-3/force_train.out')
+force_test_m3 = np.loadtxt('./log/MLIP-3/force_test.out')
+force_train_m3 = np.loadtxt('./log/MLIP-3/force_train.out')
 
 # Extract the data of predicted force components
 force_test_comb_m1 = np.concatenate((force_test_m1[:, 0], force_test_m1[:, 1], force_test_m1[:, 2]), axis=None)
