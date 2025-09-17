@@ -11,6 +11,7 @@
 - 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
 
 ---
+**SOME OF THE CSV-FILES DESCRIBED HERE NEED TO BE INCLUDED IN THE IDA REPO**  
 
 This sub-repository contains the code and workflows for training a machine learning model to predict NMR magnetic shielding tensors using the SchNet neural network architecture. The model is trained on a dataset of 1001 C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using TURBOMOLE.
 
@@ -43,7 +44,7 @@ pip install ase==3.17.0 pandas==1.1.5 numpy==1.19.5 schnetpack==0.2.1
 
 ## Directory Structure
 
-### Input Files (the *.csv input files are to be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60))
+### Input Files (the *.csv input files are to be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60))
 ```
 ./input/
     structures.csv             # Atomic coordinates (cartesian) for all structures
@@ -57,7 +58,7 @@ pip install ase==3.17.0 pandas==1.1.5 numpy==1.19.5 schnetpack==0.2.1
 ./nmr-ml_schnet_carpo2.job                # SLURM job submission script
 ```
 
-### Output Files (the output files, including the NMR-ML trained model are to be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60))
+### Output Files (the output files, including the NMR-ML trained model are to be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60))
 ```
 # Histograms of magnetic shielding input data
 ./sigma_iso_hist.png
