@@ -48,7 +48,7 @@ To start the calculation and process the results, all the necessary Turbomole in
     `mpshift.out`, 
     `rdgrad.out`, 
     `ridft.out`, and 
-    `statistics`
+    `statistics`.
     
 
 Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job` or `turbomole_carpo2.job`) as well as the job log files:
