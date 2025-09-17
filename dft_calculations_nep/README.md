@@ -31,13 +31,11 @@ Directory structure example:
     rdgrad.out
     ridft.out
     statistics
-    ref.xyz
     auxbasis
     basis
     control
-    mos
     coord
-    coord_34500.xyz
+    coord_50000.xyz
     createxyz.py
     merge.py
     turbomole_carpo2.job OR tm77_puhti.job
