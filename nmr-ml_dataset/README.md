@@ -93,7 +93,7 @@ python3 ml_nmr_schnet_dataset_oz-t.py
 
 ### Directory Structure
 
-**Input Structure (the data can be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60)):**
+**Input Structure:**
 ```
 ./ml_nmr_schnet_dataset_oz-t.py
 ./cluster_1/
