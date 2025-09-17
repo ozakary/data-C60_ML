@@ -16,23 +16,34 @@ This repository contains the calculation conditions used in the DFT and NMR magn
 
 ## Overview of the Data
 
-This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example folder `cluster_34500` with the output files can be found [here](../dft_calculations_nep/DFT-1/cluster_34500). Each of the DFT calculations of the 1001 structures were carried out as described in this page.
+This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. One example folder `cluster_36000` with the output files can be found [here](../dft_calculations_nep/DFT-1/cluster_36000). Each of the DFT calculations of the 1001 structures were carried out as described in this page.
 
 Directory structure example:
 ```
-./input_files/
+./cluster_<ID>/
+    energy
+    gradient
+    mpshift.out
+    rdgrad.out
+    ridft.out
+    statistics
+    ref.xyz
     auxbasis
     basis
     control
+    mos
     coord
-    coord.xyz
+    coord_34500.xyz
+    createxyz.py
+    merge.py
     turbomole_carpo2.job OR tm77_puhti.job
+
 ```
-To start the calculation all files in `input_files` should be included in the desired `cluster_<ID>` calculation folder. 
+To start the calculation and process the results, all the necessary Turbomole input files should be included in the desired directory.  
 
-Each calculation produces output files identical to the example `cluster_<ID>` folder found [here](../dft_calculations_nep/DFT-1/cluster_34500).
+Each calculation produces output files, as described [here](../dft_calculations_nep/DFT-1/cluster_36000) in more detail.
 
-The results are collected, and the processed data files used for the training of the SchNet model can be found in this [Zenodo repository](https://github.com/ozakary/data-NMR-ML_C60).
+The results are collected, and the processed data files used for the training of the SchNet model can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
 
 Details of generating the training dataset files can be found [here](../nmr-ml_dataset/).
 
