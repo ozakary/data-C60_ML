@@ -14,7 +14,7 @@
 
 ## Producing the reference dataset structures of C<sub>60</sub>
 
-This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model.
+This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model. The output files, including the full trajectory of the semi-empirical MD simulation can be found in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) of this project.
 
 ### DFTB+ input files
 
@@ -31,14 +31,15 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 ```
 
 - Note that if you want to exactly repeat the calculation, you are strongly suggested to remove the `dftb_in.hsd`, and then rename the file `dftb_pin.hsd` as `dftb_in.hsd`  
-- The additional script files `prepare.sh` and `createC60xyz.py` are only used after the DFTB+ simulation has finished
+- The additional script files `prepare.sh` and `createC60xyz.py` are used after the DFTB+ simulation has finished to extract sample C<sub>60</sub> structure configurations from the simulation trajectory.
 
 
 ### Scripts
 
-Scripts used to analyze the MD trajectory and to initialize the [DFT calculations](../dft_calculations_nep) for the C<sub>60</sub> structures produced in the MD simulation are also presented in this directory.  
+Scripts used to analyze the MD trajectory and to initialize the [DFT calculations](../dft_calculations_nep) for the C<sub>60</sub> structures produced in the MD simulation are presented below.  
 
 **prepare.sh**  
+
 After the DFTB+ calculation has been completed this shell script prepares the results for the DFT calculations of the reference C<sub>60</sub> configurations.  
 Running the script with the command `./prepare.sh` creates the following file structure:
 ```
@@ -53,11 +54,12 @@ Running the script with the command `./prepare.sh` creates the following file st
     createC60xyz.py
 ...
 ```
-Note that the first selected configuration is `cluster_34000`, in order to neglect the configurations in the equilibration stage of the simulation.
+Note that the first selected configuration is `cluster_34000`, since the beginning of the semi-empirical MD simulation is discarded due to the equilibration stage of the simulation.
 
 Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations_schnet](../dft_calculations_schnet) to run the DFT calculations for the C<sub>60</sub> configurations.
 
 **createC60xyz.py**  
+
 This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene, producing an empty C<sub>60</sub> structure.
 
 ---
