@@ -35,6 +35,7 @@ Directory structure example:
     auxbasis
     basis
     control
+    mos
     coord
     coord_34500.xyz
     createxyz.py
