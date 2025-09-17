@@ -16,15 +16,15 @@ This repository contains the calculation conditions used in the DFT reference da
 
 ## Overview of the Data
 
-This project contains computational data for C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. The complete input and output files are available in the external `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60).
+This project contains computational data for C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below.  
 
-The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The corresponding DFT data for the structures can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
+The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The necessary input files for the calculations can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
 
-In the `Zenodo` [repository](https://github.com/ozakary/data-NMR-ML_C60), the Turbomole input and output files for each structure are organized under folders named `cluster_<ID>`. ID ranges from `0` to `n`, where `n` is the corresponding time step of the given configuration in the [DFTB+](../DFTB-MD/) MD simulation. One example folder `cluster_34500` is included here for each DFT level, and can be found in the corresponding subdirectory.
+Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). These example Turbomole DFT calculation data files can be found in the corresponding subdirectories.
 
 Directory structure example:
 ```
-./cluster_34500/
+./cluster_<ID>/
     energy
     gradient
     mpshift.out
@@ -32,8 +32,6 @@ Directory structure example:
     ridft.out
     statistics
     ref.xyz
-
-./input_files/
     auxbasis
     basis
     control
@@ -42,10 +40,18 @@ Directory structure example:
     createxyz.py
     merge.py
     turbomole_carpo2.job OR tm77_puhti.job
-```
-To start the calculation and process the results, all files in `input_files` should be included in the `cluster_<ID>` folder. For simplicity we have omitted the input files in the `cluster_34500` example folder, which includes only the output files of the calculation and the produced reference dataset structure `ref.xyz`.
 
-Each `cluster_<ID>` folder contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
+```
+To start the calculation and process the results, all the necessary Turbomole input files should be included in the desired directory. The calculation produces the following output files:
+    `energy`
+    `gradient`
+    `mpshift.out`
+    `rdgrad.out`
+    `ridft.out`
+    `statistics`  
+    
+
+Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
 
@@ -99,6 +105,7 @@ Each `cluster_<ID>` folder contains the corresponding `.job` file (`tm77_puhti.j
   - [coord](./DFT-1/input_files/coord): Cartesian coordinates file
   - [coord_ID.xyz](./DFT-1/input_files/coord_34500.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/input_files/auxbasis): Auxiliary basis set for RI approximation
+  - [mos](./DFT-1/input_files/mos): Turbomole input file containing the molecular orbitals
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/input_files/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
   - [turbomole_carpo2.job](./DFT-1/input_files/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
