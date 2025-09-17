@@ -18,7 +18,7 @@ This repository contains the calculation conditions used in the DFT reference da
 
 This project contains computational data for C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below.  
 
-The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3. The necessary input files for the calculations can be found in the subdirectories `DFT-1`, `DFT-2`, and `DFT-3`.
+The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3.
 
 Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). These example Turbomole DFT calculation data files can be found in the corresponding subdirectories.
 
@@ -43,15 +43,15 @@ Directory structure example:
 
 ```
 To start the calculation and process the results, all the necessary Turbomole input files should be included in the desired directory. The calculation produces the following output files:
-    `energy`
-    `gradient`
-    `mpshift.out`
-    `rdgrad.out`
-    `ridft.out`
-    `statistics`  
+    `energy`, 
+    `gradient`, 
+    `mpshift.out`, 
+    `rdgrad.out`, 
+    `ridft.out`, and 
+    `statistics`
     
 
-Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job` or turbomole_carpo2.job) as well as the job log files:
+Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_puhti.job` or `turbomole_carpo2.job`) as well as the job log files:
 - Output log: `jobfile.out<JOB_ID>`
 - Error log: `jobfile.err<JOB_ID>`
 
