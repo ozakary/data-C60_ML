@@ -106,7 +106,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
   - [coord](./DFT-1/cluster_36000/coord): Cartesian coordinates file
   - [coord_ID.xyz](./DFT-1/cluster_36000/coord_36000.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/cluster_36000/auxbasis): Auxiliary basis set for RI approximation
-  - [mos](./DFT-1/cluster_36000/mos): Turbomole input file containing the molecular orbitals
+  - mos: Turbomole input file containing the molecular orbitals. Available in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/cluster_50000/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
   - [turbomole_carpo2.job](./DFT-1/cluster_36000/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
