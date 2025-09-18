@@ -110,8 +110,8 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/cluster_50000/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
   - [turbomole_carpo2.job](./DFT-1/cluster_36000/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
-  - [createxyz.py](./DFT-1/cluster_36000/createxyz.py): Produces an xyz-file (ref.xyz) with one C<sub>60</sub> structure containing reference DFT values (called after Turbomole DFT calculations are finished)
-  - [merge.py](./DFT-1/cluster_36000/merge.py): Assigns the reference C<sub>60</sub> structure (ref.xyz) to train or test dataset
+  - [createxyz.py](./nep-ml_dataset/createxyz.py): Produces an xyz-file (ref.xyz) with one C<sub>60</sub> structure containing reference DFT values (called after Turbomole DFT calculations are finished)
+  - [merge.py](./nep-ml_dataset/merge.py): Assigns the reference C<sub>60</sub> structure (ref.xyz) to train or test dataset
  
 ### Workflow of DFT calculations
 
