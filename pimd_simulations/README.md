@@ -13,7 +13,7 @@
 ---
 This sub-repository contains example input files for the PIMD simulations, final NEP MLIP potential/parameter files, and workflow of the PIMD simulations of C<sub>60</sub> with [GPUMD](https://github.com/brucefan1983/GPUMD) code. 
 
-One example PIMD simulation run with the resulting output files for the C<sub>60</sub> NTE study and the C<sub>60</sub> NMR study is provided in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) of the project. Due to the massive size of the whole PIMD simulation data, it is not possible to provide everything in the IDA repository.
+One example PIMD simulation run with the resulting output files for the C<sub>60</sub> NTE study and the C<sub>60</sub> NMR study is provided in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) of this project. Due to the massive size of the whole PIMD simulation data, it is not possible to provide everything in the IDA repository.
 
 ## Directory Structure
 
