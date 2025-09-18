@@ -20,28 +20,30 @@ This project contains computational data for C<sub>60</sub> structures. Each str
 
 The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3.
 
-Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). These example Turbomole DFT calculation data files can be found in the corresponding subdirectories, or in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60)..
+Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). The input files for these example Turbomole DFT calculation data files can be found in the corresponding subdirectories in this GitHub page. The output files and the calculation results can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60)..
 
-Directory structure example:
+Calculation directory structure example:
 ```
 ./cluster_<ID>/
-    energy
-    gradient
-    mpshift.out
-    rdgrad.out
-    ridft.out
-    statistics
     auxbasis
     basis
     control
     coord
     coord_50000.xyz
     createxyz.py
+    energy
+    gradient
     merge.py
+    mos
+    mpshift.out
+    rdgrad.out
+    ref.xyz
+    ridft.out
+    statistics
     turbomole_carpo2.job OR tm77_puhti.job
 
 ```
-To start the calculation and process the results, all the necessary Turbomole input files should be included in the desired directory. The calculation produces the following output files:
+To start the calculation, all the necessary Turbomole input files should be included in the desired directory. The calculation produces the following output files:
     `energy`, 
     `gradient`, 
     `mpshift.out`, 
@@ -102,7 +104,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
   - [basis](./DFT-1/input_files/basis): Basis set definition
   - [control](./DFT-1/input_files/control): Main input control file
   - [coord](./DFT-1/input_files/coord): Cartesian coordinates file
-  - [coord_ID.xyz](./DFT-1/input_files/coord_34500.xyz): Coordinate file in xyz format
+  - [coord_ID.xyz](./DFT-1/input_files/coord_36000.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/input_files/auxbasis): Auxiliary basis set for RI approximation
   - [mos](./DFT-1/input_files/mos): Turbomole input file containing the molecular orbitals
 - **Additional scripts**:
