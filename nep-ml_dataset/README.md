@@ -12,11 +12,11 @@
 
 ---
 
-This document describes the preparation of datasets for training the MLIP-1 NEP3 architecture.
+This document describes the dataset preparation for the training of MLIP-1 NEP3 architecture. Similar procedure is applied to prepare the datasets for the MLIP-2 and MLIP-3 models.
 
 ## Directory Contents
 
-The `DFT-1` directory contains the processed data files necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components (as well as magnetic shielding tensor, which will be ignored for now) acting on each atom calculated using `TURBOMOLE`.
+The `DFT-1_dataset` directory in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) contains the data files necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components acting on each atom calculated using `TURBOMOLE`.
 
 ## Dataset Files
 
@@ -84,8 +84,9 @@ This can be automated to go through all directories `cluster_<ID>` with a simple
 ## Notes
 
 - The dataset is suitable for training NEP or similar neural network architectures for predicting molecular energy and forces
-- The datasets `train.xyz` and `test.xyz` contain **additional reference data** structures from **active learning** process (data in [Zenodo repository](https://github.com/ozakary/)), for which the DFT calculations and dataset preparation are performed in similar manner as described above
+- The datasets `train.xyz` and `test.xyz` of the MLIP-1 model (DFT-1 theory level) contain **additional reference data** structures from **active learning** process. DFT calculations and dataset preparation for these additional structures are performed in similar manner as described above.
 - Reference DFT energy from `TURBOMOLE` for each structure in the **train.xyz** and **test.xyz** files has been shifted by +62100 eV
+- All of the datasets are available in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
 
 ---
 
