@@ -20,7 +20,7 @@ This project contains computational data for C<sub>60</sub> structures. Each str
 
 The reference DFT values are calculated for all empty C<sub>60</sub> structures in the reference dataset at three levels of DFT theory, which we refer to as DFT-1, DFT-2, and DFT-3.
 
-Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). The input files for these example Turbomole DFT calculation data files can be found in the corresponding subdirectories in this GitHub page. The output files and the calculation results can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60)..
+Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). The input files for these example Turbomole DFT calculation data files can be found in the corresponding subdirectories in this GitHub page. The output files and the calculation results can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60). The reference energy, force, and magnetic shielding values from all of the Turbomole calculations are available in the reference/training data files found in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
 
 Calculation directory structure example:
 ```
