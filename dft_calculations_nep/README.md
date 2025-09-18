@@ -69,7 +69,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
 - `DFT-3` : `pcSseg-1` (segmented contracted basis set, optimized for calculating nuclear magnetic shielding constants)
 - **Auxiliary Basis Set**:  
 - `DFT-1` and `DFT-2` : `x2c-TZVPall-s` (`12s5p4d2f1g`)
-- `DFT-3` : `pcSseg-1` (`12s5p4d2f1g`)
+- `DFT-3` : `universal` (`6s4p3d1f1g|12s5p4d2f1g`)
 - **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact Two-Component (`X2C`) Hamiltonian
 - **Dispersion Correction**:  
 - `DFT-1` : `DFT-D4` dispersion model
