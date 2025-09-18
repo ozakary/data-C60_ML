@@ -1,0 +1,87 @@
+$title
+$symmetry c1
+$coord    file=coord
+$optimize
+ internal   off
+ redundant  off
+ cartesian  on
+ global     off
+ basis      off
+$atoms
+c  1-60                                                                        \
+   basis =c x2c-TZVPall-s                                                      \
+   jbas  =c x2c-TZVPall-s
+$basis    file=basis
+$scfmo   file=mos
+$scfiterlimit       100
+$scfdamp   start=3.300  step=0.050  min=0.100
+$scfdump
+$scfdiis
+$maxcor    500 MiB  per_core
+$scforbitalshift  automatic=.1
+$rx2c
+$rlocal
+$finnuc
+$pcc
+$dft
+    functional   pbe0
+    gridsize   4a
+$scfconv   8
+$disp4
+$ricore      500
+$rij
+$jbas    file=auxbasis
+$marij
+$rundimensions
+   natoms=60
+   nbf(CAO)=2340
+   nbf(AO)=2040
+$xctype hybrid-GGA X= 0.25000 (not to be modified here)
+$charge from ridft
+         -0.000 (not to be modified here)
+$last SCF energy change = -2285.3694
+$senex
+   gridsize  m3
+   do_sfit
+$esenex
+   gridsize  m3
+   do_sfit
+$dsenex
+   gridsize  m3
+   do_sfit
+$closed shells
+ a       1-180                                  ( 2 )
+$thize     0.10000000E-04
+$thime        5
+$scfintunit
+ unit=30       size=0        file=twoint
+$drvopt
+   cartesian  on
+   basis      off
+   global     off
+   hessian    on
+   dipole     on
+   nuclear polarizability
+$interconversion  off
+   qconv=1.d-7
+   maxiter=25
+$coordinateupdate
+   dqmax=0.3
+   interpolate  on
+   statistics    5
+$forceupdate
+   ahlrichs numgeo=0  mingeo=3 maxgeo=4 modus=<g|dq> dynamic fail=0.3
+   threig=0.005  reseig=0.005  thrbig=3.0  scale=1.00  damping=0.0
+$forceinit on
+   diag=default
+$energy    file=energy
+$grad    file=gradient
+$forceapprox    file=forceapprox
+$last step     ridft
+$orbital_max_rnorm 0.39499529133596E-05
+$subenergy  Etot         E1                  Ej                Ex                 Ec                 En                 Disp
+-2285.369382923    -19753.48341971     9349.777998381    -233.6150319835    -12.61069958000     8364.755502586    -.1944904787501
+$dipole from ridft
+  x     0.06823276367322    y    -0.02290863172129    z    -0.01752272550948    a.u.
+   | dipole | =    0.1882891114  debye
+$end
