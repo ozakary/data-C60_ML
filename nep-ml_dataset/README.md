@@ -1,4 +1,4 @@
-# C<sub>60</sub> Fullerene Dataset Preparation for Training the MLIP-1 NEP3 Architecture
+# C<sub>60</sub> Fullerene Dataset Preparation for Training the NEP3 Architecture
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
