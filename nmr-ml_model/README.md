@@ -10,8 +10,7 @@
 - 🌐 Website: [Personal Webpage](https://cc.oulu.fi/~nmrwww/members/Ouail_Zakary.html)  
 - 📁 Portfolio: [Academic Portfolio](https://ozakary.github.io/)
 
----
-**SOME OF THE CSV-FILES DESCRIBED HERE NEED TO BE INCLUDED IN THE IDA REPO**  
+--- 
 
 This sub-repository contains the code and workflows for training a machine learning model to predict NMR magnetic shielding tensors using the SchNet neural network architecture. The model is trained on a dataset of 1001 C<sub>60</sub> fullerene structures and their corresponding magnetic shielding tensors calculated using TURBOMOLE.
 
