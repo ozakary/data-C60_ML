@@ -38,6 +38,8 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
+### Preprint
+
 ```bibtex
 @article{laurila2025_ml_c60,
   title={Machine Learning-Enabled Insights Into Quantum Effects on Structure and $^{13}$C NMR of C$_{60}$ Fullerene},
@@ -46,7 +48,11 @@ If you use this data, please cite the following:
   year={2025},
   note={DOI: To be announced}
 }
+```
 
+### Dataset
+
+```bibtex
 @dataset{laurila2025_data_c60,
   author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   title = {Supporting Data for "Machine Learning-Enabled Insights Into Quantum Effects on Structure and $^{13}$C NMR of C$_{60}$ Fullerene"},
