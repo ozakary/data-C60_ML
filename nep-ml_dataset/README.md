@@ -16,7 +16,7 @@ This document describes the dataset preparation for the training of MLIP-1 NEP3 
 
 ## Directory Contents
 
-The `DFT-1_dataset` directory in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) contains the data files necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components acting on each atom calculated using `TURBOMOLE`.
+The `DFT-1_dataset` directory in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) contains the dataset necessary for training machine learning models to predict energy and forces from molecular structures. The dataset contains C<sub>60</sub> fullerene structures and their corresponding energy and force components acting on each atom calculated using `TURBOMOLE`.
 
 ## Dataset Files
 
