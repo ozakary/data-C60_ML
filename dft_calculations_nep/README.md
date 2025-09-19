@@ -43,7 +43,6 @@ Calculation directory structure example:
     ridft.out
     statistics
     turbomole_carpo2.job OR tm77_puhti.job
-
 ```
 To start the calculation, all the necessary Turbomole input files should be included in the desired directory. The calculation produces the following output files:
     `energy`, 
