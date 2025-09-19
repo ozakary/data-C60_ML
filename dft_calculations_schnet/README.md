@@ -91,7 +91,7 @@ Details of generating the training dataset files can be found [here](../nmr-ml_d
   - [auxbasis](./input_files/auxbasis): Auxiliary basis set for RI approximation
   - mos: Turbomole input file containing the molecular orbitals.
 - **Computational Resource**: [CSC](https://csc.fi/) Supercomputers [PUHTI](https://www.puhti.csc.fi/public/) and [MAHTI](https://www.mahti.csc.fi/public/)
-- The Turbomole calculations can be started in Puhti with the job script found [here](../dft_calculations_nep/DFT-2/input_files/tm77_puhti.job)
+- The Turbomole calculations can be started in Puhti with the job script found [here](../dft_calculations_nep/DFT-2/cluster_50000/tm77_puhti.job)
 
 
 ---
