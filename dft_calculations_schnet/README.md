@@ -39,11 +39,11 @@ Directory structure example:
 ```
 To start the calculation and process the results, all the necessary Turbomole input files should be included in the desired directory.  
 
-Each calculation produces output files, as described [here](../dft_calculations_nep/DFT-1/cluster_36000) in more detail.
+Each calculation produces output files, as described [here](../dft_calculations_nep/) in more detail.
 
 The results are collected, and the processed data files used for the training of the SchNet model can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
 
-Details of generating the training dataset files can be found [here](../nmr-ml_dataset/).
+Details of generating the NMR magnetic shielding training dataset can be found [here](../nmr-ml_dataset/).
 
 ## Computational Details
 
