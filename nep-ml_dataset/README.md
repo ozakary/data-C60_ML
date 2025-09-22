@@ -60,13 +60,15 @@ C 14.13605137 11.99494343 15.59973828 1.696422175711945 -0.7179688933868583 -1.0
 
 The datasets **train.xyz** and **test.xyz** were prepared using Python scripts (`createxyz.py` and `merge.py`) that process the output files from TURBOMOLE calculations.  
 
-The script `createxyz.py`:
+### Scripts
+
+### `createxyz.py`
 
 1. Extracts atomic coordinates from `coord_<ID>.xyz` file
 2. Reads DFT energy and forces from TURBOMOLE output files `energy` and `gradient`
 3. Creates xyz file (`ref.xyz`) of the structure with DFT target energy and forces
 
-The script `merge.py`:
+### `merge.py`
 
 1. Assigns reference structure (`ref.xyz`) into training (70%) and test (30%) set with the given probability
 
