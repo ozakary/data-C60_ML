@@ -47,7 +47,7 @@ A directory [pimd_nmr_nte](./pimd_nte) is provided with the following structure:
     volume_beads.py        # Script for calculating the volume of each individual bead
 ```
 
-***volume_beads.py***  
+### `volume_beads.py`
 Python script `volume_beads.py` calculates for each bead **\<i\>** in the PIMD simulation the volume of C<sub>60</sub> from the samples written in the file beads_dump_\<i\>.xyz. The script creates the output files:
 
 ```
@@ -66,7 +66,7 @@ Here ``P`` is the number of beads used in the simulation. Each line in the outpu
 Here ``<n>``is the n<sup>th</sup> output structure in the beads_dump_\<i\>.xyz output file.
 
 
-***volume_avg.py***  
+### `volume_avg.py`  
 Python script `volume_avg.py` calculates the average volume of C<sub>60</sub> configuration by taking the average of the volume over all the beads written in the files volumes_ell_\<i\>bead.txt. The script creates an output file `volumes_ell_average.txt`, with the format:
 ```
 <volume (Å)>
