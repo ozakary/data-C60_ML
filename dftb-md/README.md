@@ -38,7 +38,7 @@ All the necessary files needed to start the MD simulation with DFTB+ are provide
 
 Scripts used to analyze the MD trajectory and to initialize the [DFT calculations](../dft_calculations_nep) for the C<sub>60</sub> structures produced in the MD simulation are presented below.  
 
-**prepare.sh**  
+### `prepare.sh`
 
 After the DFTB+ calculation has been completed this shell script prepares the results for the DFT calculations of the reference C<sub>60</sub> configurations.  
 Running the script with the command `./prepare.sh` creates the following file structure:
@@ -58,7 +58,7 @@ Note that the first selected configuration is `cluster_34000`, since the beginni
 
 Follow the instruction in [dft_calculations_nep](../dft_calculations_nep) or [dft_calculations_schnet](../dft_calculations_schnet) to run the DFT calculations for the C<sub>60</sub> configurations.
 
-**createC60xyz.py**  
+### `createC60xyz.py`
 
 This Python script removes the helium atom from the center of the He@C<sub>60</sub> endofullerene, producing an empty C<sub>60</sub> structure.
 
