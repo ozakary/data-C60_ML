@@ -58,7 +58,7 @@ Details of generating the NMR magnetic shielding training dataset can be found [
   - (`11s7p2d1f`) primitive Gaussian functions contracted to `[5s4p2d1f]`
 - **Auxiliary Basis Set**: `x2c-TZVPall-s` (`12s5p4d2f1g`)
 - **Relativistic Treatment**: Diagonal Local Approximation (`DLU`) with Exact Two-Component (`X2C`) Hamiltonian
-- **Dispersion Correction**: `DFT-D4` dispersion model
+- **Dispersion Correction**: `D4` dispersion correction
 
 ### SCF Parameters
 - **Convergence Criterion**: 10<sup>-8</sup> atomic units
