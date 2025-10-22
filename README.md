@@ -1,4 +1,4 @@
-# Supporting Code for “*Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene*”
+# Supporting Code for “*Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene*”
 
 ## Graphical Abstract
 
@@ -18,7 +18,7 @@
 
 ---
 
-This is the supporting code for the manuscript “***Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This is the supporting code for the manuscript “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”. [DOI: TBA]
 
 The repository comprises the following sections:
 
@@ -43,7 +43,7 @@ If you use this data, please cite the following:
 
 ```bibtex
 @article{laurila2025_ml_c60,
-  title={Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene},
+  title={Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene},
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   journal={In preparation},
   year={2025},
@@ -56,7 +56,7 @@ If you use this data, please cite the following:
 ```bibtex
 @dataset{laurila2025_data_c60,
   author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
-  title = {Supporting Data for "Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene"},
+  title = {Supporting Data for "Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene"},
   year = {2025},
   publisher = {In preparation},
   note = {DOI: To be announced},
