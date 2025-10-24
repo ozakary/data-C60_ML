@@ -42,7 +42,7 @@ If you use this data, please cite the following:
 ### Preprint
 
 ```bibtex
-@article{laurila2025_ml_c60,
+@article{laurila_2025_c60_ml,
   title={Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene},
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   journal={In preparation},
@@ -54,12 +54,25 @@ If you use this data, please cite the following:
 ### Dataset
 
 ```bibtex
-@dataset{laurila2025_data_c60,
+@dataset{laurila_2025_data_c60_ml,
   author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   title = {Supporting Data for "Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene"},
   year = {2025},
   publisher = {In preparation},
   note = {DOI: To be announced},
+}
+```
+
+### Code [![DOI](https://img.shields.io/badge/GitHub-ozakary%2Fdata--C60__ML-blue.svg)](https://github.com/ozakary/data-C60_ML)
+```bibtex
+@misc{laurila_2025_github_c60_ml,
+  author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
+  title = {Supporting Code for "Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene"},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ozakary/data-C60_ML}},
+  url = {https://github.com/ozakary/data-C60_ML}
 }
 ```
 
