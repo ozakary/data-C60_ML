@@ -126,8 +126,8 @@ err6_1 = ax.errorbar(beads[0:7], vol_350, yerr=sem_350, capsize=2.0, fmt="o", la
 err7_1 = ax.errorbar(beads[0:6], vol_400, yerr=sem_400, capsize=2.0, fmt="o", label="T=400 K", color='#520202', markersize=6, marker="p", linestyle=(0, (3, 1, 1, 1)))
 err8_1 = ax.errorbar(beads[0:6], vol_500, yerr=sem_500, capsize=2.0, fmt="o", label="T=500 K", color='orange', markersize=6, marker="x", linestyle=(0, (3, 1, 1, 1, 1, 1)))
 ax.legend(handles=[err8_1, err7_1, err6_1, err5_1, err4_1, err3_1, err2_1, err1_1], loc="upper center", fontsize=14, ncols=4, bbox_to_anchor=(0.5 , 1.2), framealpha=1)
-ax.set_xlabel('Number of beads', fontsize=14)
-ax.set_ylabel('Volume (Å$^{3}$)', fontsize=14)
+ax.set_xlabel('P', fontsize=14)
+ax.set_ylabel('V (Å$^{3}$)', fontsize=14)
 ax.set_xscale('log', base=2)
 ax.set_ylim(183, 184.8)
 ax.set_xticks([1, 2, 4, 8, 16, 32, 64, 128])
@@ -136,9 +136,9 @@ ax.tick_params(axis='y', labelsize=14)
 ax.grid(True)
 
 # inset Axes
-x1_1, x2_1, y1_1, y2_1 = 2, 135, 184.5, 184.725  # subregion of the original image
+x1_1, x2_1, y1_1, y2_1 = 4, 140, 184.5, 184.66  # subregion of the original image
 axins1 = ax.inset_axes(
-    [0.5, 0.05, 0.47, 0.45],
+    [0.52, 0.05, 0.47, 0.45],
     xlim=(x1_1, x2_1), ylim=(y1_1, y2_1))
 axins1.set_xscale('log', base=2)
 axins1.scatter(beads, vol_100, color='green', alpha=0.8, s=22)
