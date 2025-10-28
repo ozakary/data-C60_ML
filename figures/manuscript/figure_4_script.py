@@ -9,19 +9,24 @@ fig, ((ax1, ax2, ax3),(ax4, ax5, ax6)) = plt.subplots(2, 3, layout='none', figsi
 fig.subplots_adjust(left=0.105, right=0.968, wspace=0.274, top=0.955, bottom=0.098, hspace=0.33)
 
 
-# Load the shielding DFT results
-sigma_train = sigma_train = pd.read_csv('model_sigma_predictions/sigma_train_data.csv')
+# Load the chemical shielding DFT results and the chemical shielding values predicted by SchNet NMR-ML model
+sigma_train = pd.read_csv('model_sigma_predictions/sigma_train_data.csv')
 sigma_val = pd.read_csv('model_sigma_predictions/sigma_val_data.csv')
 sigma_test = pd.read_csv('model_sigma_predictions/sigma_test_data.csv')
 
 sigma_train_target = sigma_train['Target']
+sigma_train_pred = sigma_train['Prediction']
+
 sigma_val_target = sigma_val['Target']
+sigma_val_pred = sigma_val['Prediction']
+
 sigma_test_target = sigma_test['Target']
+sigma_test_pred = sigma_test['Prediction']
 
 # Draw the histograms
 plot1 = ax1.hist(sigma_train_target, 15, facecolor='blue', alpha=0.75, label="Train")
 ax1.set_xlabel(r'$\sigma_{iso}^{DFT}$ / ppm', fontsize=13)
-ax1.set_ylabel('Number of datapoints', fontsize=13)
+ax1.set_ylabel('Count', fontsize=13)
 ax1.tick_params(axis='x', labelsize=13)
 ax1.tick_params(axis='y', labelsize=13)
 ax1.legend(["Train"], loc="upper left", fontsize=12, framealpha=1)
@@ -40,14 +45,6 @@ ax3.tick_params(axis='x', labelsize=13)
 ax3.tick_params(axis='y', labelsize=13)
 ax3.legend(["Test"], loc="upper left", fontsize=12, framealpha=1)
 
-sigma_train_target = sigma_train['Target']
-sigma_train_pred = sigma_train['Prediction']
-
-sigma_val_target = sigma_val['Target']
-sigma_val_pred = sigma_val['Prediction']
-
-sigma_test_target = sigma_test['Target']
-sigma_test_pred = sigma_test['Prediction']
 
 # Calculate linear regression parameters
 slope_train, intercept_train, r_value_train, p_value_train, std_err_train = stats.linregress(sigma_train_target, sigma_train_pred)
@@ -70,9 +67,9 @@ ax4.scatter(sigma_train_target, sigma_train_pred, marker = 'o', alpha=0.4, color
 min_val = min(min(sigma_train_target)-20, min(sigma_train_pred)-20)
 max_val = max(max(sigma_train_target)+20, max(sigma_train_pred)+20)
 ax4.plot([min_val, max_val], [min_val, max_val], 'r-', alpha=0.8)
-ax4.text(-17, 68, f'Train RMSE = {rmse_train:.2f}', fontsize=12)
-ax4.text(-17, 60, f'Train MAE = {mae_train:.2f}', fontsize=12)
-ax4.text(-17, 52, f'Train R$^2$ = {r_value_train**2:.3f}', fontsize=12)
+ax4.text(-17, 68, f'RMSE = {rmse_train:.2f}', fontsize=12)
+ax4.text(-17, 60, f'MAE = {mae_train:.2f}', fontsize=12)
+ax4.text(-17, 52, f'R$^2$ = {r_value_train**2:.3f}', fontsize=12)
 ax4.tick_params(axis='x', labelsize=13)
 ax4.tick_params(axis='y', labelsize=13)
 ax4.legend(["Train"], loc="lower right", fontsize=13, framealpha=1)
@@ -83,9 +80,9 @@ ax4.set_ylim([-20, 75])
 
 ax5.scatter(sigma_val_target, sigma_val_pred, marker= 's', alpha=0.4, color='green', label="Validation")
 ax5.plot([min_val, max_val], [min_val, max_val], 'r-', alpha=0.8)
-ax5.text(-17, 68, f'Validation RMSE = {rmse_val:.2f}', fontsize=12)
-ax5.text(-17, 60, f'Validation MAE = {mae_val:.2f}', fontsize=12)
-ax5.text(-17, 52, f'Validation R$^2$ = {r_value_val**2:.3f}', fontsize=12)
+ax5.text(-17, 68, f'RMSE = {rmse_val:.2f}', fontsize=12)
+ax5.text(-17, 60, f'MAE = {mae_val:.2f}', fontsize=12)
+ax5.text(-17, 52, f'R$^2$ = {r_value_val**2:.3f}', fontsize=12)
 ax5.tick_params(axis='x', labelsize=13)
 ax5.tick_params(axis='y', labelsize=13)
 ax5.legend(["Validation"], loc="lower right", fontsize=13, framealpha=1)
@@ -95,9 +92,9 @@ ax5.set_ylim([-20, 75])
 
 ax6.scatter(sigma_test_target, sigma_test_pred, marker='x', alpha=0.4, color='darkorange', label="Test")
 ax6.plot([min_val, max_val], [min_val, max_val], 'r-', alpha=0.8)
-ax6.text(-17, 68, f'Test RMSE = {rmse_test:.2f}', fontsize=12)
-ax6.text(-17, 60, f'Test MAE = {mae_test:.2f}', fontsize=12)
-ax6.text(-17, 52, f'Test R$^2$ = {r_value_test**2:.3f}', fontsize=12)
+ax6.text(-17, 68, f'RMSE = {rmse_test:.2f}', fontsize=12)
+ax6.text(-17, 60, f'MAE = {mae_test:.2f}', fontsize=12)
+ax6.text(-17, 52, f'R$^2$ = {r_value_test**2:.3f}', fontsize=12)
 ax6.tick_params(axis='x', labelsize=13)
 ax6.tick_params(axis='y', labelsize=13)
 ax6.legend(["Test"], loc="lower right", fontsize=13, framealpha=1)
