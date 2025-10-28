@@ -103,7 +103,7 @@ err7 = ax.errorbar(temps[0:6], vol_64bead, label="P=64", yerr=sem_64bead, capsiz
 ax.scatter(temps[0:4], vol_128bead, color='orange', alpha=0.65, s=22)
 err8 = ax.errorbar(temps[0:4], vol_128bead, label="P=128", yerr=sem_128bead, capsize=2.0, fmt="o", color='orange', markersize=6, marker="x", linestyle=(0, (3, 1, 1, 1, 1, 1)))
 ax.set_xlabel('T (K)', fontsize=14)
-ax.set_ylabel('Volume (Å$^{3}$)', fontsize=14)
+ax.set_ylabel('V (Å$^{3}$)', fontsize=14)
 ax.set_ylim(182.25, 184.75)
 ax.tick_params(axis='x', labelsize=14)
 ax.tick_params(axis='y', labelsize=14)
@@ -111,9 +111,9 @@ ax.legend(handles=[err8, err7, err6, err5, err4, err3, err2, err1], loc="upper c
 ax.grid(True)
 
 # inset Axes....
-x1, x2, y1, y2 = 90, 510, 184.575, 184.725  # subregion of the original image
+x1, x2, y1, y2 = 90, 510, 184.55, 184.665  # subregion of the original image
 axins2 = ax.inset_axes(
-    [0.4, 0.05, 0.57, 0.37],
+    [0.41, 0.05, 0.57, 0.37],
     xlim=(x1, x2), ylim=(y1, y2))
 axins2.scatter(temps, vol_1bead, color='green', alpha=0.65, s=22)
 err1 = axins2.errorbar(temps, vol_1bead, label="P=1", yerr=sem_1bead, capsize=2.0, fmt="o", color='green', markersize=6, marker="o", linestyle="solid")
@@ -132,10 +132,10 @@ err7 = axins2.errorbar(temps[0:6], vol_64bead, label="P=64", yerr=sem_64bead, ca
 axins2.scatter(temps[0:4], vol_128bead, color='orange', alpha=0.65, s=22)
 err8 = axins2.errorbar(temps[0:4], vol_128bead, label="P=128", yerr=sem_128bead, capsize=2.0, fmt="o", color='orange', markersize=6, marker="x", linestyle=(0, (3, 1, 1, 1, 1, 1)))
 axins2.set_xlim(90, 510)
-axins2.set_ylim(184.575, 184.725)
+axins2.set_ylim(184.55, 184.665)
 axins2.set_xticks([100, 200, 300, 400, 500])
-axins2.set_yticks([184.600, 184.650, 184.700])
-axins2.tick_params(axis='both', labelsize=14, which='both', bottom=True, left=True, zorder=True)
+axins2.set_yticks([184.55, 184.60, 184.650])
+axins2.tick_params(axis='both', labelsize=13, which='both', bottom=True, left=True, zorder=True)
 
 plt.savefig('figure_6.png', dpi=300)
 plt.show()
