@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Initialize the figure and subplots
-fig = plt.figure(layout='none', figsize=(12, 7))
+fig = plt.figure(layout='none', figsize=(12, 8))
 ax1 = fig.add_subplot(241)
 ax11 = fig.add_subplot(242)
 ax2 = fig.add_subplot(243)
@@ -154,7 +154,7 @@ ax22.set_xlim(-0.52, -0.43)
 ax22.set_xticks([-0.5, -0.45])
 ax22.tick_params(axis='x', labelsize=18)
 ax22.tick_params(axis='y', labelsize=18)
-ax22.legend(["DFT-1", "DFT-2", "DFT-3"], loc="upper right", fontsize=18)
+ax22.legend(["DFT-1.2", "DFT-2", "DFT-3"], loc="upper right", fontsize=18)
 
 plot3 = ax3.hist(force_train_comb_true, 15, alpha=0.7, facecolor='blue', edgecolor='blue', linewidth=2, histtype='step')
 plot3_2 = ax3.hist(force_train_comb_true_m2, 15, alpha=0.7, facecolor='green', edgecolor='green', linewidth=2, histtype='step')
