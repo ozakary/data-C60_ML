@@ -32,8 +32,8 @@ def plot_sigma_curves(log_data, property_name, ax):
     rmse_values = log_data[rmse_col].values
     
     # Plot both curves
-    ax.plot(epochs, mae_values, 'o-', color='orange', linewidth=2, markersize=4, label=r'$\sigma_{iso}$ MAE / ppm')
-    ax.plot(epochs, rmse_values, 's-', color='purple', linewidth=2, markersize=4, label=r'$\sigma_{iso}$ RMSE / ppm')
+    ax.plot(epochs, mae_values, 'o-', color='orange', linewidth=2, markersize=4, label=r'$\sigma_{\text{iso}}$ MAE / ppm')
+    ax.plot(epochs, rmse_values, 's-', color='purple', linewidth=2, markersize=4, label=r'$\sigma_{\text{iso}}$ RMSE / ppm')
     
     # Add legend
     ax.legend(fontsize=14)
@@ -58,8 +58,8 @@ def plot_training_curves(log_data, property_name, ax):
     val_values = log_data[val_col].values
     
     # Plot both curves
-    ax.plot(epochs, train_values, 'o-', color='blue', linewidth=2, markersize=4, label='Train loss')
-    ax.plot(epochs, val_values, 's-', color='green', linewidth=2, markersize=4, label='Validation loss')
+    ax.plot(epochs, train_values, 'o-', color='blue', linewidth=2, markersize=4, label='training loss')
+    ax.plot(epochs, val_values, 's-', color='green', linewidth=2, markersize=4, label='validation loss')
     
     # Add legend
     ax.legend(fontsize=14)
@@ -68,7 +68,7 @@ def init_plot(ax):
 
     # Add labels and title
     ax.set_xlabel('Epoch', fontsize=18)
-    ax.set_ylabel('Errors', fontsize=18)
+    ax.set_ylabel('Error / Loss', fontsize=18)
 
     # Format tick labels
     ax.tick_params(axis='both', which='major', labelsize=14, length=6, width=1)
