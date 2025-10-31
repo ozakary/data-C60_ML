@@ -103,7 +103,7 @@ err7 = ax.errorbar(temps[0:6], vol_64bead, label="$P$=64", yerr=sem_64bead, caps
 ax.scatter(temps[0:4], vol_128bead, color='orange', alpha=0.65, s=22)
 err8 = ax.errorbar(temps[0:4], vol_128bead, label="$P$=128", yerr=sem_128bead, capsize=2.0, fmt="o", color='orange', markersize=6, marker="x", linestyle=(0, (3, 1, 1, 1, 1, 1)))
 ax.set_xlabel('$T$ (K)', fontsize=14)
-ax.set_ylabel('$V$ (Å$^{3}$)', fontsize=14)
+ax.set_ylabel(r'$\langle V_{\text{eff}} \rangle\ (Å^{3}$)', fontsize=14)
 ax.set_ylim(182.25, 184.75)
 ax.tick_params(axis='x', labelsize=14)
 ax.tick_params(axis='y', labelsize=14)
