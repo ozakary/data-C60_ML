@@ -127,7 +127,7 @@ err7_1 = ax.errorbar(beads[0:6], vol_400, yerr=sem_400, capsize=2.0, fmt="o", la
 err8_1 = ax.errorbar(beads[0:6], vol_500, yerr=sem_500, capsize=2.0, fmt="o", label="$T$=500 K", color='orange', markersize=6, marker="x", linestyle=(0, (3, 1, 1, 1, 1, 1)))
 ax.legend(handles=[err8_1, err7_1, err6_1, err5_1, err4_1, err3_1, err2_1, err1_1], loc="upper center", fontsize=14, ncols=4, bbox_to_anchor=(0.5 , 1.2), framealpha=1)
 ax.set_xlabel('$P$', fontsize=14)
-ax.set_ylabel('$V$ (Å$^{3}$)', fontsize=14)
+ax.set_ylabel(r'$\langle V_{\text{eff}} \rangle\ (Å^{3}$)', fontsize=14)
 ax.set_xscale('log', base=2)
 ax.set_ylim(183, 184.8)
 ax.set_xticks([1, 2, 4, 8, 16, 32, 64, 128])
