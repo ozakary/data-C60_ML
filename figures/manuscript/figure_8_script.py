@@ -87,7 +87,7 @@ print(f'hp slope intercept std error: {linreg_params_hp.intercept_stderr*1000:.4
 print(f'Grad(s) - Grad(hh) =  {(linreg_params_s.slope - linreg_params_hh.slope)*1000:.4f} ppb +- {(linreg_params_s.stderr**2+linreg_params_s.stderr**2)**(1/2)*1000:.4f} ppb')
 print(f'Grad(s) - Grad(hp) =  {(linreg_params_s.slope - linreg_params_hp.slope)*1000:.4f} ppb +- {(linreg_params_s.stderr**2+linreg_params_s.stderr**2)**(1/2)*1000:.4f} ppb')
 
-ax.set_ylabel('$\\sigma_{\\text{iso}}$ (ppm)', fontsize=16)
+ax.set_ylabel(r'$\langle {\sigma}_{\text{iso}} \rangle$ (ppm)', fontsize=16)
 ax.set_xlabel('$T$ (K)', fontsize=16)
 ax.tick_params(axis='x', labelsize=16)
 ax.tick_params(axis='y', labelsize=16)
