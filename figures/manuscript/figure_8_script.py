@@ -53,6 +53,18 @@ print('300K hh: avg sigma iso = ' + str(mean_hh[2]) + ' and std = ' + str(dev_hh
 print('320K hh: avg sigma iso = ' + str(mean_hh[3]) + ' and std = ' + str(dev_hh[3]) + ' and SEM: ' + str(sem_hh[3]) + " data: " + str(len(sig_hh[3])))
 print('340K hh: avg sigma iso = ' + str(mean_hh[4]) + ' and std = ' + str(dev_hh[4]) + ' and SEM: ' + str(sem_hh[4]) + " data: " + str(len(sig_hh[4])))
 print("\n")
+print('260K hp: avg sigma iso = ' + str(mean_hp[0]) + ' and std = ' + str(dev_hp[0]) + ' and SEM: ' + str(sem_hp[0]) + " data: " + str(len(sig_hp[0])))
+print('280K hp: avg sigma iso = ' + str(mean_hp[1]) + ' and std = ' + str(dev_hp[1]) + ' and SEM: ' + str(sem_hp[1]) + " data: " + str(len(sig_hp[1])))
+print('300K hp: avg sigma iso = ' + str(mean_hp[2]) + ' and std = ' + str(dev_hp[2]) + ' and SEM: ' + str(sem_hp[2]) + " data: " + str(len(sig_hp[2])))
+print('320K hp: avg sigma iso = ' + str(mean_hp[3]) + ' and std = ' + str(dev_hp[3]) + ' and SEM: ' + str(sem_hp[3]) + " data: " + str(len(sig_hp[3])))
+print('340K hp: avg sigma iso = ' + str(mean_hp[4]) + ' and std = ' + str(dev_hp[4]) + ' and SEM: ' + str(sem_hp[4]) + " data: " + str(len(sig_hp[4])))
+print("\n")
+print('260K single: avg sigma iso = ' + str(mean_single[0]) + ' and std = ' + str(dev_single[0]) + ' and SEM: ' + str(sem_single[0]) + " data: " + str(len(sig_single[0])))
+print('280K single: avg sigma iso = ' + str(mean_single[1]) + ' and std = ' + str(dev_single[1]) + ' and SEM: ' + str(sem_single[1]) + " data: " + str(len(sig_single[1])))
+print('300K single: avg sigma iso = ' + str(mean_single[2]) + ' and std = ' + str(dev_single[2]) + ' and SEM: ' + str(sem_single[2]) + " data: " + str(len(sig_single[2])))
+print('320K single: avg sigma iso = ' + str(mean_single[3]) + ' and std = ' + str(dev_single[3]) + ' and SEM: ' + str(sem_single[3]) + " data: " + str(len(sig_single[3])))
+print('340K single: avg sigma iso = ' + str(mean_single[4]) + ' and std = ' + str(dev_single[4]) + ' and SEM: ' + str(sem_single[4]) + " data: " + str(len(sig_single[4])))
+print("\n")
 
 #x-axis
 temps = np.array([260, 280, 300, 320, 340])
