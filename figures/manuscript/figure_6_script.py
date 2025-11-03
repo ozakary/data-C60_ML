@@ -20,7 +20,7 @@ linestyle_tuple = [
      ('densely dashdotdotted', (0, (3, 1, 1, 1, 1, 1)))]
 
 
-#Load data of simulation in folder f and split the data at interval s
+#Load data of simulation in folder f
 def ld(f):
     try:
         return np.concatenate(np.loadtxt('./convergence/' + f + '/allvol.txt'), axis=None)
