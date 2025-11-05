@@ -51,15 +51,16 @@ If you use this data, please cite the following:
 }
 ```
 
-### Dataset
+### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd--c64c043e--473e--371d--9586--8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
 
 ```bibtex
 @dataset{laurila_2025_data_c60_ml,
   author = {Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   title = {Supporting Data for "Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene"},
   year = {2025},
-  publisher = {In preparation},
-  note = {DOI: To be announced},
+  publisher = {Fairdata},
+  doi = {10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0},
+  url = {https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0}
 }
 ```
 
