@@ -39,15 +39,17 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Preprint
+### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
   title={Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene},
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
-  journal={In preparation},
+  journal={ChemRxiv},
   year={2025},
-  note={DOI: To be announced}
+  doi={10.26434/chemrxiv-2025-68g6s},
+  url={https://doi.org/10.26434/chemrxiv-2025-68g6s},
+  note={Preprint}
 }
 ```
 
