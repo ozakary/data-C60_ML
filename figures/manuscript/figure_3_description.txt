@@ -1,1 +1,1 @@
-(a, b, c) The energy (meV/atom) correlation plots of the trained NEP MLIP models 1, 2, and 3 respectively compared to DFT level reference energies. Figures (d, e, f) show the force (eV/Å) correlation of the trained models compared to DFT forces.
+Histogram plots illustrating the distributions of the DFT-computed total energy, E_DFT (eV), and atomic forces, f_DFT (eV.Å^(-1)), from the training (a and c) and validation (b and d) sets of DATA-1, DATA-2, and DATA-3 datasets.
