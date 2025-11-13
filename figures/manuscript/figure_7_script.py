@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 
 #Load data of simulation in folder f and split the data at interval s
-def ld(f, s):
-    return np.concatenate(np.loadtxt('./' + f + '/allvol.txt')[0::s], axis=None)
+def ld(f):
+    return np.concatenate(np.loadtxt('./' + f + '/allvol.txt'), axis=None)
 
 #Calculate mean and stdev and standard error
 def calc_stats(data):
@@ -18,34 +18,34 @@ def calc_stats(data):
     return means, devs, sems
 
 # Load the data
-volumedata_m1 = [ld('./MLIP-1.2/80K', 1),
-              ld('./MLIP-1.2/100K', 1),
-              ld('./MLIP-1.2/120K', 1),
-              ld('./MLIP-1.2/150K', 1),
-              ld('./MLIP-1.2/200K', 1),
-              ld('./MLIP-1.2/250K', 1),
-              ld('./MLIP-1.2/300K', 1),
-              ld('./MLIP-1.2/350K', 1),
-              ld('./MLIP-1.2/400K', 1),
-              ld('./MLIP-1.2/500K', 1)]
+volumedata_m1 = [ld('./MLIP-1.2/80K'),
+              ld('./MLIP-1.2/100K'),
+              ld('./MLIP-1.2/120K'),
+              ld('./MLIP-1.2/150K'),
+              ld('./MLIP-1.2/200K'),
+              ld('./MLIP-1.2/250K'),
+              ld('./MLIP-1.2/300K'),
+              ld('./MLIP-1.2/350K'),
+              ld('./MLIP-1.2/400K'),
+              ld('./MLIP-1.2/500K')]
 
-volumedata_m2 = [ld('./MLIP-2/100K', 1),
-              ld('./MLIP-2/150K', 1),
-              ld('./MLIP-2/200K', 1),
-              ld('./MLIP-2/250K', 1),
-              ld('./MLIP-2/300K', 1),
-              ld('./MLIP-2/350K', 1),
-              ld('./MLIP-2/400K', 1),
-              ld('./MLIP-2/500K', 1)]
+volumedata_m2 = [ld('./MLIP-2/100K'),
+              ld('./MLIP-2/150K'),
+              ld('./MLIP-2/200K'),
+              ld('./MLIP-2/250K'),
+              ld('./MLIP-2/300K'),
+              ld('./MLIP-2/350K'),
+              ld('./MLIP-2/400K'),
+              ld('./MLIP-2/500K')]
 
-volumedata_m3 = [ld('./MLIP-3/100K', 1),
-              ld('./MLIP-3/150K', 1),
-              ld('./MLIP-3/200K', 1),
-              ld('./MLIP-3/250K', 1),
-              ld('./MLIP-3/300K', 1),
-              ld('./MLIP-3/350K', 1),
-              ld('./MLIP-3/400K', 1),
-              ld('./MLIP-3/500K', 1)]
+volumedata_m3 = [ld('./MLIP-3/100K'),
+              ld('./MLIP-3/150K'),
+              ld('./MLIP-3/200K'),
+              ld('./MLIP-3/250K'),
+              ld('./MLIP-3/300K'),
+              ld('./MLIP-3/350K'),
+              ld('./MLIP-3/400K'),
+              ld('./MLIP-3/500K')]
 
 # Reference data (rovibrational)
 volumedata_ref = [186.06196, 186.062138, 186.06203, 186.06126, 186.05835, 186.05472, 186.05244, 186.05340, 186.058889, 186.08564]
