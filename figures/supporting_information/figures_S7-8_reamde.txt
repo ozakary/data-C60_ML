@@ -1,1 +1,0 @@
-# Nympy was used to load the data and Matplotlib to plot the figures. Additionally the blocking method by Flyvbjerg et al. was used to estimate the statistical inefficiency.
