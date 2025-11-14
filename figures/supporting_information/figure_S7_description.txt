@@ -1,1 +1,1 @@
-Correlation figure of the potential energy in a test PIMD simulation of C60 at T = 300 K with P = 32. Based on the figure, the correlation time is determined to be approximately 1000 simulation time steps.
+Statistical inefficiency of the potential energy as a function of block length obtained from an MLPIMD simulation with MLIP-1.2 interatomic potential at T = 300K and P = 32. The correlation time is estimated from the block length corresponding to the maximum statistical inefficiency, which is approximately 1000 time steps (500 fs).
