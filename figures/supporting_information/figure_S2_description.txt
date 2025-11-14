@@ -1,1 +1,1 @@
-RMSE values for energy E_RMSE (meV/atom) and forces F_RMSE (eV/Å) of test NEP MLIP models with various numbers of neurons in the hidden layer of NEP architecture. The training of the models were stopped at generation 200 000. We choose to use 100 neurons for the final NEP models.
+Evolution of the root mean squared error (RMSE) with respect to the number of neurons of the NEP architecture for the energy per atom and atomic forces, which are illustrated in the left and right panels, respectively.
