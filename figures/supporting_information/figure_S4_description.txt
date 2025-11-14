@@ -1,1 +1,1 @@
-RMSE values for energy E_RMSE (meV/atom) and forces F_RMSE (eV/Å) of test NEP MLIP models with using various sizes of training dataset. The training was stopped at generation 200 000.
+Evolution of the root mean squared error (RMSE) with respect to the training dataset size of the NEP architecture for the energy per atom and atomic forces, which are illustrated in the left and right panels, respectively.
