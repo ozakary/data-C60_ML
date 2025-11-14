@@ -1,0 +1,1 @@
+Evolution of the average effective geometry volume V_eff, as a function of the number of beads P, obtained from MLPIMD simulations using the MLIP-1.2 interatomic potential at temperatures T = 100, 150, 200, 250, 300, 350, 400, and 500 K. The inset (bottom right) shows a zoomed view of the region where V_eff approaches convergence.
