@@ -1,1 +1,1 @@
-# Logarithmic scaled plots of MAE (blue dots) and RMSE (green squares) illustrating the training process of the NMR-ML SchNet model from C60 fullerene.
+Training and validation progress from SchNet for C_60 fullerene. The figure illustrate the evolution of the training and validation loss function and validation RMSE and MAE for the 13C isotropic magnetic shielding (sigma_iso, ppm) as a function of the number of epochs.
