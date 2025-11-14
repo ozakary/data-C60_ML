@@ -1,1 +1,1 @@
-RMSE values for energy E_RMSE (meV/atom) and forces F_RMSE (eV/Å) with varying angular descriptor term cutoff radii. The training is stopped at generation 100 000. The optimal cutoff radius of angular terms is 4 Å.
+Evolution of the root mean squared error (RMSE) with respect to the cutoff radius of angular bases of the NEP architecture for the energy per atom and atomic forces, which are illustrated in the left and right panels, respectively.
