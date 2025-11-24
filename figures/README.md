@@ -12,10 +12,7 @@
 
 ---
 TODO:  
-
 *UPDATE FIGURE DESCRIPTION FILES AFTER FINAL MANUSCRIPT*  
-
-*CHANGE THE LINKS OF ALL THE DATA IN THE TABLE BELOW TO CORRESPONDING DIRECTORIES OR PROVIDE IDA LINK*
 
 This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the manuscript and supporting information documents of “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”.
 
@@ -53,8 +50,8 @@ To reproduce the figures and analyze the data, you will need the following:
 | [Figure S4](./supporting_information/figure_S4.png) | N/A | N/A | [Readme](./supporting_information/figures_S1-4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
 | [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
 | [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
-| [Figure S7](./supporting_information/figure_S7.png) | N/A | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S7_description.txt) |
-| [Figure S8](./supporting_information/figure_S8.png) | N/A | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S8_description.txt) |
+| [Figure S7](./supporting_information/figure_S7.png) | N/A | N/A | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S7_description.txt) |
+| [Figure S8](./supporting_information/figure_S8.png) | N/A | N/A | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S8_description.txt) |
 | [Figure S9](./supporting_information/figure_S9.png) | [Script](./supporting_information/figure_S9_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S9_description.txt) |
 
 ---
