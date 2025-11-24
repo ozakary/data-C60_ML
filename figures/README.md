@@ -36,12 +36,12 @@ To reproduce the figures and analyze the data, you will need the following:
 |------------|-------------|-------------|------------|-----------------|
 | [Figure 1](./manuscript/figure_1.png) | N/A | N/A | [Readme](./manuscript/figure_1_readme.txt) | [Description](./manuscript/figure_1_description.txt) |  
 | [Figure 2](./manuscript/figure_2.png) | N/A | N/A | [Readme](./manuscript/figure_2_readme.txt) | [Description](./manuscript/figure_2_description.txt) |  
-| [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.py) | N/A | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
-| [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.py) | N/A | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
-| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | N/A | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
-| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | N/A | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
-| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | N/A | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
-| [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.py) | N/A | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
+| [Figure 3](./manuscript/figure_3.png) | [Script](./manuscript/figure_3_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_3_readme.txt) | [Description](./manuscript/figure_3_description.txt) |  
+| [Figure 4](./manuscript/figure_4.png) | [Script](./manuscript/figure_4_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_4_readme.txt) | [Description](./manuscript/figure_4_description.txt) |  
+| [Figure 5](./manuscript/figure_5.png) | [Script](./manuscript/figure_5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_5_description.txt) |  
+| [Figure 6](./manuscript/figure_6.png) | [Script](./manuscript/figure_6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_6_description.txt) |  
+| [Figure 7](./manuscript/figure_7.png) | [Script](./manuscript/figure_7_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figures_5-7_readme.txt) | [Description](./manuscript/figure_7_description.txt) |  
+| [Figure 8](./manuscript/figure_8.png) | [Script](./manuscript/figure_8_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./manuscript/figure_8_readme.txt) | [Description](./manuscript/figure_8_description.txt) |  
 
 ## Table 2: Figures from the Supporting Information
 
@@ -51,11 +51,11 @@ To reproduce the figures and analyze the data, you will need the following:
 | [Figure S2](./supporting_information/figure_S2.png) | N/A | N/A | [Readme](./supporting_information/figures_S1-4_readme.txt) | [Description](./supporting_information/figure_S2_description.txt) |
 | [Figure S3](./supporting_information/figure_S3.png) | N/A | N/A | [Readme](./supporting_information/figures_S1-4_readme.txt) | [Description](./supporting_information/figure_S3_description.txt) |
 | [Figure S4](./supporting_information/figure_S4.png) | N/A | N/A | [Readme](./supporting_information/figures_S1-4_readme.txt) | [Description](./supporting_information/figure_S4_description.txt) |
-| [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [MLIP-1](./manuscript/MLIP-1), [MLIP-2](./manuscript/MLIP-2), [MLIP-3](./manuscript/MLIP-3) | [Readme](./supporting_information/figures_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
-| [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](./supporting_information/sigma_iso/log/log.csv) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
-| [Figure S7](./supporting_information/figure_S7.png) | N/A | N/A | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S7_description.txt) |
-| [Figure S8](./supporting_information/figure_S8.png) | N/A | N/A | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S8_description.txt) |
-| [Figure S9](./supporting_information/figure_S9.png) | [Script](./supporting_information/figure_S9_script.py) | N/A | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S9_description.txt) |
+| [Figure S5](./supporting_information/figure_S5.png) | [Script](./supporting_information/figure_S5_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5_readme.txt) | [Description](./supporting_information/figure_S5_description.txt) |
+| [Figure S6](./supporting_information/figure_S6.png) | [Script](./supporting_information/figure_S6_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figure_S6_readme.txt) | [Description](./supporting_information/figure_S6_description.txt) |
+| [Figure S7](./supporting_information/figure_S7.png) | N/A | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S7_description.txt) |
+| [Figure S8](./supporting_information/figure_S8.png) | N/A | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S8_description.txt) |
+| [Figure S9](./supporting_information/figure_S9.png) | [Script](./supporting_information/figure_S9_script.py) | [Data](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) | [Readme](./supporting_information/figures_S5-9_reamde.txt) | [Description](./supporting_information/figure_S9_description.txt) |
 
 ---
 
