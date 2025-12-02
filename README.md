@@ -39,7 +39,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s)
+### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
