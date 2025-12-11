@@ -43,7 +43,7 @@ pip install ase==3.17.0 pandas==1.1.5 numpy==1.19.5 schnetpack==0.2.1
 
 ## Directory Structure
 
-### Input Files (the *.csv input files are to be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60))
+### Input Files (the *.csv input files are to be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0))
 ```
 ./input/
     structures.csv             # Atomic coordinates (cartesian) for all structures
@@ -57,7 +57,7 @@ pip install ase==3.17.0 pandas==1.1.5 numpy==1.19.5 schnetpack==0.2.1
 ./nmr-ml_schnet_carpo2.job                # SLURM job submission script
 ```
 
-### Output Files (the output files, including the NMR-ML trained model are to be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60))
+### Output Files (the output files, including the NMR-ML trained model are to be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0))
 ```
 # Histograms of magnetic shielding input data
 ./sigma_iso_hist.png
