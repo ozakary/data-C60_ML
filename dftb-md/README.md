@@ -14,7 +14,7 @@
 
 ## Producing the reference dataset structures of C<sub>60</sub>
 
-This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model. The output files, including the full trajectory of the semi-empirical MD simulation can be found in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60) of this project.
+This directory contains the necessary input files to reproduce the semi-empirical MD data with DFTB+ software. The configurations of the output MD trajectory are used as reference data in the training of NEP3 MLIP models and SchNet NMR-ML model. The output files, including the full trajectory of the semi-empirical MD simulation can be found in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project.
 
 ### DFTB+ input files
 
