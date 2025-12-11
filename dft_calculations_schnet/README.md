@@ -12,13 +12,13 @@
 
 ---
 
-This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This repository contains the calculation conditions used in the DFT and NMR magnetic shielding tensor computations for the C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
 
 ## Overview of the Data
 
 This project contains computational data for a total of 1001 C<sub>60</sub> structures. Each structure was computed using the computational conditions described in the sections below. Each of the DFT calculations of the 1001 structures were carried out as described in this page.
 
-Here we provide the input files for one Turbomole DFT calculation used in the NMR magnetic shielding dataset. The output files and the calculation results of the example calculation provided here follow the same structure as the DFT calculations used for the NEP MLIP training, as described [here](../dft_calculations_nep/). The reference NMR magnetic shielding values are collected in the reference/training data file found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
+Here we provide the input files for one Turbomole DFT calculation used in the NMR magnetic shielding dataset. The output files and the calculation results of the example calculation provided here follow the same structure as the DFT calculations used for the NEP MLIP training, as described [here](../dft_calculations_nep/). The reference NMR magnetic shielding values are collected in the reference/training data file found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 
 Directory structure example:
 ```
@@ -41,7 +41,7 @@ To start the calculation and process the results, all the necessary Turbomole in
 
 Each calculation produces output files, as described [here](../dft_calculations_nep/) in more detail.
 
-The results are collected, and the processed data files used for the training of the SchNet model can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
+The results are collected, and the processed data files used for the training of the SchNet model can be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 
 Details of generating the NMR magnetic shielding training dataset can be found [here](../nmr-ml_dataset/).
 
