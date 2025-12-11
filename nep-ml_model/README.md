@@ -30,7 +30,7 @@ The internal hyperparameters of the model and the training process are controlle
 With the provided file structure, the training process of NEP model may be started simply with the command
 ```nep```
 provided that **GPUMD** and **NEP** are installed.  
-Here we have only provided truncated `train.xyz` and `test.xyz` files as an example. The actual files used to train the models **MLIP-1**, **MLIP-2**, and **MLIP-3** can be found in the external `IDA` [repository](https://github.com/ozakary/data-NMR-ML_C60) of this project.
+Here we have only provided truncated `train.xyz` and `test.xyz` files as an example. The actual files used to train the models **MLIP-1**, **MLIP-2**, and **MLIP-3** can be found in the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0) of this project.
 
 ### Output files
 
@@ -50,7 +50,7 @@ The training process creates the following output files:
 
 - Note that we do not use virials in the training process
 - In the [output_files](./output_files) directory, the output files of the training process of the three NEP3 MLIP models are provided.
-- All trained NEP model parameter files can be found in the corresponding subdirectory of the `output_files` directory, or additionally [here](../pimd_simulations/pimd_nte), or in the external `IDA` [repository](https://github.com/ozakary/data-NMR-ML_C60).
+- All trained NEP model parameter files can be found in the corresponding subdirectory of the `output_files` directory, or additionally [here](../pimd_simulations/pimd_nte), or in the external [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 
 ---
 
