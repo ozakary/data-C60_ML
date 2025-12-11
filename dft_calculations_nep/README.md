@@ -12,7 +12,7 @@
 
 ---
 
-This repository contains the calculation conditions used in the DFT reference data computations for the NEP machine learning interatomic potentials of C<sub>60</sub> fullerene system described in the manuscript “***Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This repository contains the calculation conditions used in the DFT reference data computations for the NEP machine learning interatomic potentials of C<sub>60</sub> fullerene system described in the manuscript “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”. [DOI:](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
 
 ## Overview of the Data
 
@@ -22,7 +22,7 @@ The reference DFT values are calculated for all empty C<sub>60</sub> structures 
 
 Here we provide one example calculation folder `cluster_<ID>` for each DFT theory level used (DFT-1, DFT-2, and DFT-3). The input files for these example Turbomole DFT calculation data files can be found in the corresponding subdirectories in this GitHub page.
 
-The output files and the calculation results of the examples provided here can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60). The reference energy, force, and magnetic shielding values from all of the Turbomole calculations are available in the reference/training data files in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
+The output files and the calculation results of the examples provided here can be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0). The reference energy, force, and magnetic shielding values from all of the Turbomole calculations are available in the reference/training data files in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)(https://github.com/ozakary/data-NMR-ML_C60).
 
 Calculation directory structure example:
 ```
@@ -107,7 +107,7 @@ Each `cluster_<ID>` folder also contains the corresponding `.job` file (`tm77_pu
   - [coord](./DFT-1/cluster_36000/coord): Cartesian coordinates file
   - [coord_ID.xyz](./DFT-1/cluster_36000/coord_36000.xyz): Coordinate file in xyz format
   - [auxbasis](./DFT-1/cluster_36000/auxbasis): Auxiliary basis set for RI approximation
-  - mos: Turbomole input file containing the molecular orbitals. Available in the [IDA repository](https://github.com/ozakary/data-NMR-ML_C60).
+  - mos: Turbomole input file containing the molecular orbitals. Available in the [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0).
 - **Additional scripts**:
   - [tm77_puhti.job](./DFT-2/cluster_50000/tm77_puhti.job): Script to call Turbomole DFT calculation in supercomputer Puhti (https://www.puhti.csc.fi/public/)
   - [turbomole_carpo2.job](./DFT-1/cluster_36000/turbomole_carpo2.job): Script to call Turbomole DFT calculation in supercomputer Carpo2
