@@ -12,7 +12,7 @@
 
 ---
 
-This sub-repository contains code and workflows for predicting NMR isotropic magnetic shielding for carbon atoms using the pre-trained SchNet model. The workflow is specifically designed to handle Path Integral Molecular Dynamics (PIMD) simulation data with 32 beads (the corresponding example trajectory files can be found in this [IDA repository](https://github.com/ozakary/data-NMR-ML_C60)).
+This sub-repository contains code and workflows for predicting NMR isotropic magnetic shielding for carbon atoms using the pre-trained SchNet model. The workflow is specifically designed to handle Path Integral Molecular Dynamics (PIMD) simulation data with 32 beads (the corresponding example trajectory files can be found in this [Fairdata repository](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)).
 
 ## Overview
 
@@ -33,7 +33,7 @@ The workflow creates the following directory structure:
         /best_model                           # Best model checkpoint
 ./input/                                      # Input files directory
 ./0/                                          # Bead 0 directory
-    /beads_dump_0.xyz                         # Trajectory file for bead 0 (All '.xyz' for this example can be found at this Zenodo repository: https://github.com/ozakary/data-NMR-ML_C60)
+    /beads_dump_0.xyz                         # Trajectory file for bead 0 (All '.xyz' for this example can be found at this Zenodo repository: https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
     /code_seperate.py                         # Local copy of splitting script (modified for this bead)
     /predicted_sigma_iso_beads_0.csv          # Final concatenated results for bead 0
     /1/                                       # Chunk 1 directory
