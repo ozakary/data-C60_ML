@@ -1,4 +1,4 @@
-# Figures, Scripts, and Datasets for Manuscript and Supporting Information “*Neural Networks-Enabled Insights Into Quantum Effects on Structure and <sup>13</sup>C NMR of C<sub>60</sub> Fullerene*”
+# Figures, Scripts, and Datasets for Manuscript and Supporting Information “*Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene*”
 
 📄 Authors: **Ouail Zakary** and **Ossi Laurila**
 
