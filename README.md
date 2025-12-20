@@ -39,7 +39,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
+### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s--v2-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
@@ -47,8 +47,8 @@ If you use this data, please cite the following:
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   journal={ChemRxiv},
   year={2025},
-  doi={10.26434/chemrxiv-2025-68g6s},
-  url={https://doi.org/10.26434/chemrxiv-2025-68g6s},
+  doi={10.26434/chemrxiv-2025-68g6s-v2},
+  url={https://doi.org/10.26434/chemrxiv-2025-68g6s-v2},
   note={Preprint}
 }
 ```
