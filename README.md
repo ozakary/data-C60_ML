@@ -53,7 +53,7 @@ If you use this data, please cite the following:
 }
 ```
 
-### Dataset [![DOI](https://img.shields.io/badge/DOI-10.1021%2Ffd-c64c043e-473e-371d-9586-8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
+### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd-c64c043e-473e-371d-9586-8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
 
 ```bibtex
 @dataset{laurila_2025_data_c60_ml,
