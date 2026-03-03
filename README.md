@@ -18,7 +18,7 @@
 
 ---
 
-This is the supporting code for the manuscript “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”. [DOI: TBA]
+This is the supporting code for the manuscript “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”. [DOI: https://doi.org/10.1021/acs.jpca.6c00238]
 
 The repository comprises the following sections:
 
@@ -39,7 +39,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Preprint [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s--v2-yellow.svg)](https://doi.org/10.26434/chemrxiv-2025-68g6s-v2)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s--v2-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
