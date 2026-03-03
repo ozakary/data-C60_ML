@@ -45,15 +45,14 @@ If you use this data, please cite the following:
 @article{laurila_2025_c60_ml,
   title={Machine Learning-Accelerated Path Integral Molecular Dynamics and $^{13}$C NMR Simulations Unlock New Insights Into Quantum Effects in C$_{60}$ Fullerene},
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
-  journal={ChemRxiv},
-  year={2025},
-  doi={10.26434/chemrxiv-2025-68g6s-v2},
-  url={https://doi.org/10.26434/chemrxiv-2025-68g6s-v2},
-  note={Preprint}
+  journal={J. Phys. Chem. A},
+  year={2026},
+  doi={10.1021/acs.jpca.6c00238},
+  url={https://doi.org/10.1021/acs.jpca.6c00238}
 }
 ```
 
-### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd-c64c043e-473e-371d-9586-8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
+### Dataset [![DOI](https://img.shields.io/badge/DOI-10.23729%2Ffd--c64c043e--473e--371d--9586--8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
 
 ```bibtex
 @dataset{laurila_2025_data_c60_ml,
