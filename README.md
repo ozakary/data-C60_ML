@@ -39,7 +39,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Fchemrxiv--2025--68g6s--v2-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
@@ -53,7 +53,7 @@ If you use this data, please cite the following:
 }
 ```
 
-### Dataset [![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jpca.6c00238-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
+### Dataset [![DOI](https://img.shields.io/badge/DOI-10.1021%2Ffd-c64c043e-473e-371d-9586-8fd3d04e2fb0-blueviolet.svg)](https://doi.org/10.23729/fd-c64c043e-473e-371d-9586-8fd3d04e2fb0)
 
 ```bibtex
 @dataset{laurila_2025_data_c60_ml,
