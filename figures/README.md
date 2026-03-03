@@ -12,7 +12,7 @@
 
 --- 
 
-This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the manuscript and supporting information documents of “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”.
+This folder contains the figures, Python scripts, datasets, and additional metadata (README and description files) used to generate the figures related to the NMR-ML model in the paper and supporting information documents of “***Machine Learning-Accelerated Path Integral Molecular Dynamics and <sup>13</sup>C NMR Simulations Unlock New Insights Into Quantum Effects in C<sub>60</sub> Fullerene***”.
 
 ## Requirements
 
