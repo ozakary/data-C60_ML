@@ -39,7 +39,7 @@ The repository comprises the following sections:
 ## Citations
 If you use this data, please cite the following:
 
-### Paper [![DOI](https://img.shields.io/badge/DOI-10.26434%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
+### Paper [![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jpca.6c00238-yellow.svg)](https://doi.org/10.1021/acs.jpca.6c00238)
 
 ```bibtex
 @article{laurila_2025_c60_ml,
