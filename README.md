@@ -47,6 +47,9 @@ If you use this data, please cite the following:
   author={Laurila, Ossi, and Jacklin, Tiia, and Zakary, Ouail and Lantto, Perttu},
   journal={J. Phys. Chem. A},
   year={2026},
+  volume = {130},
+  number = {10},
+  pages = {2169--2181},
   doi={10.1021/acs.jpca.6c00238},
   url={https://doi.org/10.1021/acs.jpca.6c00238}
 }
