@@ -26,7 +26,7 @@ The repository comprises the following sections:
    i. Configuration generation using semi-empirical MD simulations. ([directory](./dftb-md/))  
    ii. DFT calculations of the generated SE-MD configurations for training the three MLIP models. ([directory](./dft_calculations_nep/))  
    iii. Dataset format of the MLIP models. ([directory](./nep-ml_dataset/))  
-3. Example of training, validation, and testing processes for a MLIP model using NEP3 architecture. ([directory](./nep-ml_model/))  
+3. Example of training, validation, and testing processes for the MLIP model using NEP3 architecture. ([directory](./nep-ml_model/))  
 4. Machine learning-assisted path-integral MD simulations. ([directory](./pimd_simulations/))  
 5. Dataset preparation for the NMR-ML model:  
    i. Configuration generation using semi-empirical MD simulations. ([directory](./dftb-md/))  
